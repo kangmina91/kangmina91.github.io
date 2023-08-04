@@ -1,6 +1,15 @@
 # kangmina91.github.io
 
 
+13주차 실습 과제 
+특징 - 풀페이지 작업 / 반응형
+
+사이트명 : 부광약품
+원본 사이트 : https://www.bukwang.co.kr
+
+깃허브 구현 페이지 : https://kangmina91.github.io/miniproject230804
+깃허브 저장소 페이지 : https://github.com/kangmina91/miniproject230804
+-------------------------------------------------------------------------------------------
 12주차 실습 과제 
 특징 - 풀페이지 작업 / 반응형
 
