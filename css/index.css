@@ -3,7 +3,6 @@
     max-width: 1200px;
     /* 최대 너비를 1200px로 주고 디스플레이 사이즈에 따라 가변 */
     margin: 10px auto;
-    background: burlywood;
     line-height: 50px;
 
     border: 5px solid #ddd;
@@ -13,33 +12,25 @@
 
 .header h1 {
     margin: 20px;
-    font-size: 50px;
+    font-size: 30px;
     font-weight: 1000;
 }
 
-.header h2 {
-    margin: 20px;
-    font-size: 30px;
-    font-weight: 800;
-}
-
-.sec {
-    padding: 50px 0;
-}
+/* .sec {
+    padding: 25 0;
+} */
 
 .inner {
     max-width: 1200px;
     margin: 0 auto;
-    border: 2px solid #888;
     box-sizing: border-box;
 }
 
 .name {
     display: block;
-    text-align: center;
-    font-size: 20px;
-    font-weight: 800;
-    border-bottom: 2px solid #888;
+    text-align: right;
+    font-size: 16px;
+    font-weight: 500;
     padding: 10px 0;
 }
 
