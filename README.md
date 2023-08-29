@@ -41,7 +41,8 @@
 특징 - 통 다단 메뉴, 스와이퍼 슬라이드, 개별 상품 슬라이드 / 반응형 / 그누보드
 
 사이트명 : 테스콤
-원본 사이트 : https://www.tescomwireless.com/ <br>
+원본 사이트 : https://www.tescomwireless.com/ 
+
 그누보드 호스팅 페이지 : http://gmn0508.dothome.co.kr/ <br>
 깃허브 구현 페이지 : https://kangmina91.github.io/miniproject230714 <br>
 깃허브 저장소 페이지 : https://github.com/kangmina91/miniproject230714 
