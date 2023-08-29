@@ -7,7 +7,7 @@
 사이트명 : 고려대학교
 원본 사이트 : https://www.korea.ac.kr/mbshome/mbs/university/index.do
 
-깃허브 구현 페이지 : https://kangmina91.github.io/miniproject230811
+깃허브 구현 페이지 : https://kangmina91.github.io/miniproject230811 <br>
 깃허브 저장소 페이지 : https://github.com/kangmina91/miniproject230811
 -------------------------------------------------------------------------------------------
 13주차 실습 과제 
