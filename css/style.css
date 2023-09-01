@@ -500,8 +500,8 @@
 
 .portfolio .txt_box .tit h3 {
     font-weight: 700;
-    font-size: 36px;
-    margin: 8px 0 0 0;
+    font-size: 40px;
+    margin: 0 0 8px 0;
 }
 
 .portfolio .txt_box .tit h3 img {
@@ -512,13 +512,14 @@
 
 .portfolio .txt_box .tit p {
     font-size: 14px;
+    font-weight: 300;
     margin: 0 0 40px 0;
 }
 
 .portfolio .txt_box strong {
     display: block;
     font-size: 18px;
-    font-weight: 600;
+    margin: 0 0 8px 0;
 }
 
 
