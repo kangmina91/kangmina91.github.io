@@ -2,264 +2,433 @@
 <html lang="ko">
 
 <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./css/common.css">
-        <link rel="stylesheet" href="./css/index.css?ver=1.2">
-        <title> 강미나 퍼블리싱 실습 모음</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="강미나 포트폴리오">
+    <meta name="description" content="강미나 포트폴리오">
+    <title>강미나 포트폴리오</title>
+
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="./images/favicon.png">
+
+    <script src="./js/fullpage.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <script src="./js/particles.min.js"></script>
+
+    <script src="./js/custom.js" defer></script>
+
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/fullpage.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+
 </head>
 
-
 <body>
-        <div class="wrap">
-                <header class="header">
-                        <h1>퍼블리싱 실습 모음집</h1>
-                </header>
-                <main class="main">
-                        <section class="main_section">
-                                <div class="inner content">
-                                        <h2 class="name">작성자 : 강미나</h2>
-                                         <ul>
-                                                <strong class="title"> 14주차 실습 과제 </strong>
-                                                <span>사이트명 : 고려대학교 </span>
-                                                <span> 특징 - 통 다단 메뉴 / 반응형 / 동영상 </span>
+    <header class="header">
+        <a href="/">
+            <div class="case">
+                <figure class="img_box">
+                    <img src="./images/logo.png" alt="">
+                </figure>
+                <p class="logo_txt"> &nbsp; 2023 mina's portfolio </p>
+            </div>
+        </a>
+    </header>
+    <div class="util" aria-hidden="true">
+        <button class="menu">
+            <span>link</span>
+        </button>
+    </div>
+    <aside class="m_link">
+        <ul>
+            <li class="on"><a href="#introduction">intro</a></li>
+            <li><a href="#portfolio">portfolio</a></li>
+            <li><a href="#training">training</a></li>
+            <li><a href="#profile">profile</a></li>
+        </ul>
+    </aside>
+    <div id="main" role="main">
+        <section class="section intro" id="introduction">
+            <div class="box_cover">
+                <div class="box_left"></div>
+                <div class="box_right"></div>
+            </div>
+            <div class="inner slogan">
+                <strong>UI/UX Web Designer</strong>
+                <h2>Kang mina's&nbsp;2023&nbsp;Portfolio</h2>
+            </div>
+            <div class="wheel" aria-hidden="true">
+                <a href="#vision">wheel</a>
+            </div>
+        </section>
+        <section class="section portfolio" id="slide_move">
+            <div class="num"><span>01</span></div>
+            <div class="s_pagenation">
+                <ul>
+                    <li class="on"><a href="#portfolio">1</a></li>
+                    <li><a href="#portfolio/1">2</a></li>
+                    <li><a href="#portfolio/2">3</a></li>
+                    <li><a href="#portfolio/3">4</a></li>
+                    <li><a href="#portfolio/4">5</a></li>
+                </ul>
+            </div>
 
-                                                <li class="click"><a href="https://www.korea.ac.kr/mbshome/mbs/university/index.do" target="_blank">
-                                                                원본 사이트</a></li>
-                                                <li class="click"><a
-                                                                href="https://kangmina91.github.io/miniproject230811"
-                                                                target="_blank"> 깃허브
-                                                                구현 페이지</a></li>
-                                                <li class="click"><a
-                                                                href="https://github.com/kangmina91/miniproject230811"
-                                                                target="_blank"> 깃허브
-                                                                저장소 페이지</a></li>
-                                        </ul>
-                                        <ul>
-                                                <strong class="title"> 13주차 실습 과제 </strong>
-                                                <span>사이트명 : 부광약품 </span>
-                                                <span> 특징 - 풀페이지 작업 / 반응형 </span>
+            <div class="slide itm itm02">
+                <div class="bg_cover"></div>
+                <div class="inner content">
+                    <div class="img_box">
+                        <figure class="port_pc_img">
+                            <img src="./images/portfolio02_pc.png" alt="">
+                        </figure>
+                        <figure class="port_m_img">
+                            <img src="./images/portfolio02_m.png" alt="">
+                        </figure>
+                    </div>
+                    <div class="txt_box">
+                        <div class="tit">
+                            <h3><img src="./images/p02_logo.png" alt=""> 테스콤</h3>
+                            <p>TESCOM</p>
+                        </div>
+                        <div class="btn_box">
+                            <a href="https://kangmina91.github.io/miniproject230714/" class="btn" target="_blank">WORK
+                            </a>
+                            <a href="http://gmn0508.dothome.co.kr/" class="btn" target="_blank">GNUBOARD</a>
+                            <a href="https://www.tescomwireless.com/" class="btn" target="_blank">ORIGINAL</a>
+                        </div>
+                        <div class="des">
+                            <strong>INFO</strong>
+                            <p>무선통신 측정 분야 기술의 전문기업인 테스콤의 혁신적인 느낌을 블루 계열의 메인 컬러를 통해 표현하였으며, 메인 비주얼 전면을 가득채우는 타이포그라피를 통하여
+                                테스콤만의 신뢰성을 표현하였습니다.</p>
+                            <strong>TYPE</strong>
+                            <p>Responsive Web</p>
+                            <strong>FONT</strong>
+                            <p>Noto Sans Korean</p>
+                            <strong>PROCESS</strong>
+                            <p>Html5 , Css3 , Jquery , Slick Slide</p>
+                            <strong>WORK</strong>
+                            <p>개인작업 100%</p>
+                        </div>
+                        <div class="color">
+                            <strong>COLOR</strong>
+                            <ul>
+                                <li><span>#007EDE</span></li>
+                                <li><span>#ffffff</span></li>
+                            </ul>
 
-                                                <li class="click"><a href="https://www.bukwang.co.kr" target="_blank">
-                                                                원본 사이트</a></li>
-                                                <li class="click"><a
-                                                                href="https://kangmina91.github.io/miniproject230804"
-                                                                target="_blank"> 깃허브
-                                                                구현 페이지</a></li>
-                                                <li class="click"><a
-                                                                href="https://github.com/kangmina91/miniproject230804"
-                                                                target="_blank"> 깃허브
-                                                                저장소 페이지</a></li>
-                                        </ul>
-                                        <ul>
-                                                <strong class="title"> 12주차 실습 과제 </strong>
-                                                <span>사이트명 : 영등포자이 디그니티 쇼케이스 </span>
-                                                <span> 특징 - 풀페이지 작업 / 반응형 </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide itm itm03">
+                <div class="bg_cover"></div>
+                <div class="inner content">
+                    <div class="img_box">
+                        <figure class="port_pc_img">
+                            <img src="./images/portfolio03_pc.png" alt="">
+                        </figure>
+                        <figure class="port_m_img">
+                            <img src="./images/portfolio03_m.png" alt="">
+                        </figure>
+                    </div>
+                    <div class="txt_box">
+                        <div class="tit">
+                            <h3><img src="./images/p03_logo.png" alt=""> 영등포자이 디그니티</h3>
+                            <p>Xi</p>
+                        </div>
+                        <div class="btn_box">
+                            <a href="https://kangmina91.github.io/miniproject230728/" class="btn" target="_blank">WORK
+                            </a>
+                            <a href="https://xi.co.kr/showcase_apt/?apt_seq=153#overview" class="btn"
+                                target="_blank">ORIGINAL</a>
+                        </div>
+                        <div class="des">
+                            <strong>INFO</strong>
+                            <p>고급 아파트브랜드인 자이의 가치와 전망을 블랙&amp;화이트 , 그리고 골드 컬러로 고급스럽게 담아냈으며, Fullapge를 통해 아파트에 대한 여러 주요한
+                                정보를
+                                시각적으로 잘 받아들일 수 있도록 타이포그라피를 활용하였습니다.</p>
+                            <strong>TYPE</strong>
+                            <p>Responsive Web</p>
+                            <strong>FONT</strong>
+                            <p>Pretendard</p>
+                            <strong>PROCESS</strong>
+                            <p>Html5 , Css3 , Sass(scss) , Jquery , Fullpage</p>
+                            <strong>WORK</strong>
+                            <p>개인작업 100%</p>
+                        </div>
+                        <div class="color">
+                            <strong>COLOR</strong>
+                            <ul>
+                                <li><span>#9e826f</span></li>
+                                <li><span>#000000</span></li>
+                                <li><span>#ffffff</span></li>
+                            </ul>
 
-                                                <li class="click"><a
-                                                                href="https://xi.co.kr/showcase_apt/?apt_seq=153#overview"
-                                                                target="_blank">
-                                                                원본 사이트</a></li>
-                                                <li class="click"><a
-                                                                href="https://kangmina91.github.io/miniproject230728"
-                                                                target="_blank"> 깃허브
-                                                                구현 페이지</a></li>
-                                                <li class="click"><a
-                                                                href="https://github.com/kangmina91/miniproject230728"
-                                                                target="_blank"> 깃허브
-                                                                저장소 페이지</a></li>
-                                        </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide itm itm04">
+                <div class="bg_cover"></div>
+                <div class="inner content">
+                    <div class="img_box">
+                        <figure class="port_pc_img">
+                            <img src="./images/portfolio04_pc.png" alt="">
+                        </figure>
+                        <figure class="port_m_img">
+                            <img src="./images/portfolio04_m.png" alt="">
+                        </figure>
+                    </div>
+                    <div class="txt_box">
+                        <div class="tit">
+                            <h3><img src="./images/p04_logo.png" alt=""> 부광약품</h3>
+                            <p>Bukwang R&D</p>
+                        </div>
+                        <div class="btn_box">
+                            <a href="https://kangmina91.github.io/miniproject230804/" class="btn" target="_blank">WORK
+                            </a>
+                            <a href="https://www.bukwang.co.kr/" class="btn" target="_blank">ORIGINAL</a>
+                        </div>
+                        <div class="des">
+                            <strong>INFO</strong>
+                            <p>연구개발 제약기업인 부광약품의 지성과 신뢰성을 Fullpage를 통해 깔끔하게 표현하였으며, 그린 컬러를 활용하여 긍정적이고 미래 지향적인 회사의 비전을
+                                표현하였습니다.
+                            </p>
+                            <strong>TYPE</strong>
+                            <p>Responsive Web</p>
+                            <strong>FONT</strong>
+                            <p>Pretendard</p>
+                            <strong>PROCESS</strong>
+                            <p>Html5 , Css3 , Sass(scss), Fullpage, Jquery , Swiper Slide</p>
+                            <strong>WORK</strong>
+                            <p>개인작업 100%</p>
+                        </div>
+                        <div class="color">
+                            <strong>COLOR</strong>
+                            <ul>
+                                <li><span>#74B567</span></li>
+                                <li><span>#ffffff</span></li>
+                            </ul>
 
-                                        <ul>
-                                                <strong class="title"> 11주차 실습 과제 </strong>
-                                                <span>사이트명 : 서면4차 봄여름가을겨을 </span>
-                                                <span> 특징 - 다단 메뉴, 스와이퍼 슬라이드, 탭 메뉴 / 반응형 </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide itm itm05">
+                <div class="bg_cover"></div>
+                <div class="inner content">
+                    <div class="img_box">
+                        <figure class="port_pc_img">
+                            <img src="./images/portfolio05_pc.png" alt="">
+                        </figure>
+                        <figure class="port_m_img">
+                            <img src="./images/portfolio05_m.png" alt="">
+                        </figure>
+                    </div>
+                    <div class="txt_box">
+                        <div class="tit">
+                            <h3><img src="./images/p05_logo.png" alt=""> 고려대학교</h3>
+                            <p>Korea University</p>
+                        </div>
+                        <div class="btn_box">
+                            <a href="https://kangmina91.github.io/miniproject230811" class="btn" target="_blank">WORK
+                            </a>
+                            <a href="https://www.figma.com/file/bgxKJu3ZZOGPP8iAlpiqP3/%EA%B3%A0%EB%A0%A4%EB%8C%80%ED%95%99%EA%B5%90-%ED%94%84%EB%A1%9C%ED%86%A0%ED%83%80%EC%9E%85?type=design&node-id=9%3A1054&mode=design&t=SjsdWnX1NeALUy2L-1"
+                                target="_blank" class="btn">FIGMA</a>
+                            <a href="https://www.korea.ac.kr/mbshome/mbs/university/index.do" class="btn"
+                                target="_blank">ORIGINAL
+                            </a>
+                        </div>
+                        <div class="des">
+                            <strong>INFO</strong>
+                            <p>고려대학교의 역동적인 상을 메인 비주얼 동영상으로 담아냈으며, 레드 와인 메인 컬러로 진중하고도 유서깊은 학교의 느낌을 살렸습니다. </p>
+                            <strong>TYPE</strong>
+                            <p>Responsive Web</p>
+                            <strong>FONT</strong>
+                            <p>Pretendard</p>
+                            <strong>PROCESS</strong>
+                            <p>Html5 , Css3 , Sass(scss), Jquery , YTPplayer, Swiper Slide</p>
+                            <strong>WORK</strong>
+                            <p>개인작업 100%</p>
+                        </div>
+                        <div class="color">
+                            <strong>COLOR</strong>
+                            <ul>
+                                <li><span>#760023</span></li>
+                                <li><span>#ffffff</span></li>
+                            </ul>
 
-                                                <li class="click"><a href="http://ahnlabcore.co.kr/" target="_blank">
-                                                                원본 사이트</a></li>
-                                                <li class="click"><a
-                                                                href="https://kangmina91.github.io/miniproject230721"
-                                                                target="_blank"> 깃허브
-                                                                구현 페이지</a></li>
-                                                <li class="click"><a
-                                                                href="https://github.com/kangmina91/miniproject230721"
-                                                                target="_blank"> 깃허브
-                                                                저장소 페이지</a></li>
-                                        </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide itm itm01">
+                <div class="bg_cover"></div>
+                <div class="inner content">
+                    <div class="img_box">
+                        <figure class="port_pc_img">
+                            <img src="./images/portfolio01_pc.png" alt="">
+                        </figure>
+                        <figure class="port_m_img">
+                            <img src="./images/portfolio01_m.png" alt="">
+                        </figure>
+                    </div>
+                    <div class="txt_box">
+                        <div class="tit">
+                            <h3><img src="./images/p01_logo.png" alt=""> 부천국제판타스틱영화제</h3>
+                            <p>Bucheon International Fantastic Film Festival</p>
+                        </div>
+                        <div class="btn_box">
+                            <a href="https://kangmina91.github.io/miniproject230623/" class="btn" target="_blank">WORK
+                            </a>
+                            <a href="https://www.bifan.kr/" class="btn" target="_blank">ORIGINAL</a>
+                        </div>
+                        <div class="des">
+                            <strong>INFO</strong>
+                            <p>개성있는 영화들이 많이 상영되는 부천 국제 판타스틱 영화제의 메인 컬러로 블랙&amp;화이트랑 톡톡 튀는 파스텔 톤을 사용하였습니다. 또한 다양한 슬라이드
+                                스타일을 적용하여 메인 페이지의 효율성을 높였습니다.</p>
+                            <strong>TYPE</strong>
+                            <p>Responsive Web</p>
+                            <strong>FONT</strong>
+                            <p>Noto Sans Korean</p>
+                            <strong>PROCESS</strong>
+                            <p>Html5 , Css3 , Jquery , Swiper Slide</p>
+                            <strong>WORK</strong>
+                            <p>개인작업 100%</p>
+                        </div>
+                        <div class="color">
+                            <strong>COLOR</strong>
+                            <ul>
+                                <li><span>#6cd2cd</span></li>
+                                <li><span>#fa6e91</span></li>
+                                <li><span>#000000</span></li>
+                                <li><span>#ffffff</span></li>
+                            </ul>
 
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-                                        <ul>
-                                                <strong class="title"> 10주차 실습 과제 </strong>
-                                                <span> 사이트명 : 테스콤 </span>
-                                                <span> 특징 - 통 다단 메뉴, 스와이퍼 슬라이드, 개별 상품 슬라이드 / 반응형 </span>
+        </section>
+        <section class="section training">
+            <h2>TRAINING</h2>
+            <div class="inner content">
+                <div class="itm itm01">
+                    <div class="itm_box">
+                        <a href="https://kangmina91.github.io/responsive_web_dokdo/" target="_blank">
+                            <figure class="tr_img">
+                                <img src="./images/traning01.PNG" alt="">
+                            </figure>
+                        </a>
+                        <figcaption>
+                            <strong>독도전시관</strong>
+                        </figcaption>
+                    </div>
+                </div>
+                <div class="itm itm02">
+                    <div class="itm_box">
+                        <a href="https://kangmina91.github.io/responsive_web_outback/" target="_blank">
+                            <figure class="tr_img">
+                                <img src="./images/traning02.PNG" alt="">
+                            </figure>
+                        </a>
+                        <figcaption>
+                            <strong>아웃백</strong>
+                        </figcaption>
+                    </div>
+                </div>
+                <div class="itm itm03">
+                    <div class="itm_box">
+                        <a href="https://kangmina91.github.io/casia_test/" target="_blank">
+                            <figure class="tr_img">
+                                <img src="./images/traning03.PNG" alt="">
+                            </figure>
+                        </a>
+                        <figcaption>
+                            <strong>카시아속초</strong>
+                        </figcaption>
+                    </div>
+                </div>
+                <div class="itm itm04">
+                    <div class="itm_box">
+                        <a href="https://kangmina91.github.io/galggumi/" target="_blank">
+                            <figure class="tr_img">
+                                <img src="./images/traning04.PNG" alt="">
+                            </figure>
+                        </a>
+                        <figcaption>
+                            <strong>깔끔이청소</strong>
+                        </figcaption>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section profile" id="profiles">
+            <h2>PROFILE</h2>
+            <div class="inner content">
+                <div class="info">
+                    <div class="contact_box">
+                        <figure>
+                            <img src="./images/profile.jpg" alt="">
+                        </figure>
+                        <dl>
+                            <dt>NAME</dt>
+                            <dd>강미나</dd>
+                            <dt>PHONE</dt>
+                            <dd><a href="tle:010-2932-0812">010.2954.6121</a></dd>
+                            <dt>EMAIL</dt>
+                            <dd><a href="mailto:gmn0508@gmail.com">gmn0508@gmail.com</a></dd>
+                        </dl>
+                    </div>
+                    <div class="profile_box">
+                        <dl>
+                            <dt>학력</dt>
+                            <dd>경남여자고등학교 졸업</dd>
+                            <dd>동아대학교 문예창작학과 졸업</dd>
+                            <dd>부산 그린컴퓨터<br>(UI/UX웹디자인 과정 이수)</dd>
+                            <dt>자격증</dt>
+                            <dd>정보처리기사</dd>
+                            <dd>사회조사분석사 2급</dd>
+                            <dd>운전면허 2종 보통</dd>
+                            <dt>깃허브 주소</dt>
+                            <dd><a href="https://github.com/kangmina91" target="_blank">github.com/kangmina91</a></dd>
+                            <dt>About me</dt>
+                            <dd>항상 발전하고 변화하는 웹 환경에 열려있는 자세로 사용자와 클라이언트의 니즈를 해결하는
+                                웹 퍼블리셔</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div class="f_tit">
+                <strong>Thank You!</strong>
+                <p> &#10024; 본 사이트는 비상업적 취업지원 포트폴리오 용도로,
+                    일부 내용 및 이미지 등은 그 출처가 따로 있으며 Chrome 브라우저에 최적화되어 있습니다.</p>
+            </div>
+        </section>
+    </div>
+    <aside class="cover">
+        <ul>
+            <li class="on"><a href="#introduction">Intro</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#training">Training</a></li>
+            <li><a href="#profile">Profile</a></li>
+        </ul>
+    </aside>
 
-                                                <li class="click"><a href="https://www.tescomwireless.com/"
-                                                                target="_blank">
-                                                                원본 사이트</a></li>
-                                                 <li class="click"><a
-                                                                href="http://gmn0508.dothome.co.kr/"
-                                                                target="_blank"> 그누보드 호스팅
-                                                                구현 페이지</a></li>
-                                                <li class="click"><a
-                                                                href="https://kangmina91.github.io/miniproject230714"
-                                                                target="_blank"> 깃허브
-                                                                구현 페이지</a></li>
-                                                <li class="click"><a
-                                                                href="https://github.com/kangmina91/miniproject230714"
-                                                                target="_blank"> 깃허브
-                                                                저장소 페이지</a></li>
-                                        </ul>
-                                        <ul>
-                                                <strong class="title"> 9주차 실습 과제 </strong>
-                                                <span> 사이트명 : 현대백화점 DUTY FREE </span>
-                                                <span> 특징 - 스와이퍼 다중 슬라이드 엮기, 탭 메뉴 내 슬라이드 / 반응형 </span>
-
-                                                <li class="click"><a href="https://www.hddfs.com/store/kr/dm/main.do"
-                                                                target="_blank">
-                                                                원본 사이트</a></li>
-                                                <li class="click"><a
-                                                                href="https://kangmina91.github.io/miniproject230707"
-                                                                target="_blank"> 깃허브
-                                                                구현 페이지</a></li>
-                                                <li class="click"><a
-                                                                href="https://github.com/kangmina91/miniproject230707"
-                                                                target="_blank"> 깃허브
-                                                                저장소 페이지</a></li>
-                                        </ul>
-                                        <ul>
-                                                <strong class="title"> 8주차 실습 과제 </strong>
-                                                <span>사이트명 : 일랜시아 </span>
-                                                <span> 특징 - 통 다단메뉴, 스와이퍼 슬라이드, 탭 메뉴, 서브페이지 </span>
-
-                                                <li class="click"><a
-                                                                href="https://elancia.nexon.com/main/page/nx.aspx?url=home/index"
-                                                                target="_blank">
-                                                                원본 사이트</a></li>
-                                                <li class="click"><a
-                                                                href="https://kangmina91.github.io/miniproject230630"
-                                                                target="_blank"> 깃허브
-                                                                구현 페이지</a></li>
-                                                <li class="click"><a
-                                                                href=" https://github.com/kangmina91/miniproject230630"
-                                                                target="_blank">
-                                                                깃허브
-                                                                저장소 페이지</a></li>
-                                        </ul>
-
-                                        <ul>
-                                                <strong class="title"> 7주차 실습 과제 </strong>
-                                                <span>사이트명 : 부천국제판타스틱 영화제 </span>
-                                                <span> 특징 - 스와이퍼 슬라이드 / 탭 메뉴 내 슬라이드 / 배너 슬라이드 / 뉴스 스크롤바 슬라이드 </span>
-
-                                                <li class="click"><a href="https://www.bifan.kr/" target="_blank">
-                                                                원본 사이트</a></li>
-                                                <li class="click"><a
-                                                                href=" https://kangmina91.github.io/miniproject230623"
-                                                                target="_blank"> 깃허브
-                                                                구현 페이지</a></li>
-                                                <li class="click"><a
-                                                                href="https://github.com/kangmina91/miniproject230623"
-                                                                target="_blank"> 깃허브
-                                                                저장소 페이지</a></li>
-                                        </ul>
-
-                                        <ul>
-                                                <strong class="title"> 6주차 실습 과제 </strong>
-                                                <span> 사이트명 : 베러먼데이 </span>
-                                                <span> 특징 - 슬릭 메인 슬라이드 / 제품 슬라이드 / 탭 메뉴 </span>
-
-                                                <li class="click"><a href="https://bettermonday.company/"
-                                                                target="_blank">
-                                                                원본 사이트</a></li>
-                                                <li class="click"><a
-                                                                href="https://kangmina91.github.io/miniproject230616"
-                                                                target="_blank"> 깃허브
-                                                                구현 페이지</a></li>
-                                                <li class="click"><a
-                                                                href=" https://github.com/kangmina91/miniproject230616"
-                                                                target="_blank">
-                                                                깃허브
-                                                                저장소 페이지</a></li>
-                                        </ul>
-
-                                        <ul>
-                                                <strong class="title"> 5주차 실습 과제 </strong>
-                                                <span>사이트명 : 스탠리 브랜드 공식 온라인 서비스몰 </span>
-                                                <span> 특징 - 다단 메뉴 / 슬릭 슬라이드 </span>
-
-                                                <li class="click"><a href="http://www.citycreek.co.kr/" target="_blank">
-                                                                원본 사이트</a></li>
-                                                <li class="click"><a
-                                                                href="https://kangmina91.github.io/miniproject230609"
-                                                                target="_blank"> 깃허브
-                                                                구현 페이지</a></li>
-                                                <li class="click"><a
-                                                                href="https://github.com/kangmina91/miniproject230609"
-                                                                target="_blank"> 깃허브
-                                                                저장소 페이지</a></li>
-                                        </ul>
-                                        <ul>
-                                                <strong class="title"> 4주차 실습 과제 </strong>
-                                                <span>사이트명 : 포스코 이앤씨 </span>
-                                                <span> 특징 - 통합 다단 메뉴 / 메인 동영상 /슬릭 슬라이드 / grid area로 이미지 붙이기 </span>
-
-                                                <li class="click"><a href="https://www.poscoenc.com:446/ko/index.aspx"
-                                                                target="_blank">
-                                                                원본 사이트</a></li>
-                                                <li class="click"><a
-                                                                href="https://kangmina91.github.io/miniproject230602"
-                                                                target="_blank"> 깃허브
-                                                                구현 페이지</a></li>
-                                                <li class="click"><a
-                                                                href="https://github.com/kangmina91/miniproject230602"
-                                                                target="_blank"> 깃허브
-                                                                저장소 페이지</a></li>
-                                        </ul>
-                                        <ul>
-                                                <strong class="title"> 3주차 실습 과제 </strong>
-                                                <span>사이트명 : 현대자동차 </span>
-                                                <span> 특징 - 개별 다단 메뉴 / 슬릭 슬라이드 / 슬라이드 데이터 / 슬라이드 재생 멈춤 버튼 / 이미지 커버 / 동영상
-                                                        박스 </span>
-
-                                                <li class="click"><a href=" https://www.hyundai.com/kr/ko/e"
-                                                                target="_blank">
-                                                                원본 사이트</a></li>
-                                                <li class="click"><a
-                                                                href="https://kangmina91.github.io/miniproject230526"
-                                                                target="_blank"> 깃허브
-                                                                구현 페이지</a></li>
-                                                <li class="click"><a
-                                                                href="https://github.com/kangmina91/miniproject230526"
-                                                                target="_blank"> 깃허브
-                                                                저장소 페이지</a></li>
-                                        </ul>
-                                        <ul>
-                                                <strong class="title"> 2주차 실습 과제 </strong>
-                                                <span>사이트명 : 메종 끌레르 </span>
-                                                <span> 특징 - 슬릭 슬라이드 </span>
-
-                                                <li class="click"><a href="https://www.maisonkorea.com/"
-                                                                target="_blank">
-                                                                원본 사이트</a></li>
-                                                <li class="click"><a
-                                                                href="https://kangmina91.github.io/miniproject230518"
-                                                                target="_blank"> 깃허브
-                                                                구현 페이지</a></li>
-                                                <li class="click"><a
-                                                                href="https://github.com/kangmina91/miniproject230518"
-                                                                target="_blank"> 깃허브
-                                                                저장소 페이지</a></li>
-                                        </ul>
-
-                                </div>
-                        </section>
-                </main>
-                <footer class="footer">
-
-                </footer>
-        </div>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <defs>
+            <filter id="goo">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="50" result="blur" />
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -10"
+                    result="goo" />
+                <feBlend in="SourceGraphic" in2="goo" />
+            </filter>
+        </defs>
+    </svg>
 </body>
-
 
 </html>

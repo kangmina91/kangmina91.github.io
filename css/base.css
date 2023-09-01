@@ -1,0 +1,71 @@
+.inner {
+    max-width: 1600px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.d_flex {
+    display: flex;
+    gap: 30px;
+}
+
+.d_flex>* {
+    flex: 1;
+    min-width: 0;
+}
+
+.section>h2 {
+    position: absolute;
+    left: 50%;
+    top: 124px;
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    z-index: 1200;
+    color: #000000;
+    font-style: italic;
+}
+
+.profile h2 {
+    color: #ffffff;
+
+}
+
+
+.section>h2::before {
+    content: "";
+    height: 25%;
+    border-top: 4px dotted white;
+    border-bottom: 4px dotted white;
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    left: -50%;
+    z-index: -999;
+    transform: translate(0, -50%);
+}
+
+.section>h2::after {
+    content: "";
+    height: 25%;
+    border-top: 4px dotted white;
+    border-bottom: 4px dotted white;
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    left: 100%;
+    z-index: -999;
+    transform: translate(0, -50%);
+}
+
+.training h2::before {
+    border-top: 4px dotted rgb(0, 0, 0);
+    border-bottom: 4px dotted rgb(0, 0, 0);
+}
+
+.training h2::after {
+    border-top: 4px dotted rgb(0, 0, 0);
+    border-bottom: 4px dotted rgb(0, 0, 0);
+}

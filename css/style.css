@@ -1,0 +1,880 @@
+/* * {
+    outline: 1px solid tomato;
+} */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+
+    padding: 0 80px;
+    height: 150px;
+    overflow: hidden;
+    transition: 0.4s;
+}
+
+
+.header .case {
+    position: relative;
+    left: -80px;
+    width: 150px;
+    height: 150px;
+
+}
+
+.header .case>* {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+.header .case .img_box {
+    border-radius: 50%;
+    overflow: hidden;
+    border: 20px solid transparent;
+}
+
+
+.header .case .logo_txt {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    color: #fff;
+}
+
+
+.header .case .logo_txt.on {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    color: #000;
+}
+
+.header .case .logo_txt span {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 50%;
+
+    transform-origin: center bottom;
+}
+
+/* 메뉴 버튼 */
+.util {
+    position: fixed;
+    top: 30px;
+    right: 40px;
+    width: 32px;
+    height: 24px;
+    cursor: pointer;
+    z-index: 1013;
+}
+
+.util button {
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.util>.menu.on::after {
+    background: #000;
+}
+
+.util>.menu.on::before {
+    background: #000;
+}
+
+.util>.menu.on span {
+    background: #000;
+}
+
+.util>.menu.on span::before {
+    background: #000;
+}
+
+.util>.menu.on span::after {
+    background: #000;
+}
+
+.util.on>.menu.on::after {
+    background: #fff;
+}
+
+.util.on>.menu.on::before {
+    background: #fff;
+}
+
+.util.on>.menu.on span {
+    background: #fff;
+}
+
+.util.on>.menu.on span::before {
+    background: #fff;
+}
+
+.util.on>.menu.on span::after {
+    background: #fff;
+}
+
+.util span {
+    font-size: 0;
+}
+
+.util button::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 4px;
+    background: #fff;
+    border-radius: 2px;
+}
+
+.util button::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0 0;
+    height: 4px;
+    background: #fff;
+    border-radius: 2px;
+
+}
+
+.util.on button::before,
+.util.on button::after {
+    display: none;
+
+}
+
+.util span::before {
+    content: "";
+    position: absolute;
+    inset: 50% 0 auto 0;
+    height: 4px;
+    background: #fff;
+    transform: translate(0, -50%);
+    border-radius: 2px;
+    transition: 0.5s;
+}
+
+.util.on span::before {
+    transform: translate(0, -50%) rotate(45deg);
+    background: #fff;
+}
+
+.util span::after {
+    content: "";
+    position: absolute;
+    inset: 50% 0 auto 0;
+    height: 4px;
+    background: #fff;
+    transform: translate(0, -50%);
+    border-radius: 2px;
+    transition: 0.5s;
+}
+
+.util.on span::after {
+    transform: translate(0, -50%) rotate(-45deg);
+    background: #fff;
+}
+
+
+
+/*
+
+인트로 섹션
+
+*/
+
+.intro {
+    position: relative;
+    background: #000;
+}
+
+.intro .box_cover {
+    position: absolute;
+    inset: 0 0 0 0;
+
+    display: flex;
+    height: 100vh;
+    z-index: 999;
+}
+
+.intro .box_cover .box_left {
+    width: 50%;
+    height: 100vh;
+    background: #000000;
+    transform: translateX(0);
+    transition: 2s .5s;
+    border-right: 1px solid #fff;
+}
+
+.intro .box_cover .box_right {
+    width: 50%;
+    height: 100vh;
+    background: #000000;
+    transform: translateX(0);
+    transition: 2s .5s;
+    border-left: 1px solid #fff;
+}
+
+.intro .box_cover.on {
+    z-index: 1024;
+}
+
+.intro .box_cover.on.end {
+    z-index: 1010;
+}
+
+.intro .box_cover.on .box_left {
+    transform: translateX(-100%);
+}
+
+.intro .box_cover.on .box_right {
+    transform: translateX(100%);
+}
+
+
+.intro .slogan {
+    position: absolute;
+    inset: 50% auto auto 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    line-height: 1;
+}
+
+.intro .slogan strong {
+    display: block;
+    font-size: 36px;
+    font-weight: 100;
+    margin: 0 0 24px 0;
+
+    transform: translate(-300px, 0);
+    opacity: 0;
+}
+
+.intro.on .slogan strong {
+    transform: translate(0, 0);
+    opacity: 1;
+    transition: 1s 1s;
+}
+
+
+.intro .slogan h2 {
+    margin: 0 auto;
+}
+
+.intro .slogan h2 span {
+    display: inline-block;
+    width: 50px;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+/* .intro .slogan h2 span:nth-child(odd) {
+    background: #fff;
+    color: #333;
+    border-radius: 50%;
+} */
+
+
+
+.intro .wheel a {
+    position: absolute;
+    inset: auto auto 80px 50%;
+    transform: translate(-50%, 0);
+    width: 32px;
+    height: 46px;
+    border-radius: 16px;
+    border: 2px solid #fff;
+
+    font-size: 0;
+}
+
+.intro .wheel a::after {
+    content: "";
+    position: absolute;
+    inset: 8px auto auto 50%;
+    transform: translate(-50%, 0);
+
+    width: 3px;
+    height: 10px;
+    background: #fff;
+    border-radius: 2px;
+    animation: wheel 0.5s infinite linear;
+}
+
+@keyframes wheel {
+    0% {
+        transform: translate(-50%, 0);
+    }
+
+    50% {
+        transform: translate(-50%, 3px);
+    }
+
+    100% {
+        transform: translate(-50%, 0);
+    }
+}
+
+
+
+
+/*  
+
+메인 포트폴리오
+
+*/
+
+
+.portfolio {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio .num {
+    position: absolute;
+    right: 100px;
+    bottom: -80px;
+    font-size: 360px;
+    font-weight: 900;
+    font-style: italic;
+    color: #ddd;
+
+}
+
+
+.portfolio .s_pagenation {
+    position: absolute;
+    z-index: 1002;
+    bottom: 32px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.portfolio .s_pagenation ul {
+    display: flex;
+    gap: 12px;
+}
+
+
+.portfolio .s_pagenation ul li.on a {
+    background: #000;
+}
+
+.portfolio .s_pagenation a {
+    display: block;
+
+    background: #ddd;
+    padding: 6px;
+    font-size: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+
+.portfolio .itm .bg_cover {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    z-index: -5;
+}
+
+.portfolio .itm01 .bg_cover {
+    background: linear-gradient(to right, #6cd2cd 50%, transparent 50%)
+}
+
+.portfolio .itm02 .bg_cover {
+    background: linear-gradient(to right, #007EDE 50%, transparent 50%)
+}
+
+.portfolio .itm03 .bg_cover {
+    background: linear-gradient(to right, #9e826f 50%, transparent 50%)
+}
+
+.portfolio .itm04 .bg_cover {
+    background: linear-gradient(to right, #74B567 50%, transparent 50%)
+}
+
+.portfolio .itm05 .bg_cover {
+    background: linear-gradient(to right, #760023 50%, transparent 50%)
+}
+
+.portfolio .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+}
+
+.portfolio .img_box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.portfolio .img_box .port_pc_img {
+    width: 720px;
+    height: 480px;
+    overflow: hidden;
+    border: 10px solid #fff;
+    border-radius: 24px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
+}
+
+.portfolio .img_box .port_pc_img img {
+    transform: translate(0, 0);
+    transition: 5s;
+}
+
+.portfolio .itm01 .img_box .port_pc_img:hover img {
+    transform: translate(0, -64%);
+}
+
+.portfolio .itm01 .img_box .port_m_img:hover img {
+    transform: translate(0, -81%);
+}
+
+.portfolio .itm02 .img_box .port_pc_img:hover img {
+    transform: translate(0, -68%);
+}
+
+.portfolio .itm02 .img_box .port_m_img:hover img {
+    transform: translate(0, -79%);
+}
+
+.portfolio .itm03 .img_box .port_pc_img:hover img {
+    transform: translate(0, -81%);
+}
+
+.portfolio .itm03 .img_box .port_m_img:hover img {
+    transform: translate(0, -87%);
+}
+
+.portfolio .itm04 .img_box .port_pc_img:hover img {
+    transform: translate(0, -86%);
+}
+
+.portfolio .itm04 .img_box .port_m_img:hover img {
+    transform: translate(0, -88%);
+}
+
+.portfolio .itm05 .img_box .port_pc_img:hover img {
+    transform: translate(0, -73%);
+}
+
+.portfolio .itm05 .img_box .port_m_img:hover img {
+    transform: translate(0, -89%);
+}
+
+
+.portfolio .img_box .port_m_img {
+    width: 240px;
+    height: 480px;
+    overflow: hidden;
+    border: 10px solid #fff;
+    border-radius: 24px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
+}
+
+.portfolio .img_box .port_m_img img {
+    transform: translate(0, 0);
+    transition: 10s;
+}
+
+
+
+.portfolio .txt_box .des {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    align-items: flex-start;
+}
+
+.portfolio .txt_box .des {
+    margin: 0 0 12px 0;
+}
+
+.portfolio .txt_box .tit h3 {
+    font-weight: 700;
+    font-size: 36px;
+    margin: 8px 0 0 0;
+}
+
+.portfolio .txt_box .tit h3 img {
+    width: 32px;
+    height: 100%;
+    vertical-align: auto;
+}
+
+.portfolio .txt_box .tit p {
+    font-size: 14px;
+    margin: 0 0 40px 0;
+}
+
+.portfolio .txt_box strong {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+
+.portfolio .txt_box p {
+    margin: 0 0 20px 0;
+}
+
+.portfolio .itm .color {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: flex-start;
+    gap: 32px;
+}
+
+
+.portfolio .itm .color ul {
+    display: flex;
+    gap: 40px;
+}
+
+.portfolio .itm .color ul li {
+    position: relative;
+    display: table-cell;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.portfolio .itm .color ul li span {
+    position: absolute;
+    height: 20px;
+    left: 50%;
+    bottom: -30px;
+    transform: translate(-50%, 0);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.portfolio .itm .color strong {
+    margin: 0 0 20px 0;
+}
+
+.portfolio .itm01 .color ul li:nth-child(1) {
+    background: #6cd2cd;
+}
+
+.portfolio .itm01 .color ul li:nth-child(2) {
+    background: #fa6e91;
+}
+
+.portfolio .itm01 .color ul li:nth-child(3) {
+    background: #000000;
+}
+
+.portfolio .itm01 .color ul li:nth-child(4) {
+    background: #ffffff;
+    border: 1px solid #000;
+}
+
+.portfolio .itm02 .color ul li:nth-child(1) {
+    background: #007EDE;
+}
+
+.portfolio .itm02 .color ul li:nth-child(2) {
+    background: #ffffff;
+    border: 1px solid #000;
+}
+
+.portfolio .itm03 .color ul li:nth-child(1) {
+    background: #9e826f;
+}
+
+.portfolio .itm03 .color ul li:nth-child(2) {
+    background: #000000;
+}
+
+.portfolio .itm03 .color ul li:nth-child(3) {
+    background: #ffffff;
+    border: 1px solid #000;
+}
+
+.portfolio .itm04 .color ul li:nth-child(1) {
+    background: #74B567;
+}
+
+.portfolio .itm04 .color ul li:nth-child(2) {
+    background: #ffffff;
+    border: 1px solid #000;
+}
+
+.portfolio .itm05 .color ul li:nth-child(1) {
+    background: #760023;
+}
+
+.portfolio .itm05 .color ul li:nth-child(2) {
+    background: #ffffff;
+    border: 1px solid #000;
+}
+
+
+.portfolio .btn_box {
+    display: flex;
+    gap: 20px;
+}
+
+.portfolio .btn_box .btn {
+    position: relative;
+    padding: 12px 32px;
+    color: #000;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    border: 1px solid #000;
+    transition: 0.5s;
+    box-shadow: 5px 5px 0 #ddd;
+    margin: 0 0 40px 0;
+}
+
+.portfolio .btn_box .btn::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 0;
+    z-index: -1;
+    background-color: #000;
+    transition: 0.5s;
+}
+
+.portfolio .btn_box .btn:hover {
+    color: #fff;
+}
+
+.portfolio .btn_box .btn:hover::before {
+    left: 0;
+    right: auto;
+    width: 100%;
+}
+
+
+/* 
+
+
+실습 모음 섹션
+
+*/
+
+
+.training {
+    position: relative;
+}
+
+.training .content {
+    width: 900px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin: 120px auto 0 auto;
+}
+
+.training .content .itm_box {}
+
+.training .content .itm_box .tr_img {
+    width: 400px;
+    height: 260px;
+    border: 8px solid #fff;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
+    margin: 0 auto;
+
+}
+
+.training .content .itm_box a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0 0 12px 0;
+
+}
+
+.training .content .itm_box strong {
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* 
+
+프로필 섹션
+
+*/
+
+.profile {
+    position: relative;
+    background: #000;
+
+}
+
+.profile .content {}
+
+.profile .content .info {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 20px;
+    outline: 6px dotted #fff;
+    border: 6px dotted #000;
+    /* box-shadow: 0 0 30px rgba(255, 255, 255, 0.9); */
+    border-radius: 24px;
+    background: #fff;
+}
+
+.profile .content .info .contact_box {
+    max-width: 300px;
+    height: 400px;
+    padding: 8px;
+    text-align: center;
+}
+
+.profile .content .info .contact_box figure {
+    margin: 0 0 16px 0;
+}
+
+.profile .content .info .contact_box figure img {
+    border-radius: 24px;
+}
+
+.profile .content .info dt {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+}
+
+.profile .content .info dd {
+    display: block;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0 0 16px 0;
+}
+
+
+
+
+
+.profile .content .info .profile_box {
+    width: 600px;
+    height: 400px;
+    padding: 8px;
+    border: 3px solid #fff;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+
+
+.profile .f_tit {
+    position: absolute;
+    left: 25%;
+    bottom: 40px;
+    /* transform: translate(50%, 50%); */
+    text-align: center;
+}
+
+
+.profile .f_tit strong {
+    display: block;
+    font-size: 80px;
+    font-weight: 600;
+    color: #F1C164;
+    text-shadow: 5px 5px #2D63A7;
+    margin: 0 0 36px 0;
+}
+
+.profile .f_tit p {
+    color: #fff;
+}
+
+
+
+
+
+.m_link {
+    position: fixed;
+    inset: 50% 25px auto auto;
+    z-index: 1011;
+    transform: translate(0, -50%);
+}
+
+.m_link ul li {
+    margin: 0 0 16px 0;
+}
+
+.m_link ul li a {
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    font-size: 0;
+    background: #ffffff;
+    border: 2px solid #ddd;
+}
+
+.m_link ul li.on a {
+    background: #000;
+}
+
+
+/* 메뉴 커버 */
+.cover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1011;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.cover.on {
+    height: 100vh;
+    visibility: visible;
+    opacity: 1;
+}
+
+/* 커버 안 메뉴 */
+.cover>ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.cover>ul a {
+    display: block;
+    line-height: 1.4;
+    color: #fff;
+    text-align: center;
+    font-size: 40px;
+}
