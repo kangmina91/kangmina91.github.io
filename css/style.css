@@ -773,10 +773,6 @@
     margin: 0 0 16px 0;
 }
 
-
-
-
-
 .profile .content .info .profile_box {
     width: 600px;
     height: 400px;
@@ -786,13 +782,11 @@
     overflow: hidden;
 }
 
-
-
 .profile .f_tit {
     position: absolute;
-    left: 25%;
+    right: 50%;
     bottom: 40px;
-    /* transform: translate(50%, 50%); */
+    transform: translate(50%, 0);
     text-align: center;
 }
 
@@ -812,6 +806,7 @@
 
 
 
+/*  aside 풀페이지 메뉴 도트  */
 
 
 .m_link {
