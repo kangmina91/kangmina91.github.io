@@ -5,51 +5,61 @@ const SECTION = document.querySelectorAll('.section');
 const COVER_BTN = document.querySelector('.util');
 const COVER = document.querySelector('.cover');
 const COVER_A = document.querySelectorAll('.cover>ul a');
-
+const SLOGAN = document.querySelector('.intro .slogan');
 const BOX_COVER = document.querySelector('.box_cover');
-
 
 
 const SLIDE = document.querySelector('#slide_move');
 const SLIDE_ITM = document.querySelectorAll('#slide_move .num');
 const S_PAGENATION = document.querySelectorAll('.s_pagenation ul li');
 
-const H_CASE = document.querySelector('.logo_txt');
-const M_CASE = document.querySelector('.util .menu');
-
+let NUM = true;
 
 new fullpage('#main', {
     anchors: ['introduction', 'portfolio', 'training', 'profile'],
     css3: false,
     scrollOverflow: false, //line-height: 1에서 font-size가 box를 초과할 때 스크롤이 생기는 초기값을 false로 설정함.
-
-
+    navigation: false,
+    // responsiveWidth: 768,
+    //responsiveSlides: true,
     licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
 
     controlArrows: false, //슬라이드 화살표 숨김
     loopHorizontal: false, //슬라이드 반복 멈춤
 
-
     afterLoad: function (origin, destination, direction, trigger) {
-        // console.log(destination.index, direction);
         ASIDE.forEach(it => it.classList.remove('on'));
         ASIDE[destination.index].classList.add('on');
         SECTION.forEach(it => it.classList.remove('on'));
         SECTION[destination.index].classList.add('on');
 
+
+
         if (destination.index == 0) {
-            DDDD();
-        }
-        if (destination.index == 0) {
+
             BOX_COVER.classList.add('on');
-            setTimeout(function () {
-                BOX_COVER.classList.add('end');
-            }, 2000);
+            UFO();
+
+            if (NUM == false) {
+                DDDD();
+                SLOGAN.classList.add('on');
+            } else {
+                setTimeout(function () {
+                    DDDD();
+                    SLOGAN.classList.add('on');
+                }, 7000);
+                NUM = false;
+            }
+
+
+            if (BOX_COVER.classList.contains('on'))
+                setTimeout(function () {
+                    BOX_COVER.classList.add('end');
+                }, 9000);
 
 
         } else {
-
-
+            SLOGAN.classList.remove('on');
         }
 
 
@@ -69,15 +79,7 @@ new fullpage('#main', {
     },
     onLeave(origin, destination, direction, trigger) {
 
-        if (destination.index == 1) {
-            M_CASE.classList.add('on');
-        } else if (destination.index == 2) {
-            M_CASE.classList.add('on');
-            H_CASE.classList.add('on');
-        } else {
-            M_CASE.classList.remove('on');
-            H_CASE.classList.remove('on');
-        }
+
     },
     afterSlideLoad: function (section, origin, destination, direction, trigger) {
 
@@ -139,10 +141,12 @@ function DDDD() {
         it.innerHTML = t;
         const chars = it.querySelectorAll('span');
 
+
         gsap.from(chars, {
             yPercent: 200,
             autoAlpha: 0,
-            duration: 3,
+            delay: 1,
+            duration: 2,
 
             ease: "bounce",
             stagger: {
@@ -168,248 +172,51 @@ const LOGO_SPAN = LOGO_T.querySelectorAll('span');
 
 LOGO_SPAN.forEach((it, idx) => {
     it.style.cssText = `
-    font-size: 20px;
+    font-size: 12px;
     font-weight: 500;
     transform: translate(-50%, 0) rotate(${360 / LOGO_SPAN.length * idx}deg);
     `;
+
+    if (window.innerWidth < '720') {
+        it.style.cssText = `
+        font-size: 10px;
+        font-weight: 500;
+        transform: translate(-50%, 0) rotate(${360 / LOGO_SPAN.length * idx}deg);
+        `;
+
+    }
 })
 
 gsap.to(LOGO_T, {
 
     rotate: 360,
-    duration: 10,
+    duration: 15,
     repeat: -1,
     ease: 'linear',
 })
 
+function UFO() {
 
-// 별 파티클
-particlesJS('introduction',
-    {
-        "particles": {
-            "number": {
-                "value": 100,
-                "density": {
-                    "enable": false,
-                    "value_area": 800
-                }
-            },
-            "color": {
-                "value": "#ffffff"
-            },
-            "shape": {
-                "type": "star",
-                "stroke": {
-                    "width": 0,
-                    "color": "#000000"
-                },
-                "polygon": {
-                    "nb_sides": 5
-                },
-                "image": {
-                    "src": "http://wiki.lexisnexis.com/academic/images/f/fb/Itunes_podcast_icon_300.jpg",
-                    "width": 100,
-                    "height": 100
-                }
-            },
-            "opacity": {
-                "value": 0.5,
-                "random": false,
-                "anim": {
-                    "enable": false,
-                    "speed": 4,
-                    "opacity_min": 0.1,
-                    "sync": false
-                }
-            },
-            "size": {
-                "value": 4,
-                "random": true,
-                "anim": {
-                    "enable": false,
-                    "speed": 40,
-                    "size_min": 0.1,
-                    "sync": false
-                }
-            },
-            "line_linked": {
-                "enable": false,
-                "distance": 150,
-                "color": "#ffffff",
-                "opacity": 0.4,
-                "width": 1
-            },
-            "move": {
-                "enable": true,
-                "speed": 6,
-                "direction": "left",
-                "random": false,
-                "straight": true,
-                "out_mode": "out",
-                "bounce": false,
-                "attract": {
-                    "enable": false,
-                    "rotateX": 600,
-                    "rotateY": 1200
-                }
+    if (window.innerWidth < '540') {
+        gsap.to(".ufo_box", {
+            duration: 8,
+            motionPath: {
+                path: "#pathM",
+                align: "#pathM",
+                autoRotate: false,
+                alignOrigin: [0.5, 0.5]
             }
-        },
-        "interactivity": {
-            "detect_on": "canvas",
-            "events": {
-                "onhover": {
-                    "enable": false,
-                    "mode": "grab"
-                },
-                "onclick": {
-                    "enable": true,
-                    "mode": "repulse"
-                },
-                "resize": true
-            },
-            "modes": {
-                "grab": {
-                    "distance": 200,
-                    "line_linked": {
-                        "opacity": 1
-                    }
-                },
-                "bubble": {
-                    "distance": 400,
-                    "size": 40,
-                    "duration": 2,
-                    "opacity": 8,
-                    "speed": 3
-                },
-                "repulse": {
-                    "distance": 200,
-                    "duration": 0.4
-                },
-                "push": {
-                    "particles_nb": 4
-                },
-                "remove": {
-                    "particles_nb": 2
-                }
+        });
+    } else {
+        gsap.to(".ufo_box", {
+            duration: 8,
+            motionPath: {
+                path: "#path",
+                align: "#path",
+                autoRotate: false,
+                alignOrigin: [0.5, 0.5]
             }
-        },
-        "retina_detect": true
+        });
     }
-);
 
-
-
-
-// 별 파티클
-particlesJS('profiles',
-    {
-        "particles": {
-            "number": {
-                "value": 100,
-                "density": {
-                    "enable": false,
-                    "value_area": 800
-                }
-            },
-            "color": {
-                "value": "#ffffff"
-            },
-            "shape": {
-                "type": "star",
-                "stroke": {
-                    "width": 0,
-                    "color": "#000000"
-                },
-                "polygon": {
-                    "nb_sides": 5
-                },
-                "image": {
-                    "src": "http://wiki.lexisnexis.com/academic/images/f/fb/Itunes_podcast_icon_300.jpg",
-                    "width": 100,
-                    "height": 100
-                }
-            },
-            "opacity": {
-                "value": 0.5,
-                "random": false,
-                "anim": {
-                    "enable": false,
-                    "speed": 4,
-                    "opacity_min": 0.1,
-                    "sync": false
-                }
-            },
-            "size": {
-                "value": 4,
-                "random": true,
-                "anim": {
-                    "enable": false,
-                    "speed": 40,
-                    "size_min": 0.1,
-                    "sync": false
-                }
-            },
-            "line_linked": {
-                "enable": false,
-                "distance": 150,
-                "color": "#ffffff",
-                "opacity": 0.4,
-                "width": 1
-            },
-            "move": {
-                "enable": true,
-                "speed": 6,
-                "direction": "left",
-                "random": false,
-                "straight": true,
-                "out_mode": "out",
-                "bounce": false,
-                "attract": {
-                    "enable": false,
-                    "rotateX": 600,
-                    "rotateY": 1200
-                }
-            }
-        },
-        "interactivity": {
-            "detect_on": "canvas",
-            "events": {
-                "onhover": {
-                    "enable": false,
-                    "mode": "grab"
-                },
-                "onclick": {
-                    "enable": true,
-                    "mode": "repulse"
-                },
-                "resize": true
-            },
-            "modes": {
-                "grab": {
-                    "distance": 200,
-                    "line_linked": {
-                        "opacity": 1
-                    }
-                },
-                "bubble": {
-                    "distance": 400,
-                    "size": 40,
-                    "duration": 2,
-                    "opacity": 8,
-                    "speed": 3
-                },
-                "repulse": {
-                    "distance": 200,
-                    "duration": 0.4
-                },
-                "push": {
-                    "particles_nb": 4
-                },
-                "remove": {
-                    "particles_nb": 2
-                }
-            }
-        },
-        "retina_detect": true
-    }
-);
+}

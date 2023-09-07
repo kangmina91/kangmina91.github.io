@@ -16,25 +16,26 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
-    <script src="./js/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/MotionPathPlugin.min.js"></script>
 
-    <script src="./js/custom.js" defer></script>
+    <script src="./js/custom.js?ver=1.1" defer></script>
 
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/fullpage.min.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.css?ver=1.1">
 
 </head>
 
 <body>
+
     <header class="header">
         <a href="/">
             <div class="case">
                 <figure class="img_box">
                     <img src="./images/logo.png" alt="">
                 </figure>
-                <p class="logo_txt"> &nbsp; 2023 mina's portfolio </p>
+                <p class="logo_txt"> &nbsp; 2023 KANG MINA's UI/UX WEB DESIGN PORTFOLIO</p>
             </div>
         </a>
     </header>
@@ -51,16 +52,34 @@
             <li><a href="#profile">profile</a></li>
         </ul>
     </aside>
+    <div class="bg"></div>
     <div id="main" role="main">
         <section class="section intro" id="introduction">
-            <div class="box_cover">
-                <div class="box_left"></div>
-                <div class="box_right"></div>
+
+            <div class="box_cover" aria-hidden="true">
+                <div class="ufo_box" aria-hidden="true">
+                    <div class="ufo" aria-hidden="true"></div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1010" viewBox="0 0 1800 1010"
+                        fill="none">
+                        <path id="path"
+                            d="M1 1009C237.8 599.4 454.333 371.667 533 809L558 952L1183 145L1479 129L2135 -81"
+                            stroke="black" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="390" height="731" viewBox="0 0 390 731" fill="none">
+                        <path id="pathM"
+                            d="M-4.5 730.5C220.7 568.5 312.667 542.333 330.5 549.5L69 384L246 300.5L-38.5 279.5L83 1H500.5"
+                            stroke="black" />
+                    </svg>
+                </div>
+                <div class="box_left" aria-hidden="true"></div>
+                <div class="box_right" aria-hidden="true"></div>
             </div>
             <div class="inner slogan">
                 <strong>UI/UX Web Designer</strong>
                 <h2>Kang mina's&nbsp;2023&nbsp;Portfolio</h2>
             </div>
+            <div class="star" aria-hidden="true"></div>
+            <div class="ufo_black" aria-hidden="true"></div>
             <div class="wheel" aria-hidden="true">
                 <a href="#vision">wheel</a>
             </div>
@@ -77,15 +96,17 @@
                 </ul>
             </div>
 
-            <div class="slide itm itm02">
+            <div class="itm itm01 slide">
                 <div class="bg_cover"></div>
                 <div class="inner content">
                     <div class="img_box">
                         <figure class="port_pc_img">
-                            <img src="./images/portfolio02_pc.png" alt="">
+                            <a href="https://kangmina91.github.io/miniproject230714/" target="_blank"> <img
+                                    src="./images/portfolio02_pc.png" alt=""></a>
                         </figure>
                         <figure class="port_m_img">
-                            <img src="./images/portfolio02_m.png" alt="">
+                            <a href="https://kangmina91.github.io/miniproject230714/" target="_blank"> <img
+                                    src="./images/portfolio02_m.png" alt=""></a>
                         </figure>
                     </div>
                     <div class="txt_box">
@@ -101,7 +122,8 @@
                         </div>
                         <div class="des">
                             <strong>INFO</strong>
-                            <p>무선통신 측정 분야 기술의 전문기업인 테스콤의 혁신적인 느낌을 블루 계열의 메인 컬러를 통해 표현하였으며, 메인 비주얼 전면을 가득채우는 타이포그라피를 통하여
+                            <p class="des_txt">무선통신 측정 분야 기술의 전문기업인 테스콤의 혁신적인 느낌을 블루 컬러를 통해 표현하였으며, 메인 비주얼을
+                                가득채우는 타이포그라피를 통하여
                                 테스콤만의 신뢰성을 표현하였습니다.</p>
                             <strong>TYPE</strong>
                             <p>Responsive Web</p>
@@ -116,14 +138,14 @@
                             <strong>COLOR</strong>
                             <ul>
                                 <li><span>#007EDE</span></li>
-                                <li><span>#ffffff</span></li>
+                                <li><span>#FFFFFF</span></li>
                             </ul>
 
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="slide itm itm03">
+            <div class="itm itm02 slide">
                 <div class="bg_cover"></div>
                 <div class="inner content">
                     <div class="img_box">
@@ -137,7 +159,7 @@
                     <div class="txt_box">
                         <div class="tit">
                             <h3><img src="./images/p03_logo.png" alt=""> 영등포자이 디그니티</h3>
-                            <p>Xi</p>
+                            <p>Yeongdeungpo Xi Dignity</p>
                         </div>
                         <div class="btn_box">
                             <a href="https://kangmina91.github.io/miniproject230728/" class="btn" target="_blank">WORK
@@ -147,9 +169,8 @@
                         </div>
                         <div class="des">
                             <strong>INFO</strong>
-                            <p>고급 아파트브랜드인 자이의 가치와 전망을 블랙&amp;화이트 , 그리고 골드 컬러로 고급스럽게 담아냈으며, Fullapge를 통해 아파트에 대한 여러 주요한
-                                정보를
-                                시각적으로 잘 받아들일 수 있도록 타이포그라피를 활용하였습니다.</p>
+                            <p class="des_txt">고급 아파트브랜드인 자이의 가치를 블랙&amp;화이트 , 그리고 골드 컬러로 고급스럽게 담아냈으며, Fullapge를 통해
+                                해당 단지와 관련된 주요 정보를 잘 받아들일 수 있도록 타이포그라피를 활용하였습니다.</p>
                             <strong>TYPE</strong>
                             <p>Responsive Web</p>
                             <strong>FONT</strong>
@@ -162,16 +183,16 @@
                         <div class="color">
                             <strong>COLOR</strong>
                             <ul>
-                                <li><span>#9e826f</span></li>
+                                <li><span>#9E826F</span></li>
                                 <li><span>#000000</span></li>
-                                <li><span>#ffffff</span></li>
+                                <li><span>#FFFFFF</span></li>
                             </ul>
 
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="slide itm itm04">
+            <div class="itm itm03 slide">
                 <div class="bg_cover"></div>
                 <div class="inner content">
                     <div class="img_box">
@@ -194,7 +215,8 @@
                         </div>
                         <div class="des">
                             <strong>INFO</strong>
-                            <p>연구개발 제약기업인 부광약품의 지성과 신뢰성을 Fullpage를 통해 깔끔하게 표현하였으며, 그린 컬러를 활용하여 긍정적이고 미래 지향적인 회사의 비전을
+                            <p class="des_txt">연구개발 제약기업인 부광약품의 지성과 신뢰성을 Fullpage를 통해 깔끔하게 표현하였으며, 그린 컬러를 활용하여 긍정적이고 미래
+                                지향적인 회사의 비전을
                                 표현하였습니다.
                             </p>
                             <strong>TYPE</strong>
@@ -202,7 +224,7 @@
                             <strong>FONT</strong>
                             <p>Pretendard</p>
                             <strong>PROCESS</strong>
-                            <p>Html5 , Css3 , Sass(scss), Fullpage, Jquery , Swiper Slide</p>
+                            <p>Html5 , Css3 , Sass(scss), Fullpage, Jquery , Swiper</p>
                             <strong>WORK</strong>
                             <p>개인작업 100%</p>
                         </div>
@@ -210,14 +232,14 @@
                             <strong>COLOR</strong>
                             <ul>
                                 <li><span>#74B567</span></li>
-                                <li><span>#ffffff</span></li>
+                                <li><span>#FFFFFF</span></li>
                             </ul>
 
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="slide itm itm05">
+            <div class="itm itm04 slide">
                 <div class="bg_cover"></div>
                 <div class="inner content">
                     <div class="img_box">
@@ -244,13 +266,14 @@
                         </div>
                         <div class="des">
                             <strong>INFO</strong>
-                            <p>고려대학교의 역동적인 상을 메인 비주얼 동영상으로 담아냈으며, 레드 와인 메인 컬러로 진중하고도 유서깊은 학교의 느낌을 살렸습니다. </p>
+                            <p class="des_txt">고려대학교의 역동적인 상을 메인 비주얼 동영상으로 담아냈으며, 진중한 와인 컬러로 유서깊은 학교의 느낌을 살렸습니다.
+                            </p>
                             <strong>TYPE</strong>
                             <p>Responsive Web</p>
                             <strong>FONT</strong>
                             <p>Pretendard</p>
                             <strong>PROCESS</strong>
-                            <p>Html5 , Css3 , Sass(scss), Jquery , YTPplayer, Swiper Slide</p>
+                            <p>Html5 , Css3 , Sass(scss), Jquery , YTPplayer, Swiper</p>
                             <strong>WORK</strong>
                             <p>개인작업 100%</p>
                         </div>
@@ -258,14 +281,14 @@
                             <strong>COLOR</strong>
                             <ul>
                                 <li><span>#760023</span></li>
-                                <li><span>#ffffff</span></li>
+                                <li><span>#FFFFFF</span></li>
                             </ul>
 
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="slide itm itm01">
+            <div class="itm itm05 slide">
                 <div class="bg_cover"></div>
                 <div class="inner content">
                     <div class="img_box">
@@ -288,24 +311,24 @@
                         </div>
                         <div class="des">
                             <strong>INFO</strong>
-                            <p>개성있는 영화들이 많이 상영되는 부천 국제 판타스틱 영화제의 메인 컬러로 블랙&amp;화이트랑 톡톡 튀는 파스텔 톤을 사용하였습니다. 또한 다양한 슬라이드
-                                스타일을 적용하여 메인 페이지의 효율성을 높였습니다.</p>
+                            <p class="des_txt">개성넘치는 영화들이 상영되는 부천 국제 판타스틱 영화제의 메인 컬러로 블랙과 함께 톡톡 튀는 파스텔 컬러를
+                                사용하였습니다. 또한 다양한 슬라이드
+                                스타일을 적용하여 페이지의 효율성을 높였습니다.</p>
                             <strong>TYPE</strong>
                             <p>Responsive Web</p>
                             <strong>FONT</strong>
                             <p>Noto Sans Korean</p>
                             <strong>PROCESS</strong>
-                            <p>Html5 , Css3 , Jquery , Swiper Slide</p>
+                            <p>Html5 , Css3 , Jquery , Swiper</p>
                             <strong>WORK</strong>
                             <p>개인작업 100%</p>
                         </div>
                         <div class="color">
                             <strong>COLOR</strong>
                             <ul>
-                                <li><span>#6cd2cd</span></li>
-                                <li><span>#fa6e91</span></li>
+                                <li><span>#6CD2CD</span></li>
+                                <li><span>#FA6E91</span></li>
                                 <li><span>#000000</span></li>
-                                <li><span>#ffffff</span></li>
                             </ul>
 
                         </div>
@@ -315,7 +338,7 @@
 
         </section>
         <section class="section training">
-            <h2>TRAINING</h2>
+
             <div class="inner content">
                 <div class="itm itm01">
                     <div class="itm_box">
@@ -365,10 +388,34 @@
                         </figcaption>
                     </div>
                 </div>
+                <div class="itm itm05">
+                    <div class="itm_box">
+                        <a href="https://kangmina91.github.io/galggumi/" target="_blank">
+                            <figure class="tr_img">
+                                <img src="./images/traning04.PNG" alt="">
+                            </figure>
+                        </a>
+                        <figcaption>
+                            <strong>깔끔이청소</strong>
+                        </figcaption>
+                    </div>
+                </div>
+                <div class="itm itm06">
+                    <div class="itm_box">
+                        <a href="https://kangmina91.github.io/galggumi/" target="_blank">
+                            <figure class="tr_img">
+                                <img src="./images/traning04.PNG" alt="">
+                            </figure>
+                        </a>
+                        <figcaption>
+                            <strong>깔끔이청소</strong>
+                        </figcaption>
+                    </div>
+                </div>
             </div>
         </section>
         <section class="section profile" id="profiles">
-            <h2>PROFILE</h2>
+
             <div class="inner content">
                 <div class="info">
                     <div class="contact_box">
@@ -389,7 +436,7 @@
                             <dt>학력</dt>
                             <dd>경남여자고등학교 졸업</dd>
                             <dd>동아대학교 문예창작학과 졸업</dd>
-                            <dd>부산 그린컴퓨터<br>(UI/UX웹디자인 과정 이수)</dd>
+                            <dd>부산 그린컴퓨터아카데미 UI/UX웹디자인 과정 이수 </dd>
                             <dt>자격증</dt>
                             <dd>정보처리기사</dd>
                             <dd>사회조사분석사 2급</dd>
@@ -404,11 +451,16 @@
                 </div>
             </div>
             <div class="f_tit">
-                <strong>Thank You!</strong>
+
                 <p> &#10024; 본 사이트는 비상업적 취업지원 포트폴리오 용도로,
                     일부 내용 및 이미지 등은 그 출처가 따로 있으며 Chrome 브라우저에 최적화되어 있습니다.</p>
             </div>
         </section>
+    </div>
+    <div class="to_top">
+        <a href="#introduction"><span class="material-symbols-outlined">
+                arrow_upward
+            </span></a>
     </div>
     <aside class="cover">
         <ul>
@@ -419,16 +471,7 @@
         </ul>
     </aside>
 
-    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
-        <defs>
-            <filter id="goo">
-                <feGaussianBlur in="SourceGraphic" stdDeviation="50" result="blur" />
-                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -10"
-                    result="goo" />
-                <feBlend in="SourceGraphic" in2="goo" />
-            </filter>
-        </defs>
-    </svg>
+
 </body>
 
 </html>

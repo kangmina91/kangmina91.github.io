@@ -1,7 +1,3 @@
-/* * {
-    outline: 1px solid tomato;
-} */
-
 .header {
     position: fixed;
     top: 0;
@@ -10,7 +6,7 @@
     z-index: 999;
 
     padding: 0 80px;
-    height: 150px;
+    height: 200px;
     overflow: hidden;
     transition: 0.4s;
 }
@@ -18,7 +14,8 @@
 
 .header .case {
     position: relative;
-    left: -80px;
+    left: -60px;
+    top: 20px;
     width: 150px;
     height: 150px;
 
@@ -34,24 +31,22 @@
 .header .case .img_box {
     border-radius: 50%;
     overflow: hidden;
-    border: 20px solid transparent;
+    border: 14px solid transparent;
+}
+
+.header .case .img_box img {
+    filter: grayscale(1);
 }
 
 
 .header .case .logo_txt {
-    position: relative;
+    position: absolute;
     width: 150px;
     height: 150px;
-    color: #fff;
+    color: #000000;
 }
 
 
-.header .case .logo_txt.on {
-    position: relative;
-    width: 150px;
-    height: 150px;
-    color: #000;
-}
 
 .header .case .logo_txt span {
     position: absolute;
@@ -65,8 +60,8 @@
 /* 메뉴 버튼 */
 .util {
     position: fixed;
-    top: 30px;
-    right: 40px;
+    top: 25px;
+    right: 25px;
     width: 32px;
     height: 24px;
     cursor: pointer;
@@ -79,45 +74,6 @@
     outline: none;
 }
 
-.util>.menu.on::after {
-    background: #000;
-}
-
-.util>.menu.on::before {
-    background: #000;
-}
-
-.util>.menu.on span {
-    background: #000;
-}
-
-.util>.menu.on span::before {
-    background: #000;
-}
-
-.util>.menu.on span::after {
-    background: #000;
-}
-
-.util.on>.menu.on::after {
-    background: #fff;
-}
-
-.util.on>.menu.on::before {
-    background: #fff;
-}
-
-.util.on>.menu.on span {
-    background: #fff;
-}
-
-.util.on>.menu.on span::before {
-    background: #fff;
-}
-
-.util.on>.menu.on span::after {
-    background: #fff;
-}
 
 .util span {
     font-size: 0;
@@ -128,7 +84,7 @@
     position: absolute;
     inset: 0 0 auto 0;
     height: 4px;
-    background: #fff;
+    background: #000;
     border-radius: 2px;
 }
 
@@ -137,7 +93,7 @@
     position: absolute;
     inset: auto 0 0 0;
     height: 4px;
-    background: #fff;
+    background: #000;
     border-radius: 2px;
 
 }
@@ -153,7 +109,7 @@
     position: absolute;
     inset: 50% 0 auto 0;
     height: 4px;
-    background: #fff;
+    background: #000;
     transform: translate(0, -50%);
     border-radius: 2px;
     transition: 0.5s;
@@ -164,12 +120,13 @@
     background: #fff;
 }
 
+
 .util span::after {
     content: "";
     position: absolute;
     inset: 50% 0 auto 0;
     height: 4px;
-    background: #fff;
+    background: #000000;
     transform: translate(0, -50%);
     border-radius: 2px;
     transition: 0.5s;
@@ -177,9 +134,16 @@
 
 .util.on span::after {
     transform: translate(0, -50%) rotate(-45deg);
-    background: #fff;
+    background: #ffffff;
 }
 
+
+.bg {
+    position: fixed;
+    inset: 0 0 0 0;
+    background: url(../images/star_bg.png);
+    z-index: -1;
+}
 
 
 /*
@@ -190,7 +154,6 @@
 
 .intro {
     position: relative;
-    background: #000;
 }
 
 .intro .box_cover {
@@ -202,13 +165,55 @@
     z-index: 999;
 }
 
+svg {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+path {
+    stroke: transparent;
+}
+
+.ufo_box {
+    position: relative;
+    z-index: 2000;
+}
+
+.ufo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 150px;
+    height: 96px;
+    background: url(../images/ufo.png) no-repeat center/cover;
+    animation: ufo 1s infinite linear;
+    filter: invert(100%);
+}
+
+@keyframes ufo {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(-25deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+
 .intro .box_cover .box_left {
     width: 50%;
     height: 100vh;
     background: #000000;
     transform: translateX(0);
-    transition: 2s .5s;
-    border-right: 1px solid #fff;
+    transition: 2s 7s;
 }
 
 .intro .box_cover .box_right {
@@ -216,8 +221,7 @@
     height: 100vh;
     background: #000000;
     transform: translateX(0);
-    transition: 2s .5s;
-    border-left: 1px solid #fff;
+    transition: 2s 7s;
 }
 
 .intro .box_cover.on {
@@ -237,11 +241,13 @@
 }
 
 
+
+
 .intro .slogan {
     position: absolute;
     inset: 50% auto auto 50%;
     transform: translate(-50%, -50%);
-    color: #fff;
+    color: #000000;
     text-align: center;
     line-height: 1;
 }
@@ -256,12 +262,12 @@
     opacity: 0;
 }
 
-.intro.on .slogan strong {
+
+.intro .slogan.on strong {
     transform: translate(0, 0);
     opacity: 1;
-    transition: 1s 1s;
+    transition: 2s 2s;
 }
-
 
 .intro .slogan h2 {
     margin: 0 auto;
@@ -274,22 +280,94 @@
     font-weight: 700;
 }
 
-/* .intro .slogan h2 span:nth-child(odd) {
-    background: #fff;
-    color: #333;
-    border-radius: 50%;
-} */
+/* 별 */
+.intro .star {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.intro .star::before {
+    content: "";
+    position: absolute;
+    bottom: 55%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    background: #ffd900;
+    transform: rotate(15deg);
+    animation: star_line 3s 8s both;
+}
+
+.intro .star::after {
+    content: "";
+    position: absolute;
+    bottom: 50%;
+    left: 100px;
+    width: 100px;
+    height: 100px;
+    background: #ffd900;
+    transform: rotate(15deg);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
 
 
+@keyframes star_line {
+    0% {
+        bottom: 500px;
+        left: 130px;
+    }
 
+    100% {
+        bottom: 800px;
+        left: 600px;
+        opacity: 0;
+    }
+}
+
+/* 유에프오 */
+.ufo_black {
+    position: relative;
+    top: -25px;
+    left: 100%;
+    width: 150px;
+    height: 96px;
+    background: url(../images/ufo.png);
+    animation: ufo_line 3s 8s both;
+}
+
+@keyframes ufo_line {
+    0% {
+        transform: translateX(0) rotate(-25deg);
+    }
+
+    70% {
+        transform: translateX(-360px) rotate(-25deg);
+    }
+
+    90% {
+        transform: translateX(-360px) rotate(25deg);
+    }
+
+    100% {
+        transform: translateX(-360px) rotate(0deg);
+    }
+}
+
+/* 휠 */
 .intro .wheel a {
     position: absolute;
-    inset: auto auto 80px 50%;
+    inset: auto auto 25px 50%;
     transform: translate(-50%, 0);
     width: 32px;
     height: 46px;
     border-radius: 16px;
-    border: 2px solid #fff;
+    border: 2px solid #000000;
 
     font-size: 0;
 }
@@ -302,7 +380,7 @@
 
     width: 3px;
     height: 10px;
-    background: #fff;
+    background: #000000;
     border-radius: 2px;
     animation: wheel 0.5s infinite linear;
 }
@@ -338,13 +416,12 @@
 
 .portfolio .num {
     position: absolute;
-    right: 100px;
-    bottom: -80px;
-    font-size: 360px;
+    right: 0;
+    bottom: -100px;
+    font-size: 480px;
     font-weight: 900;
     font-style: italic;
-    color: #ddd;
-
+    color: rgba(0, 0, 0, .1)
 }
 
 
@@ -368,8 +445,8 @@
 
 .portfolio .s_pagenation a {
     display: block;
-
-    background: #ddd;
+    background: #fff;
+    border: 2px solid #ddd;
     padding: 6px;
     font-size: 0;
     width: 100%;
@@ -385,46 +462,38 @@
     z-index: -5;
 }
 
-.portfolio .itm01 .bg_cover {
-    background: linear-gradient(to right, #6cd2cd 50%, transparent 50%)
-}
-
-.portfolio .itm02 .bg_cover {
-    background: linear-gradient(to right, #007EDE 50%, transparent 50%)
-}
-
-.portfolio .itm03 .bg_cover {
-    background: linear-gradient(to right, #9e826f 50%, transparent 50%)
-}
-
-.portfolio .itm04 .bg_cover {
-    background: linear-gradient(to right, #74B567 50%, transparent 50%)
-}
-
-.portfolio .itm05 .bg_cover {
-    background: linear-gradient(to right, #760023 50%, transparent 50%)
-}
 
 .portfolio .content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
+    grid-template-columns: 2fr 1fr;
+    gap: 32px;
 }
 
 .portfolio .img_box {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    grid-template-columns: 3fr 2fr;
+    gap: 24px;
 }
 
 .portfolio .img_box .port_pc_img {
-    width: 720px;
-    height: 480px;
+
+    max-width: 680px;
+    max-height: 480px;
     overflow: hidden;
     border: 10px solid #fff;
     border-radius: 24px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
 }
+
+.portfolio .img_box .port_m_img {
+    max-width: 240px;
+    max-height: 480px;
+    overflow: hidden;
+    border: 10px solid #fff;
+    border-radius: 24px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
+}
+
 
 .portfolio .img_box .port_pc_img img {
     transform: translate(0, 0);
@@ -472,20 +541,82 @@
 }
 
 
-.portfolio .img_box .port_m_img {
-    width: 240px;
-    height: 480px;
-    overflow: hidden;
-    border: 10px solid #fff;
-    border-radius: 24px;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
-}
 
 .portfolio .img_box .port_m_img img {
     transform: translate(0, 0);
     transition: 10s;
 }
 
+
+
+
+.portfolio .txt_box .tit h3 {
+    position: relative;
+    font-weight: 700;
+    font-size: 40px;
+    margin: 16px 0 8px 0;
+}
+
+.portfolio .txt_box .tit h3::after {
+    content: "responsive";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+
+    border-top: 15px solid #ffd900;
+    border-bottom: 15px solid #ffd900;
+    border-left: 25px solid #ffd900;
+    border-right: 25px solid transparent;
+    height: 0;
+    width: 140px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    /* opacity: 0.9; */
+    line-height: 0;
+    text-indent: -16px;
+}
+
+.portfolio .itm01 .txt_box .tit h3::after {
+    right: 182px;
+}
+
+.portfolio .itm02 .txt_box .tit h3::after {
+    right: -32px;
+}
+
+.portfolio .itm03 .txt_box .tit h3::after {
+    right: 148px;
+}
+
+.portfolio .itm04 .txt_box .tit h3::after {
+    right: 113px;
+}
+
+.portfolio .itm05 .txt_box .tit h3::after {
+    right: -93px;
+}
+
+
+.portfolio .txt_box .tit h3 img {
+    width: 36px;
+    height: 28px;
+    vertical-align: baseline
+}
+
+.portfolio .itm04 .txt_box .tit h3 img {
+    width: 36px;
+    height: 40px;
+    vertical-align: middle
+}
+
+.portfolio .txt_box .tit p {
+    font-size: 14px;
+    font-weight: 300;
+    margin: 0 0 40px 0;
+}
 
 
 .portfolio .txt_box .des {
@@ -495,37 +626,22 @@
 }
 
 .portfolio .txt_box .des {
-    margin: 0 0 12px 0;
-}
-
-.portfolio .txt_box .tit h3 {
-    font-weight: 700;
-    font-size: 40px;
     margin: 0 0 8px 0;
 }
 
-.portfolio .txt_box .tit h3 img {
-    width: 32px;
-    height: 100%;
-    vertical-align: auto;
-}
-
-.portfolio .txt_box .tit p {
-    font-size: 14px;
-    font-weight: 300;
-    margin: 0 0 40px 0;
+.portfolio .txt_box .des_txt {
+    min-height: 70px;
 }
 
 .portfolio .txt_box strong {
     display: block;
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: 700;
     margin: 0 0 8px 0;
 }
 
-
-
 .portfolio .txt_box p {
-    margin: 0 0 20px 0;
+    margin: 0 0 16px 0;
 }
 
 .portfolio .itm .color {
@@ -538,7 +654,7 @@
 
 .portfolio .itm .color ul {
     display: flex;
-    gap: 40px;
+    gap: 48px;
 }
 
 .portfolio .itm .color ul li {
@@ -547,7 +663,6 @@
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    text-align: center;
 }
 
 .portfolio .itm .color ul li span {
@@ -564,47 +679,41 @@
     margin: 0 0 20px 0;
 }
 
+
+
 .portfolio .itm01 .color ul li:nth-child(1) {
-    background: #6cd2cd;
+    background: #007EDE;
 }
 
 .portfolio .itm01 .color ul li:nth-child(2) {
-    background: #fa6e91;
-}
-
-.portfolio .itm01 .color ul li:nth-child(3) {
-    background: #000000;
-}
-
-.portfolio .itm01 .color ul li:nth-child(4) {
     background: #ffffff;
     border: 1px solid #000;
 }
 
 .portfolio .itm02 .color ul li:nth-child(1) {
-    background: #007EDE;
+    background: #9e826f;
 }
 
 .portfolio .itm02 .color ul li:nth-child(2) {
+    background: #000000;
+}
+
+.portfolio .itm02 .color ul li:nth-child(3) {
     background: #ffffff;
     border: 1px solid #000;
 }
 
 .portfolio .itm03 .color ul li:nth-child(1) {
-    background: #9e826f;
+    background: #74B567;
 }
 
 .portfolio .itm03 .color ul li:nth-child(2) {
-    background: #000000;
-}
-
-.portfolio .itm03 .color ul li:nth-child(3) {
     background: #ffffff;
     border: 1px solid #000;
 }
 
 .portfolio .itm04 .color ul li:nth-child(1) {
-    background: #74B567;
+    background: #760023;
 }
 
 .portfolio .itm04 .color ul li:nth-child(2) {
@@ -613,13 +722,17 @@
 }
 
 .portfolio .itm05 .color ul li:nth-child(1) {
-    background: #760023;
+    background: #6cd2cd;
 }
 
 .portfolio .itm05 .color ul li:nth-child(2) {
-    background: #ffffff;
-    border: 1px solid #000;
+    background: #fa6e91;
 }
+
+.portfolio .itm05 .color ul li:nth-child(3) {
+    background: #000000;
+}
+
 
 
 .portfolio .btn_box {
@@ -636,6 +749,7 @@
     text-transform: uppercase;
     border: 1px solid #000;
     transition: 0.5s;
+    background: #fff;
     box-shadow: 5px 5px 0 #ddd;
     margin: 0 0 40px 0;
 }
@@ -678,18 +792,18 @@
 }
 
 .training .content {
-    width: 900px;
+    max-width: 1200px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    margin: 120px auto 0 auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
 }
 
-.training .content .itm_box {}
 
 .training .content .itm_box .tr_img {
-    width: 400px;
-    height: 260px;
+    max-width: 400px;
+    max-height: 260px;
     border: 8px solid #fff;
     border-radius: 24px;
     overflow: hidden;
@@ -721,32 +835,28 @@
 
 .profile {
     position: relative;
-    background: #000;
-
 }
 
-.profile .content {}
+
 
 .profile .content .info {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    max-width: 1000px;
+    max-width: 1200px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
     padding: 20px;
-    outline: 6px dotted #fff;
     border: 6px dotted #000;
-    /* box-shadow: 0 0 30px rgba(255, 255, 255, 0.9); */
     border-radius: 24px;
     background: #fff;
 }
 
 .profile .content .info .contact_box {
     max-width: 300px;
-    height: 400px;
+    max-height: 400px;
     padding: 8px;
     text-align: center;
 }
@@ -774,11 +884,9 @@
 }
 
 .profile .content .info .profile_box {
-    width: 600px;
-    height: 400px;
+    max-width: 600px;
+    max-height: 400px;
     padding: 8px;
-    border: 3px solid #fff;
-    border-radius: 16px;
     overflow: hidden;
 }
 
@@ -790,18 +898,8 @@
     text-align: center;
 }
 
-
-.profile .f_tit strong {
-    display: block;
-    font-size: 80px;
-    font-weight: 600;
-    color: #F1C164;
-    text-shadow: 5px 5px #2D63A7;
-    margin: 0 0 36px 0;
-}
-
 .profile .f_tit p {
-    color: #fff;
+    color: #000;
 }
 
 
@@ -873,4 +971,1278 @@
     color: #fff;
     text-align: center;
     font-size: 40px;
+}
+
+/* 탑스크롤 */
+.to_top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 999;
+}
+
+.to_top span {
+    color: #ffffff;
+    background: #000000;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+@media(max-width: 1600px) {
+
+    /* r */
+    .header .case {
+        width: 80px;
+        height: 80px;
+    }
+
+    /* r */
+    .header .case .img_box {
+        border: 12px solid transparent;
+    }
+
+    /* r */
+    .header .case .logo_txt {
+        width: 80px;
+        height: 80px;
+    }
+
+
+
+    /*
+    
+    인트로 섹션
+    
+    */
+
+    /* r */
+    .intro .slogan {
+        inset: 65% auto auto 50%;
+        max-width: 500px;
+    }
+
+    /* r */
+    .intro .slogan strong {
+        font-size: 32px;
+    }
+
+
+    /* r */
+    .intro .slogan h2 span {
+        width: 28px;
+        font-size: 40px;
+        line-height: 44px;
+    }
+
+    /* r */
+    .intro .star {
+        top: 12%;
+    }
+
+    /* r */
+    @keyframes star_line {
+        0% {
+            bottom: 428px;
+            left: 130px;
+        }
+
+        100% {
+            bottom: 800px;
+            left: 600px;
+            opacity: 0;
+        }
+    }
+
+    /* r */
+    .ufo_black {
+        top: -160px;
+    }
+
+    /* r */
+    @keyframes ufo_line {
+        0% {
+            transform: translateX(0) rotate(-25deg);
+        }
+
+        70% {
+            transform: translateX(-480px) rotate(-25deg);
+        }
+
+        90% {
+            transform: translateX(-480px) rotate(25deg);
+        }
+
+        100% {
+            transform: translateX(-480px) rotate(0deg);
+        }
+    }
+
+
+    /*  
+    
+    메인 포트폴리오
+    
+    */
+
+    /* r */
+    .portfolio .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 36px;
+        padding: 0 30px;
+    }
+
+    /* r */
+    .portfolio .img_box {
+        display: grid;
+        grid-template-columns: 1fr;
+
+    }
+
+    /* r */
+    .portfolio .img_box .port_pc_img {
+        width: 100%;
+        max-height: 360px;
+        border: 4px solid #fff;
+        margin: 0 auto;
+    }
+
+    /* r */
+    .portfolio .img_box .port_m_img {
+        display: none;
+    }
+
+    /* r */
+    .portfolio .txt_box .tit h3 {
+        font-size: 28px;
+        text-align: center;
+        margin: 0 0 28px 0;
+    }
+
+    /* r */
+    .portfolio .txt_box .tit h3::after {
+        display: none;
+    }
+
+
+    /* r */
+    .portfolio .txt_box .tit h3 img {
+        width: 24px;
+        height: 100%;
+        vertical-align: auto;
+    }
+
+    /* r */
+    .portfolio .itm04 .txt_box .tit h3 img {
+        width: 24px;
+        height: 100%;
+        vertical-align: auto;
+    }
+
+    /* r */
+    .portfolio .txt_box .tit p {
+        display: none;
+    }
+
+    /* r */
+    .portfolio .txt_box .des {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        gap: 0;
+        margin: 0 auto 4px auto;
+    }
+
+    /* r */
+    .portfolio .txt_box strong {
+        font-size: 15px;
+        margin: 0;
+    }
+
+    /* r */
+    .portfolio .txt_box .des_txt {
+        min-height: 50px;
+    }
+
+    /* r */
+    .portfolio .txt_box p {
+        font-size: 15px;
+        line-height: 1.1;
+        margin: 0 0 8px 0;
+    }
+
+    /* r */
+    .portfolio .itm .color {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        max-width: 500px;
+    }
+
+
+    /* r */
+    .portfolio .btn_box {
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+    }
+
+    /* r */
+    .portfolio .btn_box .btn {
+        position: relative;
+        padding: 10px 24px;
+        font-size: 16px;
+        font-weight: 400;
+        margin: 0 0 32px 0;
+    }
+
+    /* r */
+    .portfolio .btn_box .btn:hover {
+        color: #000;
+    }
+
+
+
+    /* 
+    
+    
+    실습 모음 섹션
+    
+    */
+
+    /* r */
+    .training .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 24px;
+        padding: 60px;
+    }
+
+
+    /* r */
+    .training .content .itm_box .tr_img {
+        width: 100%;
+        height: 100%;
+        border: 4px solid #fff;
+    }
+
+    /* r */
+    .training .content .itm_box strong {
+        font-size: 18px;
+    }
+
+    /* 
+    
+    프로필 섹션
+    
+    */
+
+    /* r */
+    .profile .content .info {
+        gap: 16px;
+    }
+
+    /* r */
+    .profile .f_tit {
+        position: absolute;
+        right: 50%;
+        bottom: 40px;
+        width: 80%;
+        transform: translate(50%, 0);
+    }
+
+    /* r */
+    .profile .f_tit p {
+        font-size: 16px;
+        color: #000;
+    }
+}
+
+@media(max-width: 1200px) {
+
+    /* r */
+    .header .case {
+        width: 80px;
+        height: 80px;
+    }
+
+    /* r */
+    .header .case .img_box {
+        border: 12px solid transparent;
+    }
+
+    /* r */
+    .header .case .logo_txt {
+        width: 80px;
+        height: 80px;
+    }
+
+
+
+    /*
+    
+    인트로 섹션
+    
+    */
+
+    /* r */
+    .intro .slogan {
+        inset: 65% auto auto 50%;
+        max-width: 500px;
+    }
+
+    /* r */
+    .intro .slogan strong {
+        font-size: 32px;
+    }
+
+
+    /* r */
+    .intro .slogan h2 span {
+        width: 28px;
+        font-size: 40px;
+        line-height: 44px;
+    }
+
+    /* r */
+    .intro .star {
+        top: 12%;
+    }
+
+    /* r */
+    @keyframes star_line {
+        0% {
+            bottom: 428px;
+            left: 130px;
+        }
+
+        100% {
+            bottom: 800px;
+            left: 600px;
+            opacity: 0;
+        }
+    }
+
+    /* r */
+    .ufo_black {
+        top: -160px;
+    }
+
+    /* r */
+    @keyframes ufo_line {
+        0% {
+            transform: translateX(0) rotate(-25deg);
+        }
+
+        70% {
+            transform: translateX(-480px) rotate(-25deg);
+        }
+
+        90% {
+            transform: translateX(-480px) rotate(25deg);
+        }
+
+        100% {
+            transform: translateX(-480px) rotate(0deg);
+        }
+    }
+
+
+    /*  
+    
+    메인 포트폴리오
+    
+    */
+
+    /* r */
+    .portfolio .content {
+        display: grid;
+        grid-template-columns: 3fr 5fr;
+        align-items: center;
+        gap: 36px;
+        padding: 0 30px;
+    }
+
+    /* r */
+    .portfolio .img_box {
+        display: grid;
+        grid-template-columns: 1fr;
+
+    }
+
+    /* r */
+    .portfolio .img_box .port_pc_img {
+        width: 100%;
+        max-height: 200px;
+        border: 4px solid #fff;
+        margin: 0 auto;
+    }
+
+    /* r */
+    .portfolio .img_box .port_m_img {
+        display: none;
+    }
+
+    /* r */
+    .portfolio .txt_box .tit h3 {
+        font-size: 28px;
+        text-align: center;
+        margin: 0 0 28px 0;
+    }
+
+    /* r */
+    .portfolio .txt_box .tit h3::after {
+        display: none;
+    }
+
+
+    /* r */
+    .portfolio .txt_box .tit h3 img {
+        width: 24px;
+        height: 100%;
+        vertical-align: auto;
+    }
+
+    /* r */
+    .portfolio .itm04 .txt_box .tit h3 img {
+        width: 24px;
+        height: 100%;
+        vertical-align: auto;
+    }
+
+    /* r */
+    .portfolio .txt_box .tit p {
+        display: none;
+    }
+
+    /* r */
+    .portfolio .txt_box .des {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        gap: 0;
+        margin: 0 auto 4px auto;
+    }
+
+    /* r */
+    .portfolio .txt_box strong {
+        font-size: 15px;
+        margin: 0;
+    }
+
+    /* r */
+    .portfolio .txt_box .des_txt {
+        min-height: 50px;
+    }
+
+    /* r */
+    .portfolio .txt_box p {
+        font-size: 15px;
+        line-height: 1.1;
+        margin: 0 0 8px 0;
+    }
+
+    /* r */
+    .portfolio .itm .color {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        max-width: 500px;
+    }
+
+
+    /* r */
+    .portfolio .btn_box {
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+    }
+
+    /* r */
+    .portfolio .btn_box .btn {
+        position: relative;
+        padding: 10px 24px;
+        font-size: 16px;
+        font-weight: 400;
+        margin: 0 0 32px 0;
+    }
+
+    /* r */
+    .portfolio .btn_box .btn:hover {
+        color: #000;
+    }
+
+
+
+    /* 
+    
+    
+    실습 모음 섹션
+    
+    */
+
+    /* r */
+    .training .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        padding: 60px;
+    }
+
+
+    /* r */
+    .training .content .itm_box .tr_img {
+        width: 80%;
+        height: 100%;
+        border: 4px solid #fff;
+    }
+
+    /* r */
+    .training .content .itm_box strong {
+        font-size: 18px;
+    }
+
+    /* 
+    
+    프로필 섹션
+    
+    */
+
+    /* r */
+    .profile .content .info {
+        width: 90%;
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 8px;
+        padding: 0;
+        border: none;
+    }
+
+
+    /* r */
+    .profile .content .info dt {
+        font-size: 18px;
+    }
+
+    /* r */
+    .profile .content .info dd {
+        font-size: 16px;
+    }
+
+    /* r */
+    .profile .content .info .profile_box {
+        width: 100%;
+        height: 100%;
+    }
+
+
+    /* r */
+    .profile .f_tit {
+        position: absolute;
+        right: 50%;
+        bottom: 40px;
+        width: 80%;
+        transform: translate(50%, 0);
+    }
+
+    /* r */
+    .profile .f_tit p {
+        font-size: 14px;
+        color: #000;
+    }
+}
+
+@media(max-width: 768px) {
+
+    /* r */
+    .header .case {
+        width: 80px;
+        height: 80px;
+    }
+
+    /* r */
+    .header .case .img_box {
+        border: 12px solid transparent;
+    }
+
+    /* r */
+    .header .case .logo_txt {
+        width: 80px;
+        height: 80px;
+    }
+
+
+
+    /*
+    
+    인트로 섹션
+    
+    */
+
+    /* r */
+    .intro .slogan {
+        inset: 65% auto auto 50%;
+        max-width: 500px;
+    }
+
+    /* r */
+    .intro .slogan strong {
+        font-size: 32px;
+    }
+
+
+    /* r */
+    .intro .slogan h2 span {
+        width: 28px;
+        font-size: 40px;
+        line-height: 44px;
+    }
+
+    /* r */
+    .intro .star {
+        top: 12%;
+    }
+
+    /* r */
+    @keyframes star_line {
+        0% {
+            bottom: 428px;
+            left: 130px;
+        }
+
+        100% {
+            bottom: 800px;
+            left: 600px;
+            opacity: 0;
+        }
+    }
+
+    /* r */
+    .ufo_black {
+        top: -160px;
+    }
+
+    /* r */
+    @keyframes ufo_line {
+        0% {
+            transform: translateX(0) rotate(-25deg);
+        }
+
+        70% {
+            transform: translateX(-480px) rotate(-25deg);
+        }
+
+        90% {
+            transform: translateX(-480px) rotate(25deg);
+        }
+
+        100% {
+            transform: translateX(-480px) rotate(0deg);
+        }
+    }
+
+
+    /*  
+    
+    메인 포트폴리오
+    
+    */
+
+    /* r */
+    .portfolio .content {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    /* r */
+    .portfolio .img_box {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    /* r */
+    .portfolio .img_box .port_pc_img {
+        width: 70%;
+        max-height: 240px;
+        border: 4px solid #fff;
+        margin: 0 auto;
+    }
+
+    /* r */
+    .portfolio .img_box .port_m_img {
+        display: none;
+    }
+
+    /* r */
+    .portfolio .txt_box .tit h3 {
+        font-size: 28px;
+        text-align: center;
+        margin: 0 0 28px 0;
+    }
+
+    /* r */
+    .portfolio .txt_box .tit h3::after {
+        display: none;
+    }
+
+
+    /* r */
+    .portfolio .txt_box .tit h3 img {
+        width: 24px;
+        height: 100%;
+        vertical-align: auto;
+    }
+
+    /* r */
+    .portfolio .itm04 .txt_box .tit h3 img {
+        width: 24px;
+        height: 100%;
+        vertical-align: auto;
+    }
+
+    /* r */
+    .portfolio .txt_box .tit p {
+        display: none;
+    }
+
+    /* r */
+    .portfolio .txt_box .des {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        gap: 0;
+        max-width: 500px;
+        margin: 0 auto 4px auto;
+    }
+
+    /* r */
+    .portfolio .txt_box strong {
+        font-size: 15px;
+        margin: 0;
+    }
+
+    /* r */
+    .portfolio .txt_box .des_txt {
+        min-height: 50px;
+    }
+
+    /* r */
+    .portfolio .txt_box p {
+        font-size: 15px;
+        line-height: 1.1;
+        margin: 0 0 8px 0;
+    }
+
+    /* r */
+    .portfolio .itm .color {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+
+    /* r */
+    .portfolio .btn_box {
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+    }
+
+    /* r */
+    .portfolio .btn_box .btn {
+        position: relative;
+        padding: 10px 24px;
+        font-size: 16px;
+        font-weight: 400;
+        margin: 0 0 32px 0;
+    }
+
+    /* r */
+    .portfolio .btn_box .btn:hover {
+        color: #000;
+    }
+
+
+
+    /* 
+    
+    
+    실습 모음 섹션
+    
+    */
+
+    /* r */
+    .training .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        padding: 30px;
+    }
+
+
+    /* r */
+    .training .content .itm_box .tr_img {
+        width: 90%;
+        height: 100%;
+        border: 4px solid #fff;
+    }
+
+    /* r */
+    .training .content .itm_box strong {
+        font-size: 16px;
+    }
+
+    /* 
+    
+    프로필 섹션
+    
+    */
+
+    /* r */
+    .profile .content .info {
+        width: 90%;
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 8px;
+        padding: 0;
+        border: none;
+    }
+
+
+    /* r */
+    .profile .content .info dt {
+        font-size: 18px;
+    }
+
+    /* r */
+    .profile .content .info dd {
+        font-size: 16px;
+    }
+
+    /* r */
+    .profile .content .info .profile_box {
+        width: 100%;
+        height: 100%;
+    }
+
+
+    /* r */
+    .profile .f_tit {
+        position: absolute;
+        right: 50%;
+        bottom: 40px;
+        width: 80%;
+        transform: translate(50%, 0);
+    }
+
+    /* r */
+    .profile .f_tit p {
+        font-size: 14px;
+        color: #000;
+    }
+
+}
+
+@media(max-width: 540px) {
+
+    /* r */
+    .header .case {
+        width: 80px;
+        height: 80px;
+    }
+
+    /* r */
+    .header .case .img_box {
+        border: 12px solid transparent;
+    }
+
+    /* r */
+    .header .case .logo_txt {
+        width: 80px;
+        height: 80px;
+    }
+
+
+    /*
+    
+    인트로 섹션
+    
+    */
+
+
+    /* r */
+    .intro .slogan {
+        position: absolute;
+        inset: 75% auto auto 50%;
+        width: 328px;
+    }
+
+    /* r */
+    .intro .slogan strong {
+        font-size: 24px;
+    }
+
+    /* r */
+    .intro .slogan h2 {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    /* r */
+    .intro .slogan h2 span {
+        font-size: 36px;
+        font-weight: 700;
+        flex: 1 1 0;
+    }
+
+
+
+    /* r */
+    .intro .star::before {
+        transform: rotate(48deg);
+        animation: star_line 4s 8s both;
+    }
+
+    /* r */
+    .intro .star::after {
+        bottom: 180px;
+        left: 46px;
+        transform: rotate(48deg);
+    }
+
+    /* r */
+    @keyframes star_line {
+        0% {
+            bottom: 204px;
+            left: 70px;
+        }
+
+        100% {
+            bottom: 800px;
+            left: 600px;
+            opacity: 0;
+        }
+    }
+
+    /* r 유에프오 */
+    .ufo_black {
+        position: relative;
+        top: -100px;
+        left: 100%;
+        width: 150px;
+        height: 96px;
+        background: url(../images/ufo.png);
+        animation: ufo_line 3s 8s both;
+    }
+
+    /* r */
+    @keyframes ufo_line {
+        0% {
+            transform: translateX(0) rotate(0);
+        }
+
+        50% {
+            transform: translateX(-360px) rotate(0);
+        }
+
+        100% {
+            transform: translateX(-360px) rotate(-40deg);
+        }
+    }
+
+    /*  
+
+메인 포트폴리오
+
+*/
+
+
+    /* r */
+    .portfolio .num {
+        position: absolute;
+        right: 60px;
+        bottom: -80px;
+        font-size: 360px;
+        color: rgba(0, 0, 0, .1)
+    }
+
+    /* r */
+    .portfolio .s_pagenation {
+        bottom: 16px;
+    }
+
+    /* r */
+    .portfolio .s_pagenation ul {
+        gap: 8px;
+    }
+
+    /* r */
+    .portfolio .s_pagenation a {
+        background: #fff;
+        border: 2px solid #ddd;
+    }
+
+
+    /* r */
+    .portfolio .content {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    /* r */
+    .portfolio .img_box {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    /* r */
+    .portfolio .img_box .port_pc_img {
+        width: 70%;
+        max-height: 160px;
+        border: 4px solid #fff;
+        margin: 0 auto;
+    }
+
+    /* r */
+    .portfolio .img_box .port_m_img {
+        display: none;
+    }
+
+    /* r */
+    .portfolio .txt_box .tit h3 {
+        font-weight: 700;
+        font-size: 24px;
+        text-align: center;
+        margin: 0 0 24px 0;
+    }
+
+
+    /* r */
+    .portfolio .txt_box .tit h3::after {
+        display: none;
+    }
+
+    /* r */
+    .portfolio .txt_box .tit h3 img {
+        width: 20px;
+        height: 100%;
+        vertical-align: auto;
+    }
+
+    /* r */
+    .portfolio .itm04 .txt_box .tit h3 img {
+        width: 20px;
+        height: 100%;
+        vertical-align: auto;
+    }
+
+    /* r */
+    .portfolio .txt_box .tit p {
+        display: none;
+    }
+
+    /* r */
+    .portfolio .txt_box .des {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 0 8px;
+        align-items: flex-start;
+        justify-content: space-between;
+        max-width: 300px;
+        margin: 0 auto 4px auto;
+    }
+
+    /* r */
+    .portfolio .txt_box strong {
+        font-size: 14px;
+        margin: 0;
+    }
+
+    /* r */
+    .portfolio .txt_box .des_txt {
+        min-height: 68px;
+    }
+
+
+    /* r */
+    .portfolio .txt_box p {
+        font-size: 12px;
+        line-height: 1.1;
+        margin: 0 0 8px 0;
+    }
+
+    /* r */
+    .portfolio .itm .color {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    /* r */
+    .portfolio .itm .color ul {
+        display: flex;
+        gap: 36px;
+    }
+
+    /* r */
+    .portfolio .itm .color ul li {
+        text-align: right;
+    }
+
+    /* r */
+    .portfolio .itm .color ul li span {
+        font-size: 12px;
+    }
+
+    /* r */
+    .portfolio .btn_box {
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+    }
+
+    /* r */
+    .portfolio .btn_box .btn {
+        position: relative;
+        padding: 10px;
+        font-size: 14px;
+        font-weight: 400;
+        margin: 0 0 32px 0;
+    }
+
+    /* r */
+    .portfolio .btn_box .btn:hover {
+        color: #000;
+    }
+
+
+
+    /* 
+
+
+실습 모음 섹션
+
+*/
+
+
+
+    /* r */
+    .training .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        padding: 0 40px;
+    }
+
+    /* r */
+    .training .content .itm_box .tr_img {
+        width: 100%;
+        height: 100%;
+        border: 4px solid #fff;
+    }
+
+
+    /* r */
+    .training .content .itm_box strong {
+        font-size: 14px;
+    }
+
+
+    /* 
+
+프로필 섹션
+
+*/
+
+    /* r */
+    .profile .content .info {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0;
+        padding: 0;
+        border: none;
+    }
+
+    /* r */
+    .profile .content .info .contact_box {
+        width: 100%;
+        padding: 0;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    /* r */
+    .profile .content .info .contact_box figure {
+        display: none;
+    }
+
+    /* r */
+    .profile .content .info .contact_box figure img {
+        border-radius: 24px;
+    }
+
+    /* r */
+    .profile .content .info dt {
+        display: block;
+        font-size: 16px;
+        margin: 0 0 8px 0;
+        text-align: center;
+    }
+
+    /* r */
+    .profile .content .info dd {
+        font-size: 14px;
+        font-weight: 300;
+        margin: 0 0 12px 0;
+        text-align: center;
+    }
+
+    /* r */
+    .profile .content .info .profile_box {
+        width: 100%;
+        height: 100%;
+    }
+
+    /* r */
+    .profile .f_tit {
+        position: absolute;
+        right: 50%;
+        bottom: 40px;
+        width: 80%;
+        transform: translate(50%, 0);
+    }
+
+    /* r */
+    .profile .f_tit p {
+        font-size: 12px;
+        color: #000;
+    }
+
+
+
+
+    /*r */
+    .to_top {
+        position: fixed;
+        bottom: 20px;
+        right: 25px;
+        z-index: 999;
+    }
+
+    /* r */
+    .to_top span {
+        color: #ffffff;
+        background: #000000;
+        padding: 8px;
+        border-radius: 50%;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
 }
