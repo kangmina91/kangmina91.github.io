@@ -861,7 +861,6 @@ path {
     padding: 20px;
     border: 6px dotted #000;
     border-radius: 24px;
-    background: #fff;
 }
 
 .profile .content .info .contact_box {
@@ -2355,7 +2354,7 @@ path {
 
     /* r 유에프오 */
     .ufo_black {
-        animation: ufo_line 3s 7s both;
+        animation: ufo_line 3s 8s both;
         z-index: 2044;
     }
 
