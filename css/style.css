@@ -2362,6 +2362,7 @@ path {
         height: 96px;
         background: url(../images/ufo.png);
         animation: ufo_line 3s 8s both;
+        z-index: 2024;
     }
 
     /* r */
