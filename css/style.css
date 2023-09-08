@@ -1944,6 +1944,7 @@ path {
         height: 96px;
         background: url(../images/ufo.png);
         animation: ufo_line 3s 8s both;
+        -webkit-animation: ufo_line 3s 8s both;
     }
 
     /* r */
@@ -2364,6 +2365,7 @@ path {
         height: 96px;
         background: url(../images/ufo.png);
         animation: ufo_line 3s 8s both;
+        -webkit-animation: ufo_line 3s 8s both;
     }
 
     /* r */
@@ -2373,15 +2375,17 @@ path {
         }
 
         50% {
-            transform: translateX(-350px) rotate(0);
+            transform: translateX(-360px) rotate(0);
         }
 
         100% {
-            transform: translateX(-350px) rotate(-40deg);
+            transform: translateX(-360px) rotate(-40deg);
         }
     }
 
-    /* 휠 */
+
+
+    /* r */
     .intro .wheel a {
         inset: auto auto 8px 50%;
         width: 22px;
