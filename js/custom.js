@@ -183,7 +183,12 @@ LOGO_SPAN.forEach((it, idx) => {
         font-weight: 500;
         transform: translate(-50%, 0) rotate(${360 / LOGO_SPAN.length * idx}deg);
         `;
-
+    } else if (window.innerWidth < '390') {
+        it.style.cssText = `
+        font-size: 8px;
+        font-weight: 500;
+        transform: translate(-50%, 0) rotate(${360 / LOGO_SPAN.length * idx}deg);
+        `;
     }
 })
 

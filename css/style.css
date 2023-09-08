@@ -1962,18 +1962,6 @@ path {
     }
 
 
-    /* 휠 */
-    .intro .wheel a {
-        inset: auto auto 8px 50%;
-        width: 22px;
-        height: 32px;
-    }
-
-    .intro .wheel a::after {
-        width: 2px;
-        height: 5px;
-    }
-
     /*  
 
 메인 포트폴리오
@@ -2276,8 +2264,23 @@ path {
 
     /* r */
     .header .case {
-        display: none;
+        left: -70px;
+        top: 10px;
+        width: 70px;
+        height: 70px;
     }
+
+    /* r */
+    .header .case .img_box {
+        border: 12px solid transparent;
+    }
+
+    /* r */
+    .header .case .logo_txt {
+        width: 70px;
+        height: 70px;
+    }
+
 
     /* 메뉴 버튼 */
     .util {
@@ -2289,7 +2292,6 @@ path {
         cursor: pointer;
         z-index: 1013;
     }
-
 
     /*
     
@@ -2362,7 +2364,6 @@ path {
         height: 96px;
         background: url(../images/ufo.png);
         animation: ufo_line 3s 8s both;
-        z-index: 2024;
     }
 
     /* r */
@@ -2372,12 +2373,24 @@ path {
         }
 
         50% {
-            transform: translateX(-320px) rotate(0);
+            transform: translateX(-350px) rotate(0);
         }
 
         100% {
-            transform: translateX(-320px) rotate(-40deg);
+            transform: translateX(-350px) rotate(-40deg);
         }
+    }
+
+    /* 휠 */
+    .intro .wheel a {
+        inset: auto auto 8px 50%;
+        width: 22px;
+        height: 32px;
+    }
+
+    .intro .wheel a::after {
+        width: 2px;
+        height: 5px;
     }
 
     /*  
