@@ -220,6 +220,7 @@ path {
     transition: 2s 7s;
     -webkit-transition: 2s 7s;
     -webkit-transform: translateX(0);
+    z-index: 1024;
 }
 
 .intro .box_cover .box_right {
@@ -230,6 +231,7 @@ path {
     transition: 2s 7s;
     -webkit-transition: 2s 7s;
     -webkit-transform: translateX(0);
+    z-index: 1024;
 }
 
 .intro .box_cover.on {
