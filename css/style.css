@@ -1962,6 +1962,19 @@ path {
         }
     }
 
+
+    /* 휠 */
+    .intro .wheel a {
+        inset: auto auto 8px 50%;
+        width: 22px;
+        height: 32px;
+    }
+
+    .intro .wheel a::after {
+        width: 2px;
+        height: 5px;
+    }
+
     /*  
 
 메인 포트폴리오
@@ -2252,6 +2265,428 @@ path {
         padding: 8px;
         border-radius: 50%;
         font-size: 20px;
+        cursor: pointer;
+    }
+
+}
+
+/* 390 아이폰 대응 */
+
+
+@media(max-width: 390px) {
+
+    /* r */
+    .header .case {
+        display: none;
+    }
+
+    /* 메뉴 버튼 */
+    .util {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        width: 24px;
+        height: 20px;
+        cursor: pointer;
+        z-index: 1013;
+    }
+
+
+    /*
+    
+    인트로 섹션
+    
+    */
+
+
+    /* r */
+    .intro .slogan {
+        position: absolute;
+        inset: 75% auto auto 50%;
+        width: 328px;
+    }
+
+    /* r */
+    .intro .slogan strong {
+        font-size: 24px;
+    }
+
+    /* r */
+    .intro .slogan h2 {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    /* r */
+    .intro .slogan h2 span {
+        font-size: 36px;
+        font-weight: 700;
+        flex: 1 1 0;
+    }
+
+
+
+    /* r */
+    .intro .star::before {
+        transform: rotate(48deg);
+        animation: star_line 4s 8s both;
+    }
+
+    /* r */
+    .intro .star::after {
+        bottom: 180px;
+        left: 46px;
+        transform: rotate(48deg);
+    }
+
+    /* r */
+    @keyframes star_line {
+        0% {
+            bottom: 204px;
+            left: 70px;
+        }
+
+        100% {
+            bottom: 800px;
+            left: 600px;
+            opacity: 0;
+        }
+    }
+
+    /* r 유에프오 */
+    .ufo_black {
+        position: relative;
+        top: -100px;
+        left: 100%;
+        width: 150px;
+        height: 96px;
+        background: url(../images/ufo.png);
+        animation: ufo_line 3s 8s both;
+    }
+
+    /* r */
+    @keyframes ufo_line {
+        0% {
+            transform: translateX(0) rotate(0);
+        }
+
+        50% {
+            transform: translateX(-320px) rotate(0);
+        }
+
+        100% {
+            transform: translateX(-320px) rotate(-40deg);
+        }
+    }
+
+    /*  
+
+메인 포트폴리오
+
+*/
+
+
+    /* r */
+    .portfolio .num {
+        position: absolute;
+        right: 60px;
+        bottom: -80px;
+        font-size: 360px;
+        color: rgba(0, 0, 0, .1)
+    }
+
+    /* r */
+    .portfolio .s_pagenation {
+        bottom: 16px;
+    }
+
+    /* r */
+    .portfolio .s_pagenation ul {
+        gap: 8px;
+    }
+
+    /* r */
+    .portfolio .s_pagenation a {
+        background: #fff;
+        border: 2px solid #ddd;
+    }
+
+
+    /* r */
+    .portfolio .content {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    /* r */
+    .portfolio .img_box {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    /* r */
+    .portfolio .img_box .port_pc_img {
+        width: 60%;
+        max-height: 100px;
+        border: 4px solid #fff;
+        margin: 0 auto;
+    }
+
+    /* r */
+    .portfolio .img_box .port_m_img {
+        display: none;
+    }
+
+    /* r */
+    .portfolio .txt_box .tit h3 {
+        font-weight: 700;
+        font-size: 18px;
+        text-align: center;
+        margin: 0 0 16px 0;
+    }
+
+
+    /* r */
+    .portfolio .txt_box .tit h3::after {
+        display: none;
+    }
+
+    /* r */
+    .portfolio .txt_box .tit h3 img {
+        width: 20px;
+        height: 100%;
+        vertical-align: auto;
+    }
+
+    /* r */
+    .portfolio .itm04 .txt_box .tit h3 img {
+        width: 20px;
+        height: 100%;
+        vertical-align: auto;
+    }
+
+    /* r */
+    .portfolio .txt_box .tit p {
+        display: none;
+    }
+
+    /* r */
+    .portfolio .txt_box .des {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        gap: 0 8px;
+        align-items: flex-start;
+        justify-content: space-between;
+        max-width: 250px;
+        margin: 0 auto;
+    }
+
+    /* r */
+    .portfolio .txt_box strong {
+        font-size: 12px;
+        margin: 0;
+    }
+
+    /* r */
+    .portfolio .txt_box .des_txt {
+        min-height: 68px;
+    }
+
+
+    /* r */
+    .portfolio .txt_box p {
+        font-size: 12px;
+        line-height: 1.1;
+        margin: 0 0 4px 0;
+    }
+
+    /* r */
+    .portfolio .itm .color {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        max-width: 250px;
+        margin: 0 auto;
+    }
+
+    /* r */
+    .portfolio .itm .color ul {
+        display: flex;
+        gap: 36px;
+    }
+
+    .portfolio .itm .color ul li {
+        position: relative;
+        display: table-cell;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        text-align: right;
+    }
+
+    .portfolio .itm .color ul li span {
+        position: absolute;
+        height: 24px;
+        left: 50%;
+        bottom: -30px;
+        transform: translate(-50%, 0);
+        font-size: 8px;
+        font-weight: 500;
+    }
+
+
+    /* r */
+    .portfolio .btn_box {
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+    }
+
+    /* r */
+    .portfolio .btn_box .btn {
+        position: relative;
+        padding: 6px 8px;
+        font-size: 12px;
+        font-weight: 400;
+        margin: 0 0 16px 0;
+    }
+
+    /* r */
+    .portfolio .btn_box .btn:hover {
+        color: #000;
+    }
+
+
+
+    /* 
+
+
+실습 모음 섹션
+
+*/
+
+
+
+    /* r */
+    .training .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        padding: 0 40px;
+    }
+
+    /* r */
+    .training .content .itm_box .tr_img {
+        width: 100%;
+        height: 100%;
+        border: 4px solid #fff;
+    }
+
+
+    /* r */
+    .training .content .itm_box strong {
+        font-size: 14px;
+    }
+
+
+    /* 
+
+프로필 섹션
+
+*/
+
+    /* r */
+    .profile .content .info {
+        width: 90%;
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+        padding: 0;
+        border: none;
+        align-items: center;
+    }
+
+    /* r */
+    .profile .content .info .contact_box {
+        width: 100%;
+        padding: 0;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    /* r */
+    .profile .content .info .contact_box figure {
+        display: block;
+        width: 100px;
+        margin: 0 auto 24px auto;
+
+    }
+
+    /* r */
+    .profile .content .info .contact_box figure img {
+        border-radius: 24px;
+    }
+
+    /* r */
+    .profile .content .info dt {
+        display: block;
+        font-size: 12px;
+        margin: 0 0 8px 0;
+        text-align: center;
+    }
+
+    /* r */
+    .profile .content .info dd {
+        font-size: 12px;
+        font-weight: 400;
+        margin: 0 0 12px 0;
+        text-align: center;
+    }
+
+    /* r */
+    .profile .content .info .profile_box {
+        width: 100%;
+        height: 100%;
+    }
+
+    /* r */
+    .profile .f_tit {
+        position: absolute;
+        right: 50%;
+        bottom: 40px;
+        width: 80%;
+        transform: translate(50%, 0);
+    }
+
+    /* r */
+    .profile .f_tit p {
+        font-size: 12px;
+        color: #000;
+    }
+
+    /*  aside 풀페이지 메뉴 도트  */
+
+
+    .m_link {
+        inset: 50% 10px auto auto;
+    }
+
+    /*r */
+    .to_top {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        z-index: 999;
+    }
+
+    /* r */
+    .to_top span {
+        color: #ffffff;
+        background: #000000;
+        padding: 8px;
+        border-radius: 50%;
+        font-size: 18px;
         cursor: pointer;
     }
 
