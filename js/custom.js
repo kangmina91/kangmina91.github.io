@@ -1,19 +1,22 @@
-const HEADER = document.querySelector('.header');
+// 사이드 도트 메뉴
 const ASIDE = document.querySelectorAll('.m_link li');
-const SECTION = document.querySelectorAll('.section');
 
+// 상단 메뉴바와 인 메뉴 커버  
 const COVER_BTN = document.querySelector('.util');
 const COVER = document.querySelector('.cover');
 const COVER_A = document.querySelectorAll('.cover>ul a');
+
+// 슬로건
 const SLOGAN = document.querySelector('.intro .slogan');
+
+// 인트로 화면 커버
 const BOX_COVER = document.querySelector('.box_cover');
 
-
+// 포트폴리오 가로 슬라이드
 const SLIDE = document.querySelector('#slide_move');
 const SLIDE_ITM = document.querySelectorAll('#slide_move .num');
 const S_PAGENATION = document.querySelectorAll('.s_pagenation ul li');
 
-let NUM = true;
 
 new fullpage('#main', {
     anchors: ['introduction', 'portfolio', 'training', 'profile'],
@@ -27,62 +30,32 @@ new fullpage('#main', {
     controlArrows: false, //슬라이드 화살표 숨김
     loopHorizontal: false, //슬라이드 반복 멈춤
 
-    afterLoad: function (origin, destination, direction, trigger) {
-        ASIDE.forEach(it => it.classList.remove('on'));
-        ASIDE[destination.index].classList.add('on');
-        SECTION.forEach(it => it.classList.remove('on'));
-        SECTION[destination.index].classList.add('on');
+    // Demo 페이지 구조가 생성된 직후에 이 콜백이 실행
+    afterRender: function () {
+        BOX_COVER.classList.add('on');
+        UFO();
 
-
-
-        if (destination.index == 0) {
-
-            BOX_COVER.classList.add('on');
-            UFO();
-
-            if (NUM == false) {
-                DDDD();
-                SLOGAN.classList.add('on');
-            } else {
-                setTimeout(function () {
-                    DDDD();
-                    SLOGAN.classList.add('on');
-                }, 7000);
-                NUM = false;
-            }
-
-
-            if (BOX_COVER.classList.contains('on'))
-                setTimeout(function () {
-                    BOX_COVER.classList.add('end');
-                }, 9000);
-
-
-        } else {
-            SLOGAN.classList.remove('on');
-        }
-
-
-
-
-        if (destination.index > 0) {
-            HEADER.classList.add('on');
-        } else {
-            HEADER.classList.remove('on');
-        }
-
-        if (direction == 'up') {
-            HEADER.classList.remove('on');
-        }
-
+        setTimeout(function () {
+            CHARS_FALL();
+            SLOGAN.classList.add('on');
+            BOX_COVER.classList.add('end');
+        }, 6000);
 
     },
+
+    //풀페이지 화면이 전환되고 나서 실행
+    afterLoad: function (origin, destination, direction, trigger) {
+        //사이드 도트 메뉴
+        ASIDE.forEach(it => it.classList.remove('on'));
+        ASIDE[destination.index].classList.add('on');
+
+    },
+
     onLeave(origin, destination, direction, trigger) {
 
 
     },
     afterSlideLoad: function (section, origin, destination, direction, trigger) {
-
         document.querySelector('.num').innerHTML = `0${destination.index + 1}`
         S_PAGENATION.forEach(it => it.classList.remove('on'));
         S_PAGENATION[destination.index].classList.add('on');
@@ -92,11 +65,7 @@ new fullpage('#main', {
 
 });
 
-
-
-
-//슬라이드에 훨이벤트 달기...
-
+// 가로 슬라이드에 훨 이동 이벤트 달기!
 SLIDE.addEventListener('wheel', (e) => {
 
     console.log(e, e.deltaY); // e.deltaY 100, -100
@@ -108,7 +77,6 @@ SLIDE.addEventListener('wheel', (e) => {
     }
 
 })
-
 
 
 COVER_BTN.addEventListener('click', function (e) {
@@ -128,10 +96,13 @@ COVER_A.forEach((lnk, idx) => {
 COVER.addEventListener('wheel', e => {
     //e.preventDefault(); 이벤트 자체를 막음
     e.stopPropagation(); // 이벤트의 전파를 막음.
-    console.log(e.deltaY) // 방향이 찍힌다. 
 });
 
-function DDDD() {
+
+
+
+// 인트로 제목 글자 하나 하나 떨어지기
+function CHARS_FALL() {
     const INTROTXT = gsap.utils.toArray('#introduction .slogan h2');
 
     INTROTXT.forEach((it, idx, arry) => {
@@ -160,6 +131,7 @@ function DDDD() {
 
 
 
+// 로고 글자들 원으로 돌게 만들기
 
 const LOGO_T = document.querySelector('.header .case .logo_txt');
 const LOGO_TXT = document.querySelector('.header .case .logo_txt').innerText;
@@ -200,6 +172,9 @@ gsap.to(LOGO_T, {
     ease: 'linear',
 })
 
+
+
+// 유에프오 모션 패스
 function UFO() {
 
     if (window.innerWidth < '540') {

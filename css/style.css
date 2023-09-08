@@ -1,3 +1,11 @@
+.bg {
+    position: fixed;
+    inset: 0 0 0 0;
+    background: url(../images/star_bg.png);
+    z-index: -1;
+}
+
+
 .header {
     position: fixed;
     top: 0;
@@ -138,12 +146,47 @@
 }
 
 
-.bg {
+
+/* 메뉴 커버 */
+.cover {
     position: fixed;
-    inset: 0 0 0 0;
-    background: url(../images/star_bg.png);
-    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1011;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
 }
+
+.cover.on {
+    height: 100vh;
+    visibility: visible;
+    opacity: 1;
+}
+
+/* 커버 안 메뉴 */
+.cover>ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.cover>ul a {
+    display: block;
+    line-height: 1.4;
+    color: #fff;
+    text-align: center;
+    font-size: 40px;
+}
+
 
 
 /*
@@ -942,45 +985,6 @@ path {
 }
 
 
-/* 메뉴 커버 */
-.cover {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 0;
-    background: rgba(0, 0, 0, 0.9);
-    z-index: 1011;
-    transition: 0.5s;
-    opacity: 0;
-    visibility: hidden;
-}
-
-.cover.on {
-    height: 100vh;
-    visibility: visible;
-    opacity: 1;
-}
-
-/* 커버 안 메뉴 */
-.cover>ul {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-.cover>ul a {
-    display: block;
-    line-height: 1.4;
-    color: #fff;
-    text-align: center;
-    font-size: 40px;
-}
 
 /* 탑스크롤 */
 .to_top {
@@ -2359,13 +2363,12 @@ path {
     /* r */
     .ufo_black {
         position: relative;
-        top: 120px;
+        top: 0;
         transform: translateX(0);
         width: 150px;
         height: 96px;
         background: url(../images/ufo.png);
         animation: ufo_line 3s 8s both;
-        -webkit-animation: ufo_line 3s 8s both;
     }
 
 
