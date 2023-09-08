@@ -2359,14 +2359,16 @@ path {
     /* r */
     .ufo_black {
         position: relative;
-        top: -100px;
-        left: 100%;
+        top: -80px;
+        transform: translateX(0);
         width: 150px;
         height: 96px;
         background: url(../images/ufo.png);
         animation: ufo_line 3s 8s both;
         -webkit-animation: ufo_line 3s 8s both;
     }
+
+
 
     /* r */
     @keyframes ufo_line {
@@ -2375,11 +2377,11 @@ path {
         }
 
         50% {
-            transform: translateX(-360px) rotate(0);
+            transform: translateX(-340px) rotate(0);
         }
 
         100% {
-            transform: translateX(-360px) rotate(-40deg);
+            transform: translateX(-340px) rotate(-40deg);
         }
     }
 
