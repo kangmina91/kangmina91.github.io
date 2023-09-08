@@ -2359,7 +2359,7 @@ path {
     /* r */
     .ufo_black {
         position: relative;
-        top: -80px;
+        top: 0;
         transform: translateX(0);
         width: 150px;
         height: 96px;
