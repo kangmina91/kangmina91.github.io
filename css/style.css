@@ -2355,13 +2355,8 @@ path {
 
     /* r 유에프오 */
     .ufo_black {
-        position: relative;
-        top: -100px;
-        left: 100%;
-        width: 150px;
-        height: 96px;
-        background: url(../images/ufo.png);
-        animation: ufo_line 3s 8s both;
+        animation: ufo_line 3s 7s both;
+        z-index: 2044;
     }
 
     /* r */
