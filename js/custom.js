@@ -11,7 +11,7 @@ const SLOGAN = document.querySelector('.intro .slogan');
 
 // 인트로 화면 커버
 const BOX_COVER = document.querySelector('.box_cover');
-
+const INTRO = document.querySelector('.intro');
 // 포트폴리오 가로 슬라이드
 const SLIDE = document.querySelector('#slide_move');
 const SLIDE_ITM = document.querySelectorAll('#slide_move .num');
@@ -34,13 +34,20 @@ new fullpage('#main', {
     afterRender: function () {
 
 
+
+
+
+
         UFO();
         BOX_COVER.classList.add('on');
+        INTRO.classList.add('light');
 
         setTimeout(function () {
             CHARS_FALL();
             SLOGAN.classList.add('on');
         }, 7000);
+
+
 
     },
 
