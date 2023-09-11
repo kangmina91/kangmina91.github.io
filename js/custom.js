@@ -33,8 +33,6 @@ new fullpage('#main', {
     // Demo 페이지 구조가 생성된 직후에 이 콜백이 실행
     afterRender: function () {
 
-        BOX_COVER.classList.add('dark');
-
 
         UFO();
         BOX_COVER.classList.add('on');
@@ -42,7 +40,6 @@ new fullpage('#main', {
         setTimeout(function () {
             CHARS_FALL();
             SLOGAN.classList.add('on');
-            BOX_COVER.classList.add('end');
         }, 7000);
 
     },
