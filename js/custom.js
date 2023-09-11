@@ -33,13 +33,16 @@ new fullpage('#main', {
     // Demo 페이지 구조가 생성된 직후에 이 콜백이 실행
     afterRender: function () {
         INTRO.style.backgroundColor = "black";
+        INTRO.style.zIndex = 2008;
         UFO();
         setTimeout(function () {
+            INTRO.style.backgroundColor = "transparent";
 
             BOX_COVER.classList.add('on');
 
             setTimeout(function () {
                 INTRO.classList.add('light');
+                INTRO.style.zIndex = 999;
                 CHARS_FALL();
                 SLOGAN.classList.add('on');
             }, 7000);
