@@ -32,18 +32,18 @@ new fullpage('#main', {
 
     // Demo 페이지 구조가 생성된 직후에 이 콜백이 실행
     afterRender: function () {
-
-
+        INTRO.style.backgroundColor = "black";
         UFO();
-        BOX_COVER.classList.add('on');
-
         setTimeout(function () {
-            INTRO.classList.add('light');
-            CHARS_FALL();
-            SLOGAN.classList.add('on');
-        }, 7000);
 
+            BOX_COVER.classList.add('on');
 
+            setTimeout(function () {
+                INTRO.classList.add('light');
+                CHARS_FALL();
+                SLOGAN.classList.add('on');
+            }, 7000);
+        }, 1000);
 
     },
 
