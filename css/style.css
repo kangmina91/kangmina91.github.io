@@ -2363,12 +2363,13 @@ path {
     /* r */
     .ufo_black {
         position: relative;
-        top: 0;
-        transform: translateX(0);
+        top: -100px;
+        left: 100%;
         width: 150px;
         height: 96px;
         background: url(../images/ufo.png);
         animation: ufo_line 3s 8s both;
+        -webkit-animation: ufo_line 3s 8s both;
     }
 
 
