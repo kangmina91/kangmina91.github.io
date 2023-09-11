@@ -211,7 +211,7 @@
     height: 100vh;
 
 
-    z-index: 999;
+    z-index: 1024;
 }
 
 
@@ -281,9 +281,7 @@ path {
     z-index: 1024;
 }
 
-.intro .box_cover.on {
-    z-index: 1024;
-}
+
 
 .intro .box_cover.on.end {
     z-index: 1010;
