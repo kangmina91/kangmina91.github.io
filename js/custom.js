@@ -34,15 +34,11 @@ new fullpage('#main', {
     afterRender: function () {
 
 
-
-
-
-
         UFO();
         BOX_COVER.classList.add('on');
-        INTRO.classList.add('light');
 
         setTimeout(function () {
+            INTRO.classList.add('light');
             CHARS_FALL();
             SLOGAN.classList.add('on');
         }, 7000);
