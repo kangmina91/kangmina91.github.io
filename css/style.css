@@ -258,13 +258,6 @@ path {
     }
 }
 
-.intro .box_cover.dark .box_left {
-    background: #000000;
-}
-
-.intro .box_cover.dark .box_right {
-    background: #000000;
-}
 
 .intro .box_cover .box_left {
     width: 100%;
@@ -288,6 +281,13 @@ path {
     z-index: 1024;
 }
 
+.intro .box_cover.dark .box_left {
+    background: #000;
+}
+
+.intro .box_cover.dark .box_right {
+    background: #000;
+}
 
 
 .intro .box_cover.on.end {
@@ -295,10 +295,12 @@ path {
 }
 
 .intro .box_cover.on .box_left {
+    transition: 2s 7s;
     transform: translateX(-100%);
 }
 
 .intro .box_cover.on .box_right {
+    transition: 2s 7s;
     transform: translateX(100%);
 }
 
@@ -2478,12 +2480,14 @@ path {
         display: grid;
         grid-template-columns: 1fr;
         gap: 12px;
+        align-items: center;
     }
 
     /* r */
     .portfolio .img_box {
         display: grid;
         grid-template-columns: 1fr;
+        align-items: center;
     }
 
     /* r */
