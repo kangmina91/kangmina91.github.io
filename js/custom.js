@@ -32,11 +32,12 @@ new fullpage('#main', {
 
     // Demo 페이지 구조가 생성된 직후에 이 콜백이 실행
     afterRender: function () {
-        setTimeout(function () {
-            BOX_COVER.classList.add('on');
-        }, 1000);
+
+        BOX_COVER.classList.add('dark');
+
 
         UFO();
+        BOX_COVER.classList.add('on');
 
         setTimeout(function () {
             CHARS_FALL();

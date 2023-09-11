@@ -258,9 +258,16 @@ path {
     }
 }
 
+.intro .box_cover.dark .box_left {
+    background: #000000;
+}
+
+.intro .box_cover.dark .box_right {
+    background: #000000;
+}
 
 .intro .box_cover .box_left {
-    width: 50%;
+    width: 100%;
     height: 100vh;
     background: #000000;
     transform: translateX(0);
@@ -271,7 +278,7 @@ path {
 }
 
 .intro .box_cover .box_right {
-    width: 50%;
+    width: 100%;
     height: 100vh;
     background: #000000;
     transform: translateX(0);
@@ -387,13 +394,14 @@ path {
 
 /* 유에프오 */
 .ufo_black {
-    position: relative;
-    top: -25px;
+    position: absolute;
+    top: 400px;
     left: 100%;
     width: 150px;
     height: 96px;
     background: url(../images/ufo.png);
     animation: ufo_line 3s 8s both;
+    -webkit-animation: ufo_line 3s 8s both;
 }
 
 @keyframes ufo_line {
@@ -1059,7 +1067,7 @@ path {
     /* r */
     @keyframes star_line {
         0% {
-            bottom: 428px;
+            bottom: 460px;
             left: 130px;
         }
 
@@ -1072,7 +1080,14 @@ path {
 
     /* r */
     .ufo_black {
-        top: -160px;
+        position: absolute;
+        top: 480px;
+        left: 100%;
+        width: 150px;
+        height: 96px;
+        background: url(../images/ufo.png);
+        animation: ufo_line 3s 8s both;
+        -webkit-animation: ufo_line 3s 8s both;
     }
 
     /* r */
@@ -1082,15 +1097,15 @@ path {
         }
 
         70% {
-            transform: translateX(-480px) rotate(-25deg);
+            transform: translateX(-580px) rotate(-25deg);
         }
 
         90% {
-            transform: translateX(-480px) rotate(25deg);
+            transform: translateX(-580px) rotate(25deg);
         }
 
         100% {
-            transform: translateX(-480px) rotate(0deg);
+            transform: translateX(-580px) rotate(0deg);
         }
     }
 
@@ -1341,7 +1356,14 @@ path {
 
     /* r */
     .ufo_black {
-        top: -160px;
+        position: absolute;
+        top: 400px;
+        left: 100%;
+        width: 150px;
+        height: 96px;
+        background: url(../images/ufo.png);
+        animation: ufo_line 3s 8s both;
+        -webkit-animation: ufo_line 3s 8s both;
     }
 
     /* r */
@@ -1351,15 +1373,15 @@ path {
         }
 
         70% {
-            transform: translateX(-480px) rotate(-25deg);
+            transform: translateX(-400px) rotate(25deg);
         }
 
         90% {
-            transform: translateX(-480px) rotate(25deg);
+            transform: translateX(-400px) rotate(-25deg);
         }
 
         100% {
-            transform: translateX(-480px) rotate(0deg);
+            transform: translateX(-400px) rotate(12deg);
         }
     }
 
@@ -1634,25 +1656,32 @@ path {
 
     /* r */
     .ufo_black {
-        top: -160px;
+        position: absolute;
+        top: 200px;
+        left: 100%;
+        width: 150px;
+        height: 96px;
+        background: url(../images/ufo.png);
+        animation: ufo_line 3s 8s both;
+        -webkit-animation: ufo_line 3s 8s both;
     }
 
     /* r */
     @keyframes ufo_line {
         0% {
-            transform: translateX(0) rotate(-25deg);
+            transform: translateX(10px) rotate(-25deg);
         }
 
         70% {
-            transform: translateX(-480px) rotate(-25deg);
+            transform: translateX(-500px) rotate(25deg);
         }
 
         90% {
-            transform: translateX(-480px) rotate(25deg);
+            transform: translateX(-500px) rotate(-25deg);
         }
 
         100% {
-            transform: translateX(-480px) rotate(0deg);
+            transform: translateX(-500px) rotate(12deg);
         }
     }
 
@@ -1941,10 +1970,10 @@ path {
         }
     }
 
-    /* r 유에프오 */
+    /* r */
     .ufo_black {
-        position: relative;
-        top: -100px;
+        position: absolute;
+        top: 200px;
         left: 100%;
         width: 150px;
         height: 96px;
@@ -1956,17 +1985,22 @@ path {
     /* r */
     @keyframes ufo_line {
         0% {
-            transform: translateX(0) rotate(0);
+            transform: translateX(10px) rotate(-25deg);
         }
 
-        50% {
-            transform: translateX(-360px) rotate(0);
+        70% {
+            transform: translateX(-360px) rotate(25deg);
+        }
+
+        90% {
+            transform: translateX(-360px) rotate(-25deg);
         }
 
         100% {
-            transform: translateX(-360px) rotate(-40deg);
+            transform: translateX(-360px) rotate(12deg);
         }
     }
+
 
 
     /*  
@@ -2361,11 +2395,10 @@ path {
         }
     }
 
-
     /* r */
     .ufo_black {
-        position: relative;
-        top: -100px;
+        position: absolute;
+        top: 200px;
         left: 100%;
         width: 150px;
         height: 96px;
@@ -2374,20 +2407,22 @@ path {
         -webkit-animation: ufo_line 3s 8s both;
     }
 
-
-
     /* r */
     @keyframes ufo_line {
         0% {
-            transform: translateX(0) rotate(0);
+            transform: translateX(10px) rotate(-25deg);
         }
 
-        50% {
-            transform: translateX(-340px) rotate(0);
+        70% {
+            transform: translateX(-360px) rotate(25deg);
+        }
+
+        90% {
+            transform: translateX(-360px) rotate(-25deg);
         }
 
         100% {
-            transform: translateX(-340px) rotate(-40deg);
+            transform: translateX(-360px) rotate(12deg);
         }
     }
 
