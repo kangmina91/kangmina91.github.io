@@ -544,43 +544,43 @@ path {
 }
 
 .portfolio .itm01 .img_box .port_pc_img:hover img {
-    transform: translate(0, -64%);
+    transform: translate(0, -62%);
 }
 
 .portfolio .itm01 .img_box .port_m_img:hover img {
-    transform: translate(0, -81%);
-}
-
-.portfolio .itm02 .img_box .port_pc_img:hover img {
-    transform: translate(0, -68%);
-}
-
-.portfolio .itm02 .img_box .port_m_img:hover img {
     transform: translate(0, -79%);
 }
 
-.portfolio .itm03 .img_box .port_pc_img:hover img {
-    transform: translate(0, -81%);
+.portfolio .itm02 .img_box .port_pc_img:hover img {
+    transform: translate(0, -77%);
 }
 
-.portfolio .itm03 .img_box .port_m_img:hover img {
+.portfolio .itm02 .img_box .port_m_img:hover img {
     transform: translate(0, -87%);
 }
 
-.portfolio .itm04 .img_box .port_pc_img:hover img {
-    transform: translate(0, -86%);
+.portfolio .itm03 .img_box .port_pc_img:hover img {
+    transform: translate(0, -83%);
 }
 
-.portfolio .itm04 .img_box .port_m_img:hover img {
+.portfolio .itm03 .img_box .port_m_img:hover img {
     transform: translate(0, -88%);
 }
 
+.portfolio .itm04 .img_box .port_pc_img:hover img {
+    transform: translate(0, -68%);
+}
+
+.portfolio .itm04 .img_box .port_m_img:hover img {
+    transform: translate(0, -89%);
+}
+
 .portfolio .itm05 .img_box .port_pc_img:hover img {
-    transform: translate(0, -73%);
+    transform: translate(0, -57%);
 }
 
 .portfolio .itm05 .img_box .port_m_img:hover img {
-    transform: translate(0, -89%);
+    transform: translate(0, -81%);
 }
 
 

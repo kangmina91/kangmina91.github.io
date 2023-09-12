@@ -195,7 +195,7 @@ function UFO() {
         });
     } else {
         gsap.to(".ufo_box", {
-            duration: 7,
+            duration: 8,
             motionPath: {
                 path: "#path",
                 align: "#path",
