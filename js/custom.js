@@ -41,11 +41,12 @@ new fullpage('#main', {
             BOX_COVER.classList.add('on');
 
             setTimeout(function () {
-                INTRO.style.backgroundColor = "transparent";
+
 
                 INTRO.style.zIndex = 999;
                 CHARS_FALL();
                 SLOGAN.classList.add('on');
+                INTRO.style.backgroundColor = "transparent";
             }, 6000);
         }, 1000);
 
