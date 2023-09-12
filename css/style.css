@@ -201,11 +201,6 @@
     z-index: 2000;
 }
 
-.intro.light {
-    background: transparent;
-    z-index: 999;
-}
-
 .intro .box_cover {
     position: absolute;
     top: 0;
@@ -217,9 +212,6 @@
     height: 100vh;
 }
 
-.intro .box_cover.on {
-    background: transparent;
-}
 
 .intro .box_cover .box_left {
     width: 100%;
@@ -241,12 +233,10 @@
 
 
 .intro .box_cover.on .box_left {
-    transition: 2s;
     transform: translateX(-100%);
 }
 
 .intro .box_cover.on .box_right {
-    transition: 2s;
     transform: translateX(100%);
 }
 
