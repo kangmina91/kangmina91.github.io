@@ -42,7 +42,7 @@ new fullpage('#main', {
 
             setTimeout(function () {
                 INTRO.style.backgroundColor = "transparent";
-                INTRO.classList.add('light');
+
                 INTRO.style.zIndex = 999;
                 CHARS_FALL();
                 SLOGAN.classList.add('on');
