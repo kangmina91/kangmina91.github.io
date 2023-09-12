@@ -43,7 +43,7 @@ new fullpage('#main', {
                     console.log(3);
                     BOX_COVER.classList.add('on');
                 }, 500);
-                //INTRO.style.zIndex = 999;
+                INTRO.style.zIndex = 999;
                 CHARS_FALL();
                 SLOGAN.classList.add('on');
             }, 6000);
