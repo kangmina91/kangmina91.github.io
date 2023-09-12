@@ -32,8 +32,6 @@ new fullpage('#main', {
 
     // Demo 페이지 구조가 생성된 직후에 이 콜백이 실행
     afterRender: function () {
-        // INTRO.style.backgroundColor = "black";
-        //INTRO.style.zIndex = 9999;
         UFO();
         setTimeout(function () {
             console.log(1);
@@ -197,7 +195,7 @@ function UFO() {
         });
     } else {
         gsap.to(".ufo_box", {
-            duration: 8,
+            duration: 7,
             motionPath: {
                 path: "#path",
                 align: "#path",

@@ -792,7 +792,6 @@ path {
     text-transform: uppercase;
     border: 1px solid #000;
     transition: 0.5s;
-    background: #fff;
     box-shadow: 5px 5px 0 #ddd;
     margin: 0 0 40px 0;
 }
