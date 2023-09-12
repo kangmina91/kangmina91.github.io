@@ -32,7 +32,7 @@ new fullpage('#main', {
 
     // Demo 페이지 구조가 생성된 직후에 이 콜백이 실행
     afterRender: function () {
-        INTRO.style.backgroundColor = "black";
+        // INTRO.style.backgroundColor = "black";
         INTRO.style.zIndex = 2008;
         UFO();
         setTimeout(function () {
@@ -46,7 +46,7 @@ new fullpage('#main', {
                 INTRO.style.zIndex = 999;
                 CHARS_FALL();
                 SLOGAN.classList.add('on');
-                INTRO.style.backgroundColor = "transparent";
+
             }, 6000);
         }, 1000);
 

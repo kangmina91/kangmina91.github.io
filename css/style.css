@@ -197,6 +197,13 @@
 
 .intro {
     position: relative;
+    background: #000000;
+    z-index: 2000;
+}
+
+.intro.light {
+    background: transparent;
+    z-index: 999;
 }
 
 .intro .box_cover {
@@ -219,9 +226,7 @@
     height: 100vh;
     background: #000000;
     transform: translateX(0);
-    transition: 2s 7s;
-    -webkit-transition: 2s 7s;
-    -webkit-transform: translateX(0);
+    transition: 2s;
     z-index: 1024;
 }
 
@@ -230,9 +235,7 @@
     height: 100vh;
     background: #000000;
     transform: translateX(0);
-    transition: 2s 7s;
-    -webkit-transition: 2s 7s;
-    -webkit-transform: translateX(0);
+    transition: 2s;
     z-index: 1024;
 }
 
