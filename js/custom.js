@@ -9,9 +9,7 @@ const COVER_A = document.querySelectorAll('.cover>ul a');
 // 슬로건
 const SLOGAN = document.querySelector('.intro .slogan');
 
-// 인트로 화면 커버
-const BOX_COVER = document.querySelector('.box_cover');
-const INTRO = document.querySelector('.intro');
+
 // 포트폴리오 가로 슬라이드
 const SLIDE = document.querySelector('#slide_move');
 const SLIDE_ITM = document.querySelectorAll('#slide_move .num');
@@ -23,8 +21,6 @@ new fullpage('#main', {
     css3: false,
     scrollOverflow: false, //line-height: 1에서 font-size가 box를 초과할 때 스크롤이 생기는 초기값을 false로 설정함.
     navigation: false,
-    // responsiveWidth: 768,
-    //responsiveSlides: true,
     licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
 
     controlArrows: false, //슬라이드 화살표 숨김
@@ -32,21 +28,8 @@ new fullpage('#main', {
 
     // Demo 페이지 구조가 생성된 직후에 이 콜백이 실행
     afterRender: function () {
-        UFO();
-        setTimeout(function () {
-            console.log(1);
-            setTimeout(function () {
-                console.log(2);
-                setTimeout(function () {
-                    console.log(3);
-                    BOX_COVER.classList.add('on');
-                }, 500);
-                INTRO.style.zIndex = 999;
-                CHARS_FALL();
-                SLOGAN.classList.add('on');
-            }, 6000);
-        }, 500);
-
+        CHARS_FALL();
+        SLOGAN.classList.add('on');
     },
 
     //풀페이지 화면이 전환되고 나서 실행
@@ -181,28 +164,28 @@ gsap.to(LOGO_T, {
 
 
 // 유에프오 모션 패스
-function UFO() {
+// function UFO() {
 
-    if (window.innerWidth < '540') {
-        gsap.to(".ufo_box", {
-            duration: 8,
-            motionPath: {
-                path: "#pathM",
-                align: "#pathM",
-                autoRotate: false,
-                alignOrigin: [0.5, 0.5]
-            }
-        });
-    } else {
-        gsap.to(".ufo_box", {
-            duration: 8,
-            motionPath: {
-                path: "#path",
-                align: "#path",
-                autoRotate: false,
-                alignOrigin: [0.5, 0.5]
-            }
-        });
-    }
+//     if (window.innerWidth < '540') {
+//         gsap.to(".ufo_box", {
+//             duration: 8,
+//             motionPath: {
+//                 path: "#pathM",
+//                 align: "#pathM",
+//                 autoRotate: false,
+//                 alignOrigin: [0.5, 0.5]
+//             }
+//         });
+//     } else {
+//         gsap.to(".ufo_box", {
+//             duration: 8,
+//             motionPath: {
+//                 path: "#path",
+//                 align: "#path",
+//                 autoRotate: false,
+//                 alignOrigin: [0.5, 0.5]
+//             }
+//         });
+//     }
 
-}
+// }
