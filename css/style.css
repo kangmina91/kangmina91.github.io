@@ -197,8 +197,6 @@
 
 .intro {
     position: relative;
-
-    z-index: 2000;
 }
 
 
@@ -239,84 +237,96 @@
     font-weight: 700;
 }
 
+/* 유에프오 */
+.intro .slogan::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 96px;
+    background: url(../images/ufo.png);
+    animation: ufo_line 3s 3s both;
+    margin: -72px 0 0 1600px;
+}
+
+@keyframes ufo_line {
+    0% {
+        transform: rotate(-25deg);
+    }
+
+    70% {
+        transform: rotate(-25deg);
+    }
+
+    90% {
+        transform: rotate(25deg);
+    }
+
+    100% {
+        left: 100%;
+        margin: -72px 0 0 -120px;
+        transform: rotate(10deg);
+    }
+}
+
 /* 별 */
 .intro .star {
-    position: absolute;
-    top: 0;
+    position: relative;
+    top: 50%;
     left: 50%;
+    transform: translate(-50%, -50%) rotate(15deg);
     width: 100%;
     height: 100%;
-    overflow: hidden;
-    z-index: -1;
+    z-index: -2;
 }
 
 .intro .star::before {
     content: "";
     position: absolute;
-    bottom: 55%;
+    top: 50%;
     left: 50%;
-    width: 50px;
-    height: 50px;
-    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 120px;
     background: #ffd900;
-    transform: rotate(15deg);
-    animation: star_line 3s 3s both;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    margin: -104px 0 0 148px;
 }
 
 .intro .star::after {
     content: "";
     position: absolute;
-    bottom: 50%;
-    left: 100px;
-    width: 100px;
-    height: 100px;
-    background: #ffd900;
-    transform: rotate(15deg);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
     clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    background: #ffd900;
+    margin: -104px 0 0 148px;
+    animation: star_line 5s 3s;
+    z-index: 2000;
 }
+
+
 
 
 @keyframes star_line {
     0% {
-        bottom: 500px;
-        left: 130px;
+        top: 50%;
+        left: 50%;
     }
 
     100% {
-        bottom: 800px;
-        left: 600px;
+        top: -1200px;
+        left: 2400px;
         opacity: 0;
     }
 }
 
-/* 유에프오 */
-.ufo_black {
-    position: absolute;
-    top: 400px;
-    left: 100%;
-    width: 150px;
-    height: 96px;
-    background: url(../images/ufo.png);
-    animation: ufo_line 3s 3s both;
-}
 
-@keyframes ufo_line {
-    0% {
-        transform: translateX(0) rotate(-25deg);
-    }
-
-    70% {
-        transform: translateX(-360px) rotate(-25deg);
-    }
-
-    90% {
-        transform: translateX(-360px) rotate(25deg);
-    }
-
-    100% {
-        transform: translateX(-360px) rotate(0deg);
-    }
-}
 
 /* 휠 */
 .intro .wheel a {
@@ -939,10 +949,6 @@
         line-height: 44px;
     }
 
-    /* r */
-    .intro .star {
-        top: 12%;
-    }
 
     /* r */
     @keyframes star_line {
@@ -1202,10 +1208,7 @@
         line-height: 44px;
     }
 
-    /* r */
-    .intro .star {
-        top: 12%;
-    }
+
 
     /* r */
     @keyframes star_line {
@@ -1489,10 +1492,7 @@
         line-height: 44px;
     }
 
-    /* r */
-    .intro .star {
-        top: 12%;
-    }
+
 
     /* r */
     @keyframes star_line {
