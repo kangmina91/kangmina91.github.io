@@ -2,7 +2,7 @@
     position: fixed;
     inset: 0 0 0 0;
     background: url(../images/star_bg.png);
-    z-index: -1;
+    z-index: 1;
 }
 
 
@@ -903,23 +903,34 @@
     cursor: pointer;
 }
 
+
+
+
+
+
+
+
+/* 
+
+반응형
+
+1600px 에서
+1201px 까지
+
+
+*/
+
+
+
+
+
+
+
+
 @media(max-width: 1600px) {
 
-    /* r */
-    .header .case {
-        width: 80px;
-        height: 80px;
-    }
-
-    /* r */
-    .header .case .img_box {
-        border: 12px solid transparent;
-    }
-
-    /* r */
-    .header .case .logo_txt {
-        width: 80px;
-        height: 80px;
+    .bg {
+        background: url(../images/star_bg.png) center/cover;
     }
 
 
@@ -932,66 +943,43 @@
 
     /* r */
     .intro .slogan {
-        inset: 65% auto auto 50%;
-        max-width: 500px;
+        inset: 50% auto auto 50%;
+        max-width: 900px;
     }
 
     /* r */
     .intro .slogan strong {
-        font-size: 32px;
+        font-size: 40px;
     }
 
 
     /* r */
     .intro .slogan h2 span {
-        width: 28px;
-        font-size: 40px;
-        line-height: 44px;
-    }
-
-
-    /* r */
-    @keyframes star_line {
-        0% {
-            bottom: 460px;
-            left: 130px;
-        }
-
-        100% {
-            bottom: 800px;
-            left: 600px;
-            opacity: 0;
-        }
-    }
-
-    /* r */
-    .ufo_black {
-        position: absolute;
-        top: 480px;
-        left: 100%;
-        width: 150px;
-        height: 96px;
-        background: url(../images/ufo.png);
+        width: 32px;
+        font-size: 48px;
     }
 
     /* r */
     @keyframes ufo_line {
         0% {
-            transform: translateX(0) rotate(-25deg);
+            transform: rotate(-25deg);
         }
 
         70% {
-            transform: translateX(-580px) rotate(-25deg);
+            transform: rotate(-25deg);
         }
 
         90% {
-            transform: translateX(-580px) rotate(25deg);
+            transform: rotate(25deg);
         }
 
         100% {
-            transform: translateX(-580px) rotate(0deg);
+            left: 100%;
+            margin: -72px 0 0 -60px;
+            transform: rotate(10deg);
         }
     }
+
 
 
     /*  
@@ -1162,24 +1150,19 @@
     }
 }
 
+/* 
+
+반응형
+
+1200px 에서
+768px 까지
+
+
+*/
+
+
+
 @media(max-width: 1200px) {
-
-    /* r */
-    .header .case {
-        width: 80px;
-        height: 80px;
-    }
-
-    /* r */
-    .header .case .img_box {
-        border: 12px solid transparent;
-    }
-
-    /* r */
-    .header .case .logo_txt {
-        width: 80px;
-        height: 80px;
-    }
 
 
 
@@ -1191,68 +1174,48 @@
 
     /* r */
     .intro .slogan {
-        inset: 65% auto auto 50%;
-        max-width: 500px;
+        inset: 50% auto auto 50%;
+        max-width: 680px;
     }
 
     /* r */
     .intro .slogan strong {
-        font-size: 32px;
+        font-size: 28px;
     }
 
 
     /* r */
     .intro .slogan h2 span {
-        width: 28px;
-        font-size: 40px;
-        line-height: 44px;
+        width: 24px;
+        font-size: 36px;
+        line-height: 40px;
     }
 
 
-
     /* r */
-    @keyframes star_line {
-        0% {
-            bottom: 428px;
-            left: 130px;
-        }
-
-        100% {
-            bottom: 800px;
-            left: 600px;
-            opacity: 0;
-        }
+    .intro .slogan::after {
+        top: -100%;
     }
 
-    /* r */
-    .ufo_black {
-        position: absolute;
-        top: 400px;
-        left: 100%;
-        width: 150px;
-        height: 96px;
-        background: url(../images/ufo.png);
-    }
-
-    /* r */
     @keyframes ufo_line {
         0% {
-            transform: translateX(0) rotate(-25deg);
+            transform: rotate(-25deg);
         }
 
         70% {
-            transform: translateX(-400px) rotate(25deg);
+            transform: rotate(-25deg);
         }
 
         90% {
-            transform: translateX(-400px) rotate(-25deg);
+            transform: rotate(25deg);
         }
 
         100% {
-            transform: translateX(-400px) rotate(12deg);
+            left: 100%;
+            margin: -72px 0 0 -400px;
+            transform: rotate(10deg);
         }
     }
-
 
     /*  
     
@@ -1446,6 +1409,17 @@
     }
 }
 
+
+/* 
+
+반응형
+
+768px 에서
+540px 까지
+
+
+*/
+
 @media(max-width: 768px) {
 
     /* r */
@@ -1466,7 +1440,6 @@
     }
 
 
-
     /*
     
     인트로 섹션
@@ -1475,7 +1448,7 @@
 
     /* r */
     .intro .slogan {
-        inset: 65% auto auto 50%;
+        inset: 50% auto auto 50%;
         max-width: 500px;
     }
 
@@ -1495,48 +1468,35 @@
 
 
     /* r */
-    @keyframes star_line {
-        0% {
-            bottom: 428px;
-            left: 130px;
-        }
-
-        100% {
-            bottom: 800px;
-            left: 600px;
-            opacity: 0;
-        }
+    .intro .slogan::after {
+        top: -100%;
     }
 
-    /* r */
-    .ufo_black {
-        position: absolute;
-        top: 200px;
-        left: 100%;
-        width: 150px;
-        height: 96px;
-        background: url(../images/ufo.png);
-    }
-
-    /* r */
     @keyframes ufo_line {
         0% {
-            transform: translateX(10px) rotate(-25deg);
+            transform: rotate(-25deg);
         }
 
         70% {
-            transform: translateX(-500px) rotate(25deg);
+            transform: rotate(-25deg);
         }
 
         90% {
-            transform: translateX(-500px) rotate(-25deg);
+            transform: rotate(25deg);
         }
 
         100% {
-            transform: translateX(-500px) rotate(12deg);
+            left: 100%;
+            margin: -72px 0 0 -320px;
+            transform: rotate(10deg);
         }
     }
 
+    /* r */
+    .intro .star::before {
+        width: 100px;
+        height: 100px;
+    }
 
     /*  
     
@@ -1729,6 +1689,19 @@
 
 }
 
+
+/* 
+
+반응형
+
+
+540px 에서
+390px 까지
+
+
+*/
+
+
 @media(max-width: 540px) {
 
     /* r */
@@ -1759,7 +1732,7 @@
     /* r */
     .intro .slogan {
         position: absolute;
-        inset: 75% auto auto 50%;
+        inset: 50% auto auto 50%;
         width: 328px;
     }
 
@@ -1776,6 +1749,7 @@
 
     /* r */
     .intro .slogan h2 span {
+        width: 36px;
         font-size: 36px;
         font-weight: 700;
         flex: 1 1 0;
@@ -1784,61 +1758,40 @@
 
 
     /* r */
-    .intro .star::before {
-        transform: rotate(48deg);
+    .intro .slogan::after {
+        top: -100%;
     }
 
-    /* r */
-    .intro .star::after {
-        bottom: 180px;
-        left: 46px;
-        transform: rotate(48deg);
-    }
-
-    /* r */
-    @keyframes star_line {
-        0% {
-            bottom: 204px;
-            left: 70px;
-        }
-
-        100% {
-            bottom: 800px;
-            left: 600px;
-            opacity: 0;
-        }
-    }
-
-    /* r */
-    .ufo_black {
-        position: absolute;
-        top: 200px;
-        left: 100%;
-        width: 150px;
-        height: 96px;
-        background: url(../images/ufo.png);
-    }
-
-    /* r */
     @keyframes ufo_line {
         0% {
-            transform: translateX(10px) rotate(-25deg);
+            transform: rotate(-25deg);
         }
 
         70% {
-            transform: translateX(-360px) rotate(25deg);
+            transform: rotate(-25deg);
         }
 
         90% {
-            transform: translateX(-360px) rotate(-25deg);
+            transform: rotate(25deg);
         }
 
         100% {
-            transform: translateX(-360px) rotate(12deg);
+            left: 100%;
+            margin: -72px 0 0 -240px;
+            transform: rotate(10deg);
         }
     }
 
+    /* r */
+    .intro .star {
+        left: 35%;
+    }
 
+    /* r */
+    .intro .star::before {
+        width: 100px;
+        height: 100px;
+    }
 
     /*  
 
@@ -1922,7 +1875,7 @@
     /* r */
     .portfolio .txt_box .des {
         display: grid;
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: 1fr 3fr;
         gap: 0 8px;
         align-items: flex-start;
         justify-content: space-between;
@@ -1938,7 +1891,8 @@
 
     /* r */
     .portfolio .txt_box .des_txt {
-        min-height: 68px;
+        max-height: 112px;
+        line-height: 16px;
     }
 
 
@@ -2122,7 +2076,15 @@
 
 }
 
-/* 390 아이폰 대응 */
+/* 
+
+390px 
+
+아이폰 대응 
+
+반응형
+
+*/
 
 
 @media(max-width: 390px) {
@@ -2168,7 +2130,7 @@
     /* r */
     .intro .slogan {
         position: absolute;
-        inset: 75% auto auto 50%;
+        inset: 50% auto auto 50%;
         width: 328px;
     }
 
@@ -2185,6 +2147,7 @@
 
     /* r */
     .intro .slogan h2 span {
+        width: 36px;
         font-size: 36px;
         font-weight: 700;
         flex: 1 1 0;
@@ -2193,59 +2156,42 @@
 
 
     /* r */
-    .intro .star::before {
-        transform: rotate(48deg);
+    .intro .slogan::after {
+        top: -100%;
     }
 
-    /* r */
-    .intro .star::after {
-        bottom: 180px;
-        left: 46px;
-        transform: rotate(48deg);
-    }
-
-    /* r */
-    @keyframes star_line {
-        0% {
-            bottom: 204px;
-            left: 70px;
-        }
-
-        100% {
-            bottom: 800px;
-            left: 600px;
-            opacity: 0;
-        }
-    }
-
-    /* r */
-    .ufo_black {
-        position: absolute;
-        top: 200px;
-        left: 100%;
-        width: 150px;
-        height: 96px;
-        background: url(../images/ufo.png);
-    }
-
-    /* r */
     @keyframes ufo_line {
         0% {
-            transform: translateX(10px) rotate(-25deg);
+            transform: rotate(-25deg);
         }
 
         70% {
-            transform: translateX(-360px) rotate(25deg);
+            transform: rotate(-25deg);
         }
 
         90% {
-            transform: translateX(-360px) rotate(-25deg);
+            transform: rotate(25deg);
         }
 
         100% {
-            transform: translateX(-360px) rotate(12deg);
+            left: 100%;
+            margin: -72px 0 0 -240px;
+            transform: rotate(10deg);
         }
     }
+
+    /* r */
+    .intro .star {
+        left: 35%;
+    }
+
+    /* r */
+    .intro .star::before {
+        width: 100px;
+        height: 100px;
+    }
+
+
 
 
 
@@ -2360,9 +2306,11 @@
         margin: 0;
     }
 
+
     /* r */
     .portfolio .txt_box .des_txt {
-        min-height: 68px;
+        max-height: 180px;
+        line-height: 16px;
     }
 
 
