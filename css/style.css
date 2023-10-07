@@ -306,7 +306,7 @@
     clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
     background: #ffd900;
     margin: -104px 0 0 148px;
-    animation: star_line 5s 3s;
+    animation: star_line 7s 3s;
     z-index: 2000;
 }
 
@@ -2157,7 +2157,7 @@
 
     /* r */
     .intro .slogan::after {
-        top: -100%;
+        top: -50%;
     }
 
     @keyframes ufo_line {
@@ -2182,16 +2182,34 @@
 
     /* r */
     .intro .star {
-        left: 35%;
+        left: 30%;
     }
 
     /* r */
     .intro .star::before {
-        width: 100px;
-        height: 100px;
+        width: 60px;
+        height: 60px;
     }
 
+    /* r */
+    .intro .star::after {
+        width: 40px;
+        height: 40px;
+    }
 
+    /* r */
+    @keyframes star_line {
+        0% {
+            top: 50%;
+            left: 50%;
+        }
+
+        100% {
+            top: -2400px;
+            left: 2400px;
+            opacity: 0;
+        }
+    }
 
 
 
@@ -2213,6 +2231,10 @@
 
 */
 
+    .portfolio {
+        margin: 0 auto;
+
+    }
 
     /* r */
     .portfolio .num {
