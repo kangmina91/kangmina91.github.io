@@ -1,0 +1,2541 @@
+.bg {
+    position: fixed;
+    inset: 0 0 0 0;
+    background: url(../images/star_bg.png);
+    z-index: -2;
+}
+
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+
+    padding: 0 80px;
+    height: 200px;
+    overflow: hidden;
+    transition: 0.4s;
+}
+
+
+.header .case {
+    position: relative;
+    left: -60px;
+    top: 20px;
+    width: 150px;
+    height: 150px;
+
+}
+
+.header .case>* {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+.header .case .img_box {
+    border-radius: 50%;
+    overflow: hidden;
+    border: 14px solid transparent;
+}
+
+.header .case .img_box img {
+    filter: grayscale(1);
+}
+
+
+.header .case .logo_txt {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    color: #000000;
+}
+
+
+
+.header .case .logo_txt span {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 50%;
+
+    transform-origin: center bottom;
+}
+
+/* 메뉴 버튼 */
+.util {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    width: 32px;
+    height: 24px;
+    cursor: pointer;
+    z-index: 1013;
+}
+
+.util button {
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+
+.util span {
+    font-size: 0;
+}
+
+.util button::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 4px;
+    background: #000;
+    border-radius: 2px;
+}
+
+.util button::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0 0;
+    height: 4px;
+    background: #000;
+    border-radius: 2px;
+
+}
+
+.util.on button::before,
+.util.on button::after {
+    display: none;
+
+}
+
+.util span::before {
+    content: "";
+    position: absolute;
+    inset: 50% 0 auto 0;
+    height: 4px;
+    background: #000;
+    transform: translate(0, -50%);
+    border-radius: 2px;
+    transition: 0.5s;
+}
+
+.util.on span::before {
+    transform: translate(0, -50%) rotate(45deg);
+    background: #fff;
+}
+
+
+.util span::after {
+    content: "";
+    position: absolute;
+    inset: 50% 0 auto 0;
+    height: 4px;
+    background: #000000;
+    transform: translate(0, -50%);
+    border-radius: 2px;
+    transition: 0.5s;
+}
+
+.util.on span::after {
+    transform: translate(0, -50%) rotate(-45deg);
+    background: #ffffff;
+}
+
+
+
+/* 메뉴 커버 */
+.cover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1011;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.cover.on {
+    height: 100vh;
+    visibility: visible;
+    opacity: 1;
+}
+
+/* 커버 안 메뉴 */
+.cover>ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.cover>ul a {
+    display: block;
+    line-height: 1.4;
+    color: #fff;
+    text-align: center;
+    font-size: 40px;
+}
+
+
+
+/*
+
+인트로 섹션
+
+*/
+
+.intro {
+    position: relative;
+}
+
+
+.intro .slogan {
+    position: absolute;
+    inset: 50% auto auto 50%;
+    transform: translate(-50%, -50%);
+    color: #000000;
+    text-align: center;
+    line-height: 1;
+}
+
+.intro .slogan strong {
+    display: block;
+    font-size: 36px;
+    font-weight: 100;
+    margin: 0 0 24px 0;
+
+    transform: translate(-300px, 0);
+    opacity: 0;
+}
+
+
+.intro .slogan.on strong {
+    transform: translate(0, 0);
+    opacity: 1;
+    transition: 2s 2s;
+}
+
+.intro .slogan h2 {
+    margin: 0 auto;
+}
+
+.intro .slogan h2 span {
+    display: inline-block;
+    width: 50px;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+/* 유에프오 */
+.intro .slogan::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 96px;
+    background: url(../images/ufo.png);
+    animation: ufo_line 3s 3s both;
+    margin: -72px 0 0 1600px;
+}
+
+@keyframes ufo_line {
+    0% {
+        transform: rotate(-25deg);
+    }
+
+    70% {
+        transform: rotate(-25deg);
+    }
+
+    90% {
+        transform: rotate(25deg);
+    }
+
+    100% {
+        left: 100%;
+        margin: -72px 0 0 -120px;
+        transform: rotate(10deg);
+    }
+}
+
+/* 별 */
+.intro .star {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(15deg);
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+
+.intro .star::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 120px;
+    background: #ffd900;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    margin: -104px 0 0 148px;
+}
+
+.intro .star::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    background: #ffd900;
+    margin: -104px 0 0 148px;
+    animation: star_line 7s 3s;
+    z-index: 2000;
+}
+
+
+
+
+@keyframes star_line {
+    0% {
+        top: 50%;
+        left: 50%;
+    }
+
+    100% {
+        top: -1200px;
+        left: 2400px;
+        opacity: 0;
+    }
+}
+
+
+
+/* 휠 */
+.intro .wheel a {
+    position: absolute;
+    inset: auto auto 25px 50%;
+    transform: translate(-50%, 0);
+    width: 32px;
+    height: 46px;
+    border-radius: 16px;
+    border: 2px solid #000000;
+
+    font-size: 0;
+}
+
+.intro .wheel a::after {
+    content: "";
+    position: absolute;
+    inset: 8px auto auto 50%;
+    transform: translate(-50%, 0);
+
+    width: 3px;
+    height: 10px;
+    background: #000000;
+    border-radius: 2px;
+    animation: wheel 0.5s infinite linear;
+}
+
+@keyframes wheel {
+    0% {
+        transform: translate(-50%, 0);
+    }
+
+    50% {
+        transform: translate(-50%, 3px);
+    }
+
+    100% {
+        transform: translate(-50%, 0);
+    }
+}
+
+
+
+
+/*  
+
+메인 포트폴리오
+
+*/
+
+
+.portfolio {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio .num {
+    position: absolute;
+    right: 0;
+    bottom: -100px;
+    font-size: 480px;
+    font-weight: 900;
+    font-style: italic;
+    color: rgba(0, 0, 0, .1)
+}
+
+
+.portfolio .s_pagenation {
+    position: absolute;
+    z-index: 1002;
+    bottom: 32px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.portfolio .s_pagenation ul {
+    display: flex;
+    gap: 12px;
+}
+
+
+.portfolio .s_pagenation ul li.on a {
+    background: #000;
+}
+
+.portfolio .s_pagenation a {
+    display: block;
+    background: #fff;
+    border: 2px solid #ddd;
+    padding: 6px;
+    font-size: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+
+.portfolio .itm .bg_cover {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    z-index: -5;
+}
+
+
+.portfolio .content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 24px;
+}
+
+.portfolio .img_box {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    gap: 24px;
+}
+
+.portfolio .img_box .port_pc_img {
+
+    max-width: 680px;
+    max-height: 400px;
+    overflow: hidden;
+    border: 10px solid #fff;
+    border-radius: 24px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
+}
+
+.portfolio .img_box .port_m_img {
+    max-width: 240px;
+    max-height: 480px;
+    overflow: hidden;
+    border: 10px solid #fff;
+    border-radius: 24px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
+}
+
+
+.portfolio .img_box .port_pc_img img {
+    transform: translate(0, 0);
+    transition: 5s;
+}
+
+.portfolio .itm01 .img_box .port_pc_img:hover img {
+    transform: translate(0, -62%);
+}
+
+.portfolio .itm01 .img_box .port_m_img:hover img {
+    transform: translate(0, -79%);
+}
+
+.portfolio .itm02 .img_box .port_pc_img:hover img {
+    transform: translate(0, -77%);
+}
+
+.portfolio .itm02 .img_box .port_m_img:hover img {
+    transform: translate(0, -87%);
+}
+
+.portfolio .itm03 .img_box .port_pc_img:hover img {
+    transform: translate(0, -83%);
+}
+
+.portfolio .itm03 .img_box .port_m_img:hover img {
+    transform: translate(0, -88%);
+}
+
+.portfolio .itm04 .img_box .port_pc_img:hover img {
+    transform: translate(0, -68%);
+}
+
+.portfolio .itm04 .img_box .port_m_img:hover img {
+    transform: translate(0, -89%);
+}
+
+.portfolio .itm05 .img_box .port_pc_img:hover img {
+    transform: translate(0, -57%);
+}
+
+.portfolio .itm05 .img_box .port_m_img:hover img {
+    transform: translate(0, -81%);
+}
+
+.portfolio .itm06 .img_box .port_pc_img:hover img {}
+
+.portfolio .itm06 .img_box .port_m_img:hover img {}
+
+
+
+
+.portfolio .img_box .port_m_img img {
+    transform: translate(0, 0);
+    transition: 10s;
+}
+
+
+
+
+.portfolio .txt_box .tit h3 {
+    position: relative;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 40px;
+    margin: 16px 0 8px 0;
+}
+
+.portfolio .txt_box .tit h3::after {
+    content: "responsive";
+    position: absolute;
+    left: calc(100% + 16px);
+    top: 50%;
+    transform: translate(0, -50%);
+
+    border-top: 15px solid #ffd900;
+    border-bottom: 15px solid #ffd900;
+    border-left: 25px solid #ffd900;
+    border-right: 25px solid transparent;
+    height: 0;
+    width: 140px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    /* opacity: 0.9; */
+    line-height: 0;
+    text-indent: -16px;
+}
+
+
+.portfolio .txt_box .tit p {
+    font-size: 14px;
+    font-weight: 300;
+    margin: 0 0 40px 0;
+}
+
+
+.portfolio .txt_box .des {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    align-items: flex-start;
+}
+
+.portfolio .txt_box .des {
+    margin: 0 0 8px 0;
+}
+
+.portfolio .txt_box .des_txt {
+    line-height: 20px;
+    max-height: 80px;
+}
+
+.portfolio .txt_box strong {
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+}
+
+.portfolio .txt_box p {
+    margin: 0 0 16px 0;
+}
+
+.portfolio .itm .color {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: flex-start;
+    gap: 32px;
+}
+
+
+.portfolio .itm .color ul {
+    display: flex;
+    gap: 48px;
+}
+
+.portfolio .itm .color ul li {
+    position: relative;
+    display: table-cell;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+.portfolio .itm .color ul li span {
+    position: absolute;
+    height: 20px;
+    left: 50%;
+    bottom: -30px;
+    transform: translate(-50%, 0);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.portfolio .itm .color strong {
+    margin: 0 0 20px 0;
+}
+
+
+
+.portfolio .itm01 .color ul li:nth-child(1) {
+    background: #007EDE;
+}
+
+.portfolio .itm01 .color ul li:nth-child(2) {
+    background: #ffffff;
+    border: 1px solid #000;
+}
+
+.portfolio .itm02 .color ul li:nth-child(1) {
+    background: #9e826f;
+}
+
+.portfolio .itm02 .color ul li:nth-child(2) {
+    background: #000000;
+}
+
+.portfolio .itm02 .color ul li:nth-child(3) {
+    background: #ffffff;
+    border: 1px solid #000;
+}
+
+.portfolio .itm03 .color ul li:nth-child(1) {
+    background: #74B567;
+}
+
+.portfolio .itm03 .color ul li:nth-child(2) {
+    background: #ffffff;
+    border: 1px solid #000;
+}
+
+.portfolio .itm04 .color ul li:nth-child(1) {
+    background: #760023;
+}
+
+.portfolio .itm04 .color ul li:nth-child(2) {
+    background: #ffffff;
+    border: 1px solid #000;
+}
+
+.portfolio .itm05 .color ul li:nth-child(1) {
+    background: #6cd2cd;
+}
+
+.portfolio .itm05 .color ul li:nth-child(2) {
+    background: #fa6e91;
+}
+
+.portfolio .itm05 .color ul li:nth-child(3) {
+    background: #000000;
+}
+
+.portfolio .itm06 .color ul li:nth-child(1) {
+    background: #0041ff;
+}
+
+.portfolio .itm06 .color ul li:nth-child(2) {
+    background: #91d5ff;
+}
+
+
+
+
+.portfolio .btn_box {
+    display: flex;
+    gap: 20px;
+}
+
+.portfolio .btn_box .btn {
+    position: relative;
+    padding: 12px 32px;
+    color: #000;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    border: 1px solid #000;
+    transition: 0.5s;
+    box-shadow: 5px 5px 0 #ddd;
+    margin: 0 0 40px 0;
+}
+
+.portfolio .btn_box .btn::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 0;
+    z-index: -1;
+    background-color: #000;
+    transition: 0.5s;
+}
+
+.portfolio .btn_box .btn:hover {
+    color: #fff;
+}
+
+.portfolio .btn_box .btn:hover::before {
+    left: 0;
+    right: auto;
+    width: 100%;
+}
+
+
+/* 
+
+
+실습 모음 섹션
+
+*/
+
+
+.training {
+    position: relative;
+}
+
+.training .content {
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+}
+
+
+.training .content .itm_box .tr_img {
+    max-width: 400px;
+    max-height: 260px;
+    border: 8px solid #fff;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
+    margin: 0 auto;
+
+}
+
+.training .content .itm_box a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0 0 12px 0;
+
+}
+
+.training .content .itm_box strong {
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* 
+
+프로필 섹션
+
+*/
+
+.profile {
+    position: relative;
+}
+
+
+
+.profile .content .info {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 20px;
+    border: 6px dotted #000;
+    border-radius: 24px;
+}
+
+.profile .content .info .contact_box {
+    max-width: 300px;
+    max-height: 400px;
+    padding: 8px;
+    text-align: center;
+}
+
+.profile .content .info .contact_box figure {
+    margin: 0 0 16px 0;
+}
+
+.profile .content .info .contact_box figure img {
+    border-radius: 24px;
+}
+
+.profile .content .info dt {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+}
+
+.profile .content .info dd {
+    display: block;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0 0 16px 0;
+}
+
+.profile .content .info .profile_box {
+    max-width: 600px;
+    max-height: 400px;
+    padding: 8px;
+    overflow: hidden;
+}
+
+.profile .f_tit {
+    position: absolute;
+    right: 50%;
+    bottom: 40px;
+    transform: translate(50%, 0);
+    text-align: center;
+}
+
+.profile .f_tit p {
+    color: #000;
+}
+
+
+
+/*  aside 풀페이지 메뉴 도트  */
+
+
+.m_link {
+    position: fixed;
+    inset: 50% 25px auto auto;
+    z-index: 1011;
+    transform: translate(0, -50%);
+}
+
+.m_link ul li {
+    margin: 0 0 16px 0;
+}
+
+.m_link ul li a {
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    font-size: 0;
+    background: #ffffff;
+    border: 2px solid #ddd;
+}
+
+.m_link ul li.on a {
+    background: #000;
+}
+
+
+
+/* 탑스크롤 */
+.to_top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 999;
+}
+
+.to_top span {
+    color: #ffffff;
+    background: #000000;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+/* 
+
+반응형
+
+1600px 에서
+1201px 까지
+
+
+*/
+
+
+
+
+
+
+
+
+@media(max-width: 1600px) {
+
+    .bg {
+        background: url(../images/star_bg.png) center/cover;
+    }
+
+
+
+    /*
+    
+    인트로 섹션
+    
+    */
+
+    /* r */
+    .intro .slogan {
+        inset: 50% auto auto 50%;
+        max-width: 900px;
+    }
+
+    /* r */
+    .intro .slogan strong {
+        font-size: 40px;
+    }
+
+
+    /* r */
+    .intro .slogan h2 span {
+        width: 32px;
+        font-size: 48px;
+    }
+
+    /* r */
+    @keyframes ufo_line {
+        0% {
+            transform: rotate(-25deg);
+        }
+
+        70% {
+            transform: rotate(-25deg);
+        }
+
+        90% {
+            transform: rotate(25deg);
+        }
+
+        100% {
+            left: 100%;
+            margin: -72px 0 0 -60px;
+            transform: rotate(10deg);
+        }
+    }
+
+
+
+    /*  
+    
+    메인 포트폴리오
+    
+    */
+
+    /* r */
+    .portfolio .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 36px;
+        padding: 0 30px;
+    }
+
+    /* r */
+    .portfolio .img_box {
+        display: grid;
+        grid-template-columns: 1fr;
+
+    }
+
+    /* r */
+    .portfolio .img_box .port_pc_img {
+        width: 100%;
+        max-height: 360px;
+        border: 4px solid #fff;
+        margin: 0 auto;
+    }
+
+    /* r */
+    .portfolio .img_box .port_m_img {
+        display: none;
+    }
+
+    /* r */
+    .portfolio .txt_box .tit h3 {
+        display: block;
+        font-size: 28px;
+        text-align: center;
+        margin: 0 0 28px 0;
+    }
+
+    /* r */
+    .portfolio .txt_box .tit h3::after {
+        display: none;
+    }
+
+
+
+
+    /* r */
+    .portfolio .txt_box .tit p {
+        display: none;
+    }
+
+    /* r */
+    .portfolio .txt_box .des {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        gap: 0;
+        margin: 0 auto 4px auto;
+    }
+
+    /* r */
+    .portfolio .txt_box strong {
+        font-size: 15px;
+        margin: 0;
+    }
+
+    /* r */
+    .portfolio .txt_box .des_txt {
+        min-height: 50px;
+    }
+
+    /* r */
+    .portfolio .txt_box p {
+        font-size: 15px;
+        line-height: 1.1;
+        margin: 0 0 8px 0;
+    }
+
+    /* r */
+    .portfolio .itm .color {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        max-width: 500px;
+    }
+
+
+    /* r */
+    .portfolio .btn_box {
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+    }
+
+    /* r */
+    .portfolio .btn_box .btn {
+        position: relative;
+        padding: 10px 24px;
+        font-size: 16px;
+        font-weight: 400;
+        margin: 0 0 32px 0;
+    }
+
+    /* r */
+    .portfolio .btn_box .btn:hover {
+        color: #000;
+    }
+
+
+
+    /* 
+    
+    
+    실습 모음 섹션
+    
+    */
+
+    /* r */
+    .training .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 24px;
+        padding: 60px;
+    }
+
+
+    /* r */
+    .training .content .itm_box .tr_img {
+        width: 100%;
+        height: 100%;
+        border: 4px solid #fff;
+    }
+
+    /* r */
+    .training .content .itm_box strong {
+        font-size: 18px;
+    }
+
+    /* 
+    
+    프로필 섹션
+    
+    */
+
+    /* r */
+    .profile .content .info {
+        gap: 16px;
+    }
+
+    /* r */
+    .profile .f_tit {
+        position: absolute;
+        right: 50%;
+        bottom: 40px;
+        width: 80%;
+        transform: translate(50%, 0);
+    }
+
+    /* r */
+    .profile .f_tit p {
+        font-size: 16px;
+        color: #000;
+    }
+}
+
+/* 
+
+반응형
+
+1200px 에서
+768px 까지
+
+
+*/
+
+
+
+@media(max-width: 1200px) {
+
+
+
+    /*
+    
+    인트로 섹션
+    
+    */
+
+    /* r */
+    .intro .slogan {
+        inset: 50% auto auto 50%;
+        max-width: 680px;
+    }
+
+    /* r */
+    .intro .slogan strong {
+        font-size: 28px;
+    }
+
+
+    /* r */
+    .intro .slogan h2 span {
+        width: 24px;
+        font-size: 36px;
+        line-height: 40px;
+    }
+
+
+    /* r */
+    .intro .slogan::after {
+        top: -100%;
+    }
+
+    @keyframes ufo_line {
+        0% {
+            transform: rotate(-25deg);
+        }
+
+        70% {
+            transform: rotate(-25deg);
+        }
+
+        90% {
+            transform: rotate(25deg);
+        }
+
+        100% {
+            left: 100%;
+            margin: -72px 0 0 -400px;
+            transform: rotate(10deg);
+        }
+    }
+
+    /*  
+    
+    메인 포트폴리오
+    
+    */
+
+    /* r */
+    .portfolio .content {
+        display: grid;
+        grid-template-columns: 3fr 5fr;
+        align-items: center;
+        gap: 36px;
+        padding: 0 30px;
+    }
+
+    /* r */
+    .portfolio .img_box {
+        display: grid;
+        grid-template-columns: 1fr;
+
+    }
+
+    /* r */
+    .portfolio .img_box .port_pc_img {
+        width: 100%;
+        max-height: 200px;
+        border: 4px solid #fff;
+        margin: 0 auto;
+    }
+
+    /* r */
+    .portfolio .img_box .port_m_img {
+        display: none;
+    }
+
+    /* r */
+    .portfolio .txt_box .tit h3 {
+        display: block;
+        font-size: 28px;
+        text-align: center;
+        margin: 0 0 28px 0;
+    }
+
+    /* r */
+    .portfolio .txt_box .tit h3::after {
+        display: none;
+    }
+
+
+
+
+    /* r */
+    .portfolio .txt_box .tit p {
+        display: none;
+    }
+
+    /* r */
+    .portfolio .txt_box .des {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        gap: 0;
+        margin: 0 auto 4px auto;
+    }
+
+    /* r */
+    .portfolio .txt_box strong {
+        font-size: 15px;
+        margin: 0;
+    }
+
+    /* r */
+    .portfolio .txt_box .des_txt {
+        min-height: 50px;
+    }
+
+    /* r */
+    .portfolio .txt_box p {
+        font-size: 15px;
+        line-height: 1.1;
+        margin: 0 0 8px 0;
+    }
+
+    /* r */
+    .portfolio .itm .color {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        max-width: 500px;
+    }
+
+
+    /* r */
+    .portfolio .btn_box {
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+    }
+
+    /* r */
+    .portfolio .btn_box .btn {
+        position: relative;
+        padding: 10px 24px;
+        font-size: 16px;
+        font-weight: 400;
+        margin: 0 0 32px 0;
+    }
+
+    /* r */
+    .portfolio .btn_box .btn:hover {
+        color: #000;
+    }
+
+
+
+    /* 
+    
+    
+    실습 모음 섹션
+    
+    */
+
+    /* r */
+    .training .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        padding: 60px;
+    }
+
+
+    /* r */
+    .training .content .itm_box .tr_img {
+        width: 80%;
+        height: 100%;
+        border: 4px solid #fff;
+    }
+
+    /* r */
+    .training .content .itm_box strong {
+        font-size: 18px;
+    }
+
+    /* 
+    
+    프로필 섹션
+    
+    */
+
+    /* r */
+    .profile .content .info {
+        width: 90%;
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 8px;
+        padding: 0;
+        border: none;
+    }
+
+
+    /* r */
+    .profile .content .info dt {
+        font-size: 18px;
+    }
+
+    /* r */
+    .profile .content .info dd {
+        font-size: 16px;
+    }
+
+    /* r */
+    .profile .content .info .profile_box {
+        width: 100%;
+        height: 100%;
+    }
+
+
+    /* r */
+    .profile .f_tit {
+        position: absolute;
+        right: 50%;
+        bottom: 40px;
+        width: 80%;
+        transform: translate(50%, 0);
+    }
+
+    /* r */
+    .profile .f_tit p {
+        font-size: 14px;
+        color: #000;
+    }
+}
+
+
+/* 
+
+반응형
+
+768px 에서
+540px 까지
+
+
+*/
+
+@media(max-width: 768px) {
+
+    /* r */
+    .header .case {
+        width: 80px;
+        height: 80px;
+    }
+
+    /* r */
+    .header .case .img_box {
+        border: 12px solid transparent;
+    }
+
+    /* r */
+    .header .case .logo_txt {
+        width: 80px;
+        height: 80px;
+    }
+
+
+    /*
+    
+    인트로 섹션
+    
+    */
+
+    /* r */
+    .intro .slogan {
+        inset: 50% auto auto 50%;
+        max-width: 500px;
+    }
+
+    /* r */
+    .intro .slogan strong {
+        font-size: 32px;
+    }
+
+
+    /* r */
+    .intro .slogan h2 span {
+        width: 28px;
+        font-size: 40px;
+        line-height: 44px;
+    }
+
+
+
+    /* r */
+    .intro .slogan::after {
+        top: -100%;
+    }
+
+    @keyframes ufo_line {
+        0% {
+            transform: rotate(-25deg);
+        }
+
+        70% {
+            transform: rotate(-25deg);
+        }
+
+        90% {
+            transform: rotate(25deg);
+        }
+
+        100% {
+            left: 100%;
+            margin: -72px 0 0 -320px;
+            transform: rotate(10deg);
+        }
+    }
+
+    /* r */
+    .intro .star::before {
+        width: 100px;
+        height: 100px;
+    }
+
+    /*  
+    
+    메인 포트폴리오
+    
+    */
+
+    /* r */
+    .portfolio .content {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    /* r */
+    .portfolio .img_box {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    /* r */
+    .portfolio .img_box .port_pc_img {
+        width: 70%;
+        max-height: 240px;
+        border: 4px solid #fff;
+        margin: 0 auto;
+    }
+
+    /* r */
+    .portfolio .img_box .port_m_img {
+        display: none;
+    }
+
+    /* r */
+    .portfolio .txt_box .tit h3 {
+        display: block;
+        font-size: 28px;
+        text-align: center;
+        margin: 0 0 28px 0;
+    }
+
+    /* r */
+    .portfolio .txt_box .tit h3::after {
+        display: none;
+    }
+
+
+
+    /* r */
+    .portfolio .txt_box .tit p {
+        display: none;
+    }
+
+    /* r */
+    .portfolio .txt_box .des {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        gap: 0;
+        max-width: 500px;
+        margin: 0 auto 4px auto;
+    }
+
+    /* r */
+    .portfolio .txt_box strong {
+        font-size: 15px;
+        margin: 0;
+    }
+
+    /* r */
+    .portfolio .txt_box .des_txt {
+        min-height: 50px;
+    }
+
+    /* r */
+    .portfolio .txt_box p {
+        font-size: 15px;
+        line-height: 1.1;
+        margin: 0 0 8px 0;
+    }
+
+    /* r */
+    .portfolio .itm .color {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+
+    /* r */
+    .portfolio .btn_box {
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+    }
+
+    /* r */
+    .portfolio .btn_box .btn {
+        position: relative;
+        padding: 10px 24px;
+        font-size: 16px;
+        font-weight: 400;
+        margin: 0 0 32px 0;
+    }
+
+    /* r */
+    .portfolio .btn_box .btn:hover {
+        color: #000;
+    }
+
+
+
+    /* 
+    
+    
+    실습 모음 섹션
+    
+    */
+
+    /* r */
+    .training .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        padding: 30px;
+    }
+
+
+    /* r */
+    .training .content .itm_box .tr_img {
+        width: 90%;
+        height: 100%;
+        border: 4px solid #fff;
+    }
+
+    /* r */
+    .training .content .itm_box strong {
+        font-size: 16px;
+    }
+
+    /* 
+    
+    프로필 섹션
+    
+    */
+
+    /* r */
+    .profile .content .info {
+        width: 90%;
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 8px;
+        padding: 0;
+        border: none;
+    }
+
+
+    /* r */
+    .profile .content .info dt {
+        font-size: 18px;
+    }
+
+    /* r */
+    .profile .content .info dd {
+        font-size: 16px;
+    }
+
+    /* r */
+    .profile .content .info .profile_box {
+        width: 100%;
+        height: 100%;
+    }
+
+
+    /* r */
+    .profile .f_tit {
+        position: absolute;
+        right: 50%;
+        bottom: 40px;
+        width: 80%;
+        transform: translate(50%, 0);
+    }
+
+    /* r */
+    .profile .f_tit p {
+        font-size: 14px;
+        color: #000;
+    }
+
+}
+
+
+/* 
+
+반응형
+
+
+540px 에서
+390px 까지
+
+
+*/
+
+
+@media(max-width: 540px) {
+
+    /* r */
+    .header .case {
+        width: 80px;
+        height: 80px;
+    }
+
+    /* r */
+    .header .case .img_box {
+        border: 12px solid transparent;
+    }
+
+    /* r */
+    .header .case .logo_txt {
+        width: 80px;
+        height: 80px;
+    }
+
+
+    /*
+    
+    인트로 섹션
+    
+    */
+
+
+    /* r */
+    .intro .slogan {
+        position: absolute;
+        inset: 50% auto auto 50%;
+        width: 328px;
+    }
+
+    /* r */
+    .intro .slogan strong {
+        font-size: 24px;
+    }
+
+    /* r */
+    .intro .slogan h2 {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    /* r */
+    .intro .slogan h2 span {
+        width: 36px;
+        font-size: 36px;
+        font-weight: 700;
+        flex: 1 1 0;
+    }
+
+
+
+    /* r */
+    .intro .slogan::after {
+        top: -100%;
+    }
+
+    @keyframes ufo_line {
+        0% {
+            transform: rotate(-25deg);
+        }
+
+        70% {
+            transform: rotate(-25deg);
+        }
+
+        90% {
+            transform: rotate(25deg);
+        }
+
+        100% {
+            left: 100%;
+            margin: -72px 0 0 -240px;
+            transform: rotate(10deg);
+        }
+    }
+
+    /* r */
+    .intro .star {
+        left: 35%;
+    }
+
+    /* r */
+    .intro .star::before {
+        width: 100px;
+        height: 100px;
+    }
+
+    /*  
+
+메인 포트폴리오
+
+*/
+
+
+    /* r */
+    .portfolio .num {
+        position: absolute;
+        right: 60px;
+        bottom: -80px;
+        font-size: 360px;
+        color: rgba(0, 0, 0, .1)
+    }
+
+    /* r */
+    .portfolio .s_pagenation {
+        bottom: 16px;
+    }
+
+    /* r */
+    .portfolio .s_pagenation ul {
+        gap: 8px;
+    }
+
+    /* r */
+    .portfolio .s_pagenation a {
+        background: #fff;
+        border: 2px solid #ddd;
+    }
+
+
+    /* r */
+    .portfolio .content {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    /* r */
+    .portfolio .img_box {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    /* r */
+    .portfolio .img_box .port_pc_img {
+        width: 70%;
+        max-height: 160px;
+        border: 4px solid #fff;
+        margin: 0 auto;
+    }
+
+    /* r */
+    .portfolio .img_box .port_m_img {
+        display: none;
+    }
+
+    /* r */
+    .portfolio .txt_box .tit h3 {
+        display: block;
+        font-weight: 700;
+        font-size: 24px;
+        text-align: center;
+        margin: 0 0 24px 0;
+    }
+
+
+    /* r */
+    .portfolio .txt_box .tit h3::after {
+        display: none;
+    }
+
+    /* r */
+    .portfolio .txt_box .tit p {
+        display: none;
+    }
+
+    /* r */
+    .portfolio .txt_box .des {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        gap: 0 8px;
+        align-items: flex-start;
+        justify-content: space-between;
+        max-width: 300px;
+        margin: 0 auto 4px auto;
+    }
+
+    /* r */
+    .portfolio .txt_box strong {
+        font-size: 14px;
+        margin: 0;
+    }
+
+    /* r */
+    .portfolio .txt_box .des_txt {
+        max-height: 112px;
+        line-height: 16px;
+    }
+
+
+    /* r */
+    .portfolio .txt_box p {
+        font-size: 12px;
+        line-height: 1.1;
+        margin: 0 0 8px 0;
+    }
+
+    /* r */
+    .portfolio .itm .color {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    /* r */
+    .portfolio .itm .color ul {
+        display: flex;
+        gap: 36px;
+    }
+
+    /* r */
+    .portfolio .itm .color ul li {
+        text-align: right;
+    }
+
+    /* r */
+    .portfolio .itm .color ul li span {
+        font-size: 12px;
+    }
+
+    /* r */
+    .portfolio .btn_box {
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+    }
+
+    /* r */
+    .portfolio .btn_box .btn {
+        position: relative;
+        padding: 10px;
+        font-size: 14px;
+        font-weight: 400;
+        margin: 0 0 32px 0;
+    }
+
+    /* r */
+    .portfolio .btn_box .btn:hover {
+        color: #000;
+    }
+
+
+
+    /* 
+
+
+실습 모음 섹션
+
+*/
+
+
+
+    /* r */
+    .training .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        padding: 0 40px;
+    }
+
+    /* r */
+    .training .content .itm_box .tr_img {
+        width: 100%;
+        height: 100%;
+        border: 4px solid #fff;
+    }
+
+
+    /* r */
+    .training .content .itm_box strong {
+        font-size: 14px;
+    }
+
+
+    /* 
+
+프로필 섹션
+
+*/
+
+    /* r */
+    .profile .content .info {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0;
+        padding: 0;
+        border: none;
+    }
+
+    /* r */
+    .profile .content .info .contact_box {
+        width: 100%;
+        padding: 0;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    /* r */
+    .profile .content .info .contact_box figure {
+        display: none;
+    }
+
+    /* r */
+    .profile .content .info .contact_box figure img {
+        border-radius: 24px;
+    }
+
+    /* r */
+    .profile .content .info dt {
+        display: block;
+        font-size: 16px;
+        margin: 0 0 8px 0;
+        text-align: center;
+    }
+
+    /* r */
+    .profile .content .info dd {
+        font-size: 14px;
+        font-weight: 300;
+        margin: 0 0 12px 0;
+        text-align: center;
+    }
+
+    /* r */
+    .profile .content .info .profile_box {
+        width: 100%;
+        height: 100%;
+    }
+
+    /* r */
+    .profile .f_tit {
+        position: absolute;
+        right: 50%;
+        bottom: 40px;
+        width: 80%;
+        transform: translate(50%, 0);
+    }
+
+    /* r */
+    .profile .f_tit p {
+        font-size: 12px;
+        color: #000;
+    }
+
+
+
+
+    /*r */
+    .to_top {
+        position: fixed;
+        bottom: 20px;
+        right: 25px;
+        z-index: 999;
+    }
+
+    /* r */
+    .to_top span {
+        color: #ffffff;
+        background: #000000;
+        padding: 8px;
+        border-radius: 50%;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+}
+
+/* 
+
+390px 
+
+아이폰 대응 
+
+반응형
+
+*/
+
+
+@media(max-width: 390px) {
+
+    /* r */
+    .header .case {
+        left: -70px;
+        top: 10px;
+        width: 70px;
+        height: 70px;
+    }
+
+    /* r */
+    .header .case .img_box {
+        border: 12px solid transparent;
+    }
+
+    /* r */
+    .header .case .logo_txt {
+        width: 70px;
+        height: 70px;
+    }
+
+
+    /* 메뉴 버튼 */
+    .util {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        width: 24px;
+        height: 20px;
+        cursor: pointer;
+        z-index: 1013;
+    }
+
+    /*
+    
+    인트로 섹션
+    
+    */
+
+
+    /* r */
+    .intro .slogan {
+        position: absolute;
+        inset: 50% auto auto 50%;
+        width: 328px;
+    }
+
+    /* r */
+    .intro .slogan strong {
+        font-size: 24px;
+    }
+
+    /* r */
+    .intro .slogan h2 {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    /* r */
+    .intro .slogan h2 span {
+        width: 36px;
+        font-size: 36px;
+        font-weight: 700;
+        flex: 1 1 0;
+    }
+
+
+
+    /* r */
+    .intro .slogan::after {
+        top: -50%;
+    }
+
+    @keyframes ufo_line {
+        0% {
+            transform: rotate(-25deg);
+        }
+
+        70% {
+            transform: rotate(-25deg);
+        }
+
+        90% {
+            transform: rotate(25deg);
+        }
+
+        100% {
+            left: 100%;
+            margin: -72px 0 0 -240px;
+            transform: rotate(10deg);
+        }
+    }
+
+    /* r */
+    .intro .star {
+        left: 30%;
+    }
+
+    /* r */
+    .intro .star::before {
+        width: 60px;
+        height: 60px;
+    }
+
+    /* r */
+    .intro .star::after {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* r */
+    @keyframes star_line {
+        0% {
+            top: 50%;
+            left: 50%;
+        }
+
+        100% {
+            top: -2400px;
+            left: 2400px;
+            opacity: 0;
+        }
+    }
+
+
+
+    /* r */
+    .intro .wheel a {
+        inset: auto auto 8px 50%;
+        width: 22px;
+        height: 32px;
+    }
+
+    .intro .wheel a::after {
+        width: 2px;
+        height: 5px;
+    }
+
+    /*  
+
+메인 포트폴리오
+
+*/
+
+    .portfolio {
+
+        margin: 0 auto;
+
+    }
+
+    /* r */
+    .portfolio .num {
+        position: absolute;
+        right: 60px;
+        bottom: -80px;
+        font-size: 360px;
+        color: rgba(0, 0, 0, .1)
+    }
+
+    /* r */
+    .portfolio .s_pagenation {
+        bottom: 16px;
+    }
+
+    /* r */
+    .portfolio .s_pagenation ul {
+        gap: 8px;
+    }
+
+    /* r */
+    .portfolio .s_pagenation a {
+        background: #fff;
+        border: 2px solid #ddd;
+    }
+
+    /* r */
+    .portfolio .itm {
+        display: grid;
+        align-items: center;
+    }
+
+    /* r */
+    .portfolio .content {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 12px;
+
+    }
+
+    /* r */
+    .portfolio .img_box {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+    }
+
+    /* r */
+    .portfolio .img_box .port_pc_img {
+        width: 60%;
+        max-height: 100px;
+        border: 4px solid #fff;
+        margin: 0 auto;
+    }
+
+    /* r */
+    .portfolio .img_box .port_m_img {
+        display: none;
+    }
+
+    /* r */
+    .portfolio .txt_box .tit h3 {
+        display: block;
+        font-weight: 700;
+        font-size: 18px;
+        text-align: center;
+        margin: 0 0 16px 0;
+    }
+
+
+    /* r */
+    .portfolio .txt_box .tit h3::after {
+        display: none;
+    }
+
+
+    /* r */
+    .portfolio .txt_box .tit p {
+        display: none;
+    }
+
+    /* r */
+    .portfolio .txt_box .des {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        gap: 0 8px;
+        align-items: flex-start;
+        justify-content: space-between;
+        max-width: 250px;
+        margin: 0 auto;
+    }
+
+    /* r */
+    .portfolio .txt_box strong {
+        font-size: 12px;
+        margin: 0;
+    }
+
+
+    /* r */
+    .portfolio .txt_box .des_txt {
+        max-height: 180px;
+        line-height: 16px;
+    }
+
+
+    /* r */
+    .portfolio .txt_box p {
+        font-size: 12px;
+        line-height: 1.1;
+        margin: 0 0 4px 0;
+    }
+
+    /* r */
+    .portfolio .itm .color {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        max-width: 250px;
+        margin: 0 auto;
+    }
+
+    /* r */
+    .portfolio .itm .color ul {
+        display: flex;
+        gap: 36px;
+    }
+
+    .portfolio .itm .color ul li {
+        position: relative;
+        display: table-cell;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        text-align: right;
+    }
+
+    .portfolio .itm .color ul li span {
+        position: absolute;
+        height: 24px;
+        left: 50%;
+        bottom: -30px;
+        transform: translate(-50%, 0);
+        font-size: 8px;
+        font-weight: 500;
+    }
+
+
+    /* r */
+    .portfolio .btn_box {
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+    }
+
+    /* r */
+    .portfolio .btn_box .btn {
+        position: relative;
+        padding: 6px 8px;
+        font-size: 12px;
+        font-weight: 400;
+        margin: 0 0 16px 0;
+    }
+
+    /* r */
+    .portfolio .btn_box .btn:hover {
+        color: #000;
+    }
+
+
+
+    /* 
+
+
+실습 모음 섹션
+
+*/
+
+
+
+    /* r */
+    .training .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        padding: 0 40px;
+    }
+
+    /* r */
+    .training .content .itm_box .tr_img {
+        width: 100%;
+        height: 100%;
+        border: 4px solid #fff;
+    }
+
+
+    /* r */
+    .training .content .itm_box strong {
+        font-size: 14px;
+    }
+
+
+    /* 
+
+프로필 섹션
+
+*/
+
+    /* r */
+    .profile .content .info {
+        width: 90%;
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+        padding: 0;
+        border: none;
+        align-items: center;
+    }
+
+    /* r */
+    .profile .content .info .contact_box {
+        width: 100%;
+        padding: 0;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    /* r */
+    .profile .content .info .contact_box figure {
+        display: block;
+        width: 100px;
+        margin: 0 auto 24px auto;
+
+    }
+
+    /* r */
+    .profile .content .info .contact_box figure img {
+        border-radius: 24px;
+    }
+
+    /* r */
+    .profile .content .info dt {
+        display: block;
+        font-size: 12px;
+        margin: 0 0 8px 0;
+        text-align: center;
+    }
+
+    /* r */
+    .profile .content .info dd {
+        font-size: 12px;
+        font-weight: 400;
+        margin: 0 0 12px 0;
+        text-align: center;
+    }
+
+    /* r */
+    .profile .content .info .profile_box {
+        width: 100%;
+        height: 100%;
+    }
+
+    /* r */
+    .profile .f_tit {
+        position: absolute;
+        right: 50%;
+        bottom: 40px;
+        width: 80%;
+        transform: translate(50%, 0);
+    }
+
+    /* r */
+    .profile .f_tit p {
+        font-size: 12px;
+        color: #000;
+    }
+
+    /*  aside 풀페이지 메뉴 도트  */
+
+
+    .m_link {
+        inset: 50% 10px auto auto;
+    }
+
+    /*r */
+    .to_top {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        z-index: 999;
+    }
+
+    /* r */
+    .to_top span {
+        color: #ffffff;
+        background: #000000;
+        padding: 8px;
+        border-radius: 50%;
+        font-size: 18px;
+        cursor: pointer;
+    }
+
+}
