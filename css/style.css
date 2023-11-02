@@ -5,10 +5,6 @@
     z-index: -2;
 }
 
-* {
-    outline: 1px solid tomato;
-}
-
 .header {
     position: fixed;
     top: 0;
